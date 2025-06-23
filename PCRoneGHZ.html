@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公主连结工会战set简单刀一图流</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        #app {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-color: #ff0000;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 12px 20px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+            margin: 0 5px;
+            flex-grow: 1;
+            border-radius: 4px;
+            transition: background-color 0.3s, transform 0.2s;
+            text-decoration: none;
+            user-select: none;
+        }
+
+        .tab:hover {
+            background-color: #ff3333;
+        }
+
+        .tab.active {
+            background-color: #e00000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            border: 2px solid #00cc00;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            transition: opacity 0.3s;
+        }
+
+        .grid-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: white;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* 添加模态框样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal.show {
+            display: block !important;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 800px;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .download-info {
+            color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(100, 100, 100, 0.7);
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                font-size: 20px;
+                padding: 12px;
+            }
+            
+            .tab {
+                padding: 10px;
+                font-size: 14px;
+            }
+            
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .tab {
+                margin: 5px 0;
+            }
+            
+            .grid-container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 8px;
+            }
+            
+            .tab {
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="header">公主连结工会战set简单刀一图流</div>
+        <div class="tabs">
+            <div 
+                v-for="(tab, index) in tabs" 
+                :key="index" 
+                :class="['tab', { active: activeTab === index }]" 
+                @click="changeTab(index)"
+            >
+                {{ tab }}
+            </div>
+        </div>
+        <div class="content">
+            <div v-if="isLoading" class="loading">
+                <div class="loading-spinner"></div>
+            </div>
+            <div class="grid-container">
+                <div 
+                    v-for="(item, index) in currentTabContent" 
+                    :key="index" 
+                    class="grid-item"
+                    @click="openModal(item.src)"
+                >
+                    <img :src="item.src" :alt="item.name" @error="handleImageError(index)" />
+                    <div style="margin-top: 8px; font-weight: bold; text-align: center;">{{ item.name }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态框 -->
+    <div id="imageModal" class="modal" v-if="showModal">
+        <span class="close" @click="closeModal">&times;</span>
+        <img class="modal-content" :src="modalSrc" alt="放大图片">
+        <div class="download-info">
+            点击右键或长按图片可以下载
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                activeTab: 0,
+                isLoading: false,
+                tabs: ['d1', 'd2', 'd3', 'd4', 'd5'],
+                tabContents: {
+                    d1: [
+                        { name: 'D1-1', src: './工会战/d1-1.jpg' },
+                        { name: 'D1-2', src: './工会战/d1-2.png' },
+                    ],
+                    d2: [
+                        { name: 'D2-1', src: './工会战/d2-1.jpg' },
+                    ],
+                    d3: [
+                        { name: 'D3-1', src: './工会战/d3-1.png' },
+                        { name: 'D3-2', src: './工会战/d3-2.png' },
+                        { name: 'D3-3', src: './工会战/d3-3.png' },
+                    ],
+                    d4: [
+                        { name: 'D4-1', src: './工会战/d4-1.jpg' },
+                        { name: 'D4-2', src: './工会战/d4-2.png' },
+                    ],
+                    d5: [
+                        { name: 'D5-1', src: './工会战/d5-1.jpg' },
+                        { name: 'D5-1A', src: './工会战/d5-1a.jpg' },
+                        { name: 'D5-2', src: './工会战/d5-2.jpg' },
+                        { name: 'D5-2A', src: './工会战/d5-2a.jpg' },
+                    ]
+                },
+                showModal: false,
+                modalSrc: ''
+            },
+            computed: {
+                currentTabContent() {
+                    return this.tabContents[this.tabs[this.activeTab]] || [];
+                }
+            },
+            methods: {
+                changeTab(index) {
+                    this.isLoading = true;
+                    
+                    // 模拟图片加载延迟
+                    setTimeout(() => {
+                        this.activeTab = index;
+                        this.isLoading = false;
+                    }, 300);
+                },
+                handleImageError(index) {
+                    console.warn(`图片加载失败：${this.currentTabContent[index].name}`);
+                    // 设置一个默认占位图
+                    this.currentTabContent[index].src = 'background-image.jpg';
+                },
+                openModal(src) {
+                    console.log('openModal called with src:', src);
+                    this.modalSrc = src;
+                    this.showModal = true;
+                    console.log('showModal:', this.showModal);
+                },
+                closeModal() {
+                    this.showModal = false;
+                }
+                
+            }
+        });
+    </script>
+</body>
+</html>
