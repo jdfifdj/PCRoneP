@@ -4,15 +4,15 @@
         color: #333;
         font-size: 24px;
         margin: 20px 0;
-      }
-      
-      .tab-container {
+    }
+
+    .tab-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-      }
-  
-      .tab {
+    }
+
+    .tab {
         background-color: red;
         color: white;
         padding: 10px 20px;
@@ -20,40 +20,40 @@
         cursor: pointer;
         border: none;
         border-radius: 5px;
-      }
-  
-      .content {
+    }
+
+    .content {
         margin-top: 10px;
         padding: 10px;
-      }
-  
-      .image-grid {
+    }
+
+    .image-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 15px;
-      }
-  
-      .image-item {
+    }
+
+    .image-item {
         margin: 0;
         cursor: pointer;
         border-radius: 8px;
         overflow: hidden;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
-      }
-  
-      .image-item:hover {
+    }
+
+    .image-item:hover {
         transform: scale(1.03);
-      }
-  
-      .image-item img {
+    }
+
+    .image-item img {
         max-width: 100%;
         height: auto;
         display: block;
-      }
-  
-      /* 放大图片的弹窗样式 */
-      .modal {
+    }
+
+    /* 放大图片的弹窗样式 */
+    .modal {
         display: none;
         position: fixed;
         top: 0;
@@ -66,24 +66,24 @@
         z-index: 9999;
         opacity: 0;
         transition: opacity 0.3s ease;
-      }
-  
-      .modal.active {
+    }
+
+    .modal.active {
         display: flex;
         opacity: 1;
-      }
-  
-      .modal img {
+    }
+
+    .modal img {
         max-width: 90%;
         max-height: 90%;
         border-radius: 8px;
-      }
-  
-      .close-btn {
+    }
+
+    .close-btn {
         position: absolute;
         top: 20px;
         right: 20px;
-        background: rgba(0,0,0,0.5);
+        background: rgba(0, 0, 0, 0.5);
         color: white;
         border: none;
         border-radius: 50%;
@@ -94,4 +94,12 @@
         justify-content: center;
         cursor: pointer;
         font-size: 18px;
-      }
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 30px;
+        color: #666;
+        border-top: 1px solid #eee;
+    }
