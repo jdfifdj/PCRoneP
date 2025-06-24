@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>公主连结Re:Dive攻略站</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <div id="app" class="app-container">
+    <div class="sidebar" :class="{ 'collapsed': sidebarCollapsed }">
+      <div class="sidebar-header">
+        <i class="fa fa-crown logo-icon"></i>
+        <span class="logo-text">公主连结攻略站</span>
+      </div>
+      
+      <div class="toggle-btn" @click="toggleSidebar">
+        <i class="fa" :class="sidebarCollapsed ? 'fa-angle-right' : 'fa-angle-left'"></i>
+      </div>
+      
+      <div class="menu-items">
+        <div class="menu-item active" @click="changeTab('home')">
+          <i class="fa fa-home menu-icon"></i>
+          <span class="sidebar-text">首页</span>
+        </div>
+        <a href="./PCRoneP.html" style="color:red;text-decoration:none;">
+        <div class="menu-item"  >
+          <i class="fa fa-users menu-icon"></i>
+          <span class="sidebar-text">一图流</span>
+        </div>
+        </a>
+        <a href="./PCRoneGHZ.html" style="color:red;text-decoration:none;">
+        <div class="menu-item" >
+          <i class="fa fa-shield menu-icon"></i>
+          <span class="sidebar-text">工会战简单set刀</span>
+        </div>
+        </a>
+        <div class="menu-item" @click="changeTab('events')">
+          <i class="fa fa-calendar menu-icon"></i>
+          <span class="sidebar-text">活动攻略</span>
+        </div>
+        <div class="menu-item" @click="changeTab('news')">
+          <i class="fa fa-newspaper-o menu-icon"></i>
+          <span class="sidebar-text">官方其他资讯</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="main-content" :class="{ 'expanded': sidebarCollapsed }">
+      <div class="header">
+        <h1>公主连结Re:Dive攻略推荐</h1>
+        <p>收集游戏攻略</p>
+      </div>
+      
+      <div class="section" v-if="currentTab === 'home'">
+        <h2>推荐B站UP主</h2>
+        <div class="up-groups">
+          <div class="up-group">
+            <h3>游戏攻略组</h3>
+            <div class="up-list">
+              <div class="up-card" v-for="up in upGroups['攻略组']" :key="up.name">
+                <div class="up-avatar">
+                  <img :src="up.avatar" :alt="up.name + '的头像'">
+                </div>
+                <div class="up-name">{{ up.name }}</div>
+                <div class="up-desc">{{ up.desc }}</div>
+                <a :href="up.url" target="_blank" class="btn">
+                  <i class="fa fa-external-link"></i> 查看主页
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="up-group">
+            <h3>萌新推荐</h3>
+            <div class="up-list">
+              <div class="up-card" v-for="up in upGroups['萌新组']" :key="up.name">
+                <div class="up-avatar">
+                  <img :src="up.avatar" :alt="up.name + '的头像'">
+                </div>
+                <div class="up-name">{{ up.name }}</div>
+                <div class="up-desc">{{ up.desc }}</div>
+                <a :href="up.url" target="_blank" class="btn">
+                  <i class="fa fa-external-link"></i> 查看主页
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="up-group">
+            <h3>竞技场推荐</h3>
+            <div class="up-list">
+              <div class="up-card" v-for="up in upGroups['竞技场组']" :key="up.name">
+                <div class="up-avatar">
+                  <img :src="up.avatar" :alt="up.name + '的头像'">
+                </div>
+                <div class="up-name">{{ up.name }}</div>
+                <div class="up-desc">{{ up.desc }}</div>
+                <a :href="up.url" target="_blank" class="btn">
+                  <i class="fa fa-external-link"></i> 查看主页
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section" v-if="currentTab === 'home' || currentTab === 'news'">
+        <h2>最新介绍</h2>
+        <div class="article-list">
+          <div class="article-card" v-for="article in articles" :key="article.id">
+            <div class="article-thumb">
+              <img :src="article.thumb" :alt="article.title">
+            </div>
+            <div class="article-content">
+              <div class="article-title">{{ article.title }}</div>
+              <div class="article-meta">
+                <span>{{ article.date }}</span>
+                <span>{{ article.author }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section" v-if="currentTab === 'characters'">
+        <h2>角色攻略</h2>
+        <p>这里将展示公主连结所有角色的详细攻略，包括角色定位、技能分析、培养建议等内容。</p>
+        <p>敬请期待更多内容更新！</p>
+      </div>
+      
+      <div class="section" v-if="currentTab === 'teams'">
+        <h2>阵容搭配</h2>
+        <p>这里将展示公主连结各种场景的阵容搭配，包括推图阵容、公会战阵容、竞技场阵容等内容。</p>
+        <p>敬请期待更多内容更新！</p>
+      </div>
+      
+      <div class="section" v-if="currentTab === 'events'">
+        <h2>活动攻略</h2>
+        <p>这里将展示公主连结各类活动的详细攻略，包括活动机制、奖励获取、阵容推荐等内容。</p>
+        <p>敬请期待更多内容更新！</p>
+      </div>
+      
+      <div class="footer">
+        <p>公主连结Re:Dive攻略站 &copy; 2025</p>
+        <p>本网站内容仅供参考，具体以游戏实际更新为准</p>
+      </div>
+    </div>
+  </div>
+  <script src="./index-config.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: INDEXconfigData,
+      methods: {
+        toggleSidebar() {
+          this.sidebarCollapsed = !this.sidebarCollapsed;
+        },
+        changeTab(tabName) {
+          this.currentTab = tabName;
+          // 更新菜单项状态
+          const menuItems = document.querySelectorAll('.menu-item');
+          menuItems.forEach(item => {
+            item.classList.remove('active');
+          });
+          event.currentTarget.classList.add('active');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+    

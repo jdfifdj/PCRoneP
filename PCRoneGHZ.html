@@ -12,55 +12,61 @@
   <div id="app">
     <h1 class="title">公主连结6月简单set刀推荐</h1>
     <h2 class="title">点击图片可以放大</h1>
-    <div class="tab-container">
-      <button class="tab" v-for="(tab, index) in tabs" :key="index" @click="activeTab = index">
-        {{ tab }}
-      </button>
-    </div>
-    
-    <div class="content">
-      <div v-if="activeTab === 0" class="image-grid">
-        <div class="image-item" v-for="(img, imgIndex) in d1Images" :key="imgIndex" @click="showModal(img)">
-          <img :src="img" alt="D1 图片">
-        </div>
+      <div class="tab-container">
+        <button class="tab" v-for="(tab, index) in tabs" :key="index" @click="activeTab = index">
+          {{ tab }}
+        </button>
       </div>
-      <div v-if="activeTab === 1" class="image-grid">
-        <div class="image-item" v-for="(img, imgIndex) in d2Images" :key="imgIndex" @click="showModal(img)">
-          <img :src="img" alt="D2 图片">
-        </div>
-      </div>
-      <div v-if="activeTab === 2" class="image-grid">
-        <div class="image-item" v-for="(img, imgIndex) in d3Images" :key="imgIndex" @click="showModal(img)">
-          <img :src="img" alt="D3 图片">
-        </div>
-      </div>
-      <div v-if="activeTab === 3" class="image-grid">
-        <div class="image-item" v-for="(img, imgIndex) in d4Images" :key="imgIndex" @click="showModal(img)">
-          <img :src="img" alt="D4 图片">
-        </div>
-      </div>
-      <div v-if="activeTab === 4" class="image-grid">
-        <div class="image-item" v-for="(img, imgIndex) in d5Images" :key="imgIndex" @click="showModal(img)">
-          <img :src="img" alt="D5 图片">
-        </div>
-      </div>
-    </div>
-    
-    <!-- 放大图片的弹窗 -->
-    <div class="modal" :class="{ active: showBigImg }">
-      <img :src="bigImgSrc" alt="放大图片">
-      <button class="close-btn" @click="closeModal">×</button>
-    </div>
 
-    <footer>
+      <div class="content">
+        <div v-if="activeTab === 0" class="image-grid">
+          <div class="image-item" v-for="(img, imgIndex) in d1Images" :key="imgIndex" @click="showModal(img)">
+            <img :src="img" alt="D1 图片">
+          </div>
+        </div>
+        <div v-if="activeTab === 1" class="image-grid">
+          <div class="image-item" v-for="(img, imgIndex) in d2Images" :key="imgIndex" @click="showModal(img)">
+            <img :src="img" alt="D2 图片">
+          </div>
+        </div>
+        <div v-if="activeTab === 2" class="image-grid">
+          <div class="image-item" v-for="(img, imgIndex) in d3Images" :key="imgIndex" @click="showModal(img)">
+            <img :src="img" alt="D3 图片">
+          </div>
+        </div>
+        <div v-if="activeTab === 3" class="image-grid">
+          <div class="image-item" v-for="(img, imgIndex) in d4Images" :key="imgIndex" @click="showModal(img)">
+            <img :src="img" alt="D4 图片">
+          </div>
+        </div>
+        <div v-if="activeTab === 4" class="image-grid">
+          <div class="image-item" v-for="(img, imgIndex) in d5Images" :key="imgIndex" @click="showModal(img)">
+            <img :src="img" alt="D5 图片">
+          </div>
+        </div>
+      </div>
+
+      <!-- 放大图片的弹窗 -->
+      <div class="modal" :class="{ active: showBigImg }">
+        <img :src="bigImgSrc" alt="放大图片">
+        <button class="close-btn" @click="closeModal">×</button>
+      </div>
+
+      <div style="text-align:center;">
+        <a href="./index.html" style="color:red;text-decoration:none;">
+          <h3>点击返回首页</h3>
+        </a>
+      </div>
+
+      <footer>
         <p>简单set刀 - 展示版</p>
         <p>攻略资料来源如下</p>
-        <p><a href="https://space.bilibili.com/189151967">B站：Columba-汐汐的奇幻历险</p>
-    </footer>
+        <p><a href="https://space.bilibili.com/189151967">B站：汐汐的奇幻历险</p>
+      </footer>
 
   </div>
 
-  
+
   <!-- 引入 Vue 2.6 -->
   <script src="./ghz-config.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.min.js"></script>
