@@ -44,6 +44,21 @@
             <img :src="img" alt="D5 图片">
           </div>
         </div>
+        <div v-if="activeTab === 5" class="image-grid">
+          <div class="image-item" v-for="(img, imgIndex) in d6Images" :key="imgIndex" @click="showModal(img)">
+            <img :src="img" alt="D6 图片">
+          </div>
+          <div class="image-item">
+            <a href="https://www.bilibili.com/video/BV1wgKaztEWq">
+              <img src="./工会战/玩具喵.jpg" alt="玩具喵作业链接">
+              </a>
+          </div>
+          <div class="image-item">
+            <a href="https://www.bilibili.com/video/BV1ipK3zZE1N">
+              <img src="./工会战/花舞.jpg" alt="花舞组作业链接">
+              </a>
+          </div>
+        </div>
       </div>
 
       <!-- 放大图片的弹窗 -->
@@ -62,6 +77,8 @@
         <p>简单set刀 - 展示版</p>
         <p>攻略资料来源如下</p>
         <p><a href="https://space.bilibili.com/189151967">B站：汐汐的奇幻历险</p>
+        <p><a href="https://space.bilibili.com/296496909">B站：玩具喵Official</p>
+        <p><a href="https://space.bilibili.com/549739">B站：玖璃梦_花舞组</p>
       </footer>
 
   </div>
