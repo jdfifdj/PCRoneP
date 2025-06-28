@@ -156,6 +156,29 @@ th {
     /* 可选：添加圆角 */
 }
 
+.img-kuang1 {
+    max-width: 30%;
+    /* 图片最大宽度为容器宽度 */
+    height: 30%;
+    /* 高度自动保持比例 */
+    object-fit: contain;
+    /* 保持图片比例不变形 */
+    border-radius: 8px;
+    /* 可选：添加圆角 */
+}
+
+.img-kuang {
+    max-width: 85%;
+    /* 图片最大宽度为容器宽度 */
+    height: auto;
+    /* 高度自动保持比例 */
+    object-fit: contain;
+    /* 保持图片比例不变形 */
+    border-radius: 8px;
+    /* 可选：添加圆角 */
+}
+
+
 /* 卡片容器 */
 .card {
     background-color: #fff;
