@@ -168,7 +168,7 @@ th {
 }
 
 .img-kuang {
-    max-width: 85%;
+    max-width: 100%;
     /* 图片最大宽度为容器宽度 */
     height: auto;
     /* 高度自动保持比例 */
