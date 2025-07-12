@@ -281,7 +281,7 @@
                         }
 
                         // 开始前10天内显示，开始后2天内显示
-                        pool.shouldShow = (daysBeforeStart <= 10 && daysBeforeStart > 0) ||
+                        pool.shouldShow = (daysBeforeStart <= 15 && daysBeforeStart > 0) ||
                             (daysAfterEnd <= 2 && daysAfterEnd >= 0) ||
                             (now >= start && now <= end);
                     });
