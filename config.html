@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>config.js 在线编辑器</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #f8f8f8;
+            border: none;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .tab.active {
+            background: #007bff;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .item {
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            background: #fafafa;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-group label {
+            min-width: 100px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .btn-primary {
+            background: #007bff;
+            color: white;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-warning {
+            background: #ffc107;
+            color: black;
+        }
+
+        .add-btn {
+            margin-bottom: 20px;
+        }
+
+        .keywords-container {
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .keyword-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 4px;
+            gap: 10px;
+        }
+
+        .keyword-item input {
+            flex: 1;
+        }
+
+        .keyword-item select {
+            width: 150px;
+        }
+
+        .export-area {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .export-textarea {
+            width: 100%;
+            height: 400px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .drag-drop-area {
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        .drag-drop-area:hover {
+            border-color: #007bff;
+            background-color: #f8f9fa;
+        }
+
+        .drag-drop-area.dragover {
+            border-color: #28a745;
+            background-color: #e8f5e8;
+        }
+
+        .original-config {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>config.js 在线编辑器</h1>
+            <div>
+                <input type="file" id="fileInput" class="file-input" accept=".js" onchange="loadConfigFile(event)">
+                <button class="btn-primary" onclick="document.getElementById('fileInput').click()">
+                    📁 加载 config.js
+                </button>
+                <button class="btn-success" onclick="downloadConfig()">
+                    💾 保存 config.js
+                </button>
+                <button class="btn-warning" onclick="resetToDefault()">
+                    🔄 重置
+                </button>
+            </div>
+        </div>
+
+        <!-- 文件拖放区 -->
+        <div class="drag-drop-area" id="dropZone">
+            <h3>📂 拖拽 config.js 文件到此处</h3>
+            <p>或者点击上方按钮选择文件</p>
+        </div>
+
+        <!-- 原始配置提示 -->
+        <div class="original-config" id="originalConfig" style="display: none;">
+            <strong>✅ 已加载原始 config.js</strong>
+            <p>当前正在编辑原始配置文件，所有修改将基于原文件</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('activities')">📅 活动</button>
+            <button class="tab" onclick="switchTab('gachaPools')">🎲 卡池</button>
+            <button class="tab" onclick="switchTab('sixStar')">⭐ 六星</button>
+            <button class="tab" onclick="switchTab('specialWeapons')">⚔️ 专武</button>
+            <button class="tab" onclick="switchTab('huodong')">🎮 活动角色</button>
+            <button class="tab" onclick="switchTab('highlightKeywords')">🔍 关键词</button>
+            <button class="tab" onclick="switchTab('export')">📤 导出</button>
+        </div>
+
+        <!-- 活动 -->
+        <div id="activities" class="tab-content active">
+            <div class="section-title">活动管理</div>
+            <button class="add-btn btn-success" onclick="addItem('activities')">➕ 添加活动</button>
+            <div id="activities-list"></div>
+        </div>
+
+        <!-- 卡池 -->
+        <div id="gachaPools" class="tab-content">
+            <div class="section-title">卡池管理</div>
+            <button class="add-btn btn-success" onclick="addItem('gachaPools')">➕ 添加卡池</button>
+            <div id="gachaPools-list"></div>
+        </div>
+
+        <!-- 六星 -->
+        <div id="sixStar" class="tab-content">
+            <div class="section-title">六星管理</div>
+            <button class="add-btn btn-success" onclick="addItem('sixStar')">➕ 添加六星</button>
+            <div id="sixStar-list"></div>
+        </div>
+
+        <!-- 专武 -->
+        <div id="specialWeapons" class="tab-content">
+            <div class="section-title">专武管理</div>
+            <button class="add-btn btn-success" onclick="addItem('specialWeapons')">➕ 添加专武</button>
+            <div id="specialWeapons-list"></div>
+        </div>
+
+        <!-- 活动角色 -->
+        <div id="huodong" class="tab-content">
+            <div class="section-title">活动角色管理</div>
+            <button class="add-btn btn-success" onclick="addItem('huodong')">➕ 添加活动角色</button>
+            <div id="huodong-list"></div>
+        </div>
+
+        <!-- 关键词 -->
+        <div id="highlightKeywords" class="tab-content">
+            <div class="section-title">关键词高亮管理</div>
+            <button class="add-btn btn-success" onclick="addKeyword()">➕ 添加关键词</button>
+            <div class="keywords-container" id="keywords-list"></div>
+        </div>
+
+        <!-- 导出 -->
+        <div id="export" class="tab-content">
+            <div class="export-area">
+                <h3>📋 导出配置代码</h3>
+                <button class="btn-primary" onclick="generateConfig()">🔄 重新生成</button>
+                <button class="btn-success" onclick="downloadConfig()">💾 下载 config.js</button>
+                <button class="btn-primary" onclick="copyToClipboard()">📋 复制到剪贴板</button>
+                <textarea class="export-textarea" id="config-output" readonly></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let configData = null;
+        let originalConfigText = '';
+        let isOriginalLoaded = false;
+
+        // 文件拖放功能
+        const dropZone = document.getElementById('dropZone');
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+            document.body.addEventListener(eventName, preventDefaults, false);
+        });
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, unhighlight, false);
+        });
+
+        dropZone.addEventListener('drop', handleDrop, false);
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        function highlight() {
+            dropZone.classList.add('dragover');
+        }
+
+        function unhighlight() {
+            dropZone.classList.remove('dragover');
+        }
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles(files);
+        }
+
+        function handleFiles(files) {
+            if (files.length > 0) {
+                const file = files[0];
+                if (file.name.endsWith('.js')) {
+                    readFile(file);
+                } else {
+                    alert('请选择 .js 文件');
+                }
+            }
+        }
+
+        // 读取文件
+        function readFile(file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                parseConfig(e.target.result);
+            };
+            reader.readAsText(file);
+        }
+
+        // 加载配置文件
+        function loadConfigFile(event) {
+            const file = event.target.files[0];
+            if (file) {
+                readFile(file);
+            }
+        }
+
+        // 解析配置
+        function parseConfig(text) {
+            try {
+                // 提取configData对象
+                const startMatch = text.match(/const configData = (\{[\s\S]*?\});?\s*\/\//);
+                if (startMatch) {
+                    const configStr = startMatch[1];
+                    configData = eval('(' + configStr + ')');
+                    originalConfigText = text;
+                    isOriginalLoaded = true;
+
+                    document.getElementById('originalConfig').style.display = 'block';
+                    document.getElementById('dropZone').style.display = 'none';
+
+                    renderAll();
+                    alert('✅ 配置文件加载成功！');
+                } else {
+                    alert('❌ 无法解析配置文件格式');
+                }
+            } catch (error) {
+                alert('❌ 解析配置文件出错: ' + error.message);
+                console.error(error);
+            }
+        }
+
+        // 切换标签
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            event.target.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+
+            if (tabName === 'export') {
+                generateConfig();
+            }
+        }
+
+        // 渲染所有内容
+        function renderAll() {
+            if (!configData) return;
+
+            renderList('activities');
+            renderList('gachaPools');
+            renderList('sixStar');
+            renderList('specialWeapons');
+            renderList('huodong');
+            renderKeywords();
+        }
+
+        // 渲染列表
+        function renderList(type) {
+            const container = document.getElementById(`${type}-list`);
+            const items = configData[type] || [];
+
+            if (items.length === 0) {
+                container.innerHTML = '<p style="color: #999; text-align: center;">暂无数据</p>';
+                return;
+            }
+
+            container.innerHTML = items.map((item, index) => `
+                <div class="item">
+                    <div class="item-header">
+                        <strong>${item.name || '未命名'}</strong>
+                        <button class="btn-danger" onclick="removeItem('${type}', ${index})">🗑️ 删除</button>
+                    </div>
+                    ${renderForm(type, item, index)}
+                </div>
+            `).join('');
+        }
+
+        // 渲染表单
+        function renderForm(type, item, index) {
+            const commonFields = `
+                <div class="form-group">
+                    <label>名称</label>
+                    <input type="text" value="${item.name || ''}" onchange="updateItem('${type}', ${index}, 'name', this.value)">
+                </div>
+            `;
+
+            const timeFields = `
+                <div class="form-group">
+                    <label>开始时间</label>
+                    <input type="text" value="${item.start || ''}" onchange="updateItem('${type}', ${index}, 'start', this.value)" placeholder="2025/07/20 12:00">
+                </div>
+                <div class="form-group">
+                    <label>结束时间</label>
+                    <input type="text" value="${item.end || ''}" onchange="updateItem('${type}', ${index}, 'end', this.value)" placeholder="2025/07/20 23:59">
+                </div>
+            `;
+
+            const switchFields = `
+                <div class="form-group">
+                    <label>是否显示</label>
+                    <select onchange="updateItem('${type}', ${index}, 'shouldShow', this.value === 'true')">
+                        <option value="true" ${item.shouldShow !== false ? 'selected' : ''}>是</option>
+                        <option value="false" ${item.shouldShow === false ? 'selected' : ''}>否</option>
+                    </select>
+                </div>
+            `;
+
+            const imageField = `
+                <div class="form-group">
+                    <label>图片路径</label>
+                    <input type="text" value="${item.image || ''}" onchange="updateItem('${type}', ${index}, 'image', this.value)">
+                </div>
+            `;
+
+            const adviceField = `
+                <div class="form-group">
+                    <label>建议内容</label>
+                    <textarea onchange="updateItem('${type}', ${index}, 'advice', this.value)">${item.advice || ''}</textarea>
+                </div>
+            `;
+
+            switch (type) {
+                case 'activities':
+                    return commonFields + timeFields + switchFields;
+                case 'gachaPools':
+                case 'specialWeapons':
+                case 'huodong':
+                    return commonFields + adviceField + imageField + timeFields + switchFields;
+                case 'sixStar':
+                    return commonFields + imageField + timeFields + switchFields;
+                default:
+                    return commonFields;
+            }
+        }
+
+        // 渲染关键词
+        function renderKeywords() {
+            const container = document.getElementById('keywords-list');
+            const keywords = configData.highlightKeywords || [];
+
+            if (keywords.length === 0) {
+                container.innerHTML = '<p style="color: #999; text-align: center;">暂无关键词</p>';
+                return;
+            }
+
+            container.innerHTML = keywords.map((kw, index) => `
+                <div class="keyword-item">
+                    <input type="text" value="${kw.keyword}" onchange="updateKeyword(${index}, 'keyword', this.value)" placeholder="关键词">
+                    <select onchange="updateKeyword(${index}, 'className', this.value)">
+                        <option value="highlight-red" ${kw.className === 'highlight-red' ? 'selected' : ''}>🔴 红色</option>
+                        <option value="highlight-blue" ${kw.className === 'highlight-blue' ? 'selected' : ''}>🔵 蓝色</option>
+                        <option value="highlight-orange" ${kw.className === 'highlight-orange' ? 'selected' : ''}>🟠 橙色</option>
+                        <option value="highlight-purple" ${kw.className === 'highlight-purple' ? 'selected' : ''}>🟣 紫色</option>
+                        <option value="highlight-green" ${kw.className === 'highlight-green' ? 'selected' : ''}>🟢 绿色</option>
+                    </select>
+                    <button class="btn-danger" onclick="removeKeyword(${index})">🗑️ 删除</button>
+                </div>
+            `).join('');
+        }
+
+        // 更新项目
+        function updateItem(type, index, key, value) {
+            if (!configData[type]) configData[type] = [];
+            configData[type][index][key] = value;
+        }
+
+        // 添加项目
+        function addItem(type) {
+            if (!configData[type]) configData[type] = [];
+
+            const newItem = {
+                name: '新' + type,
+                start: '2025/07/20 12:00',
+                end: '2025/07/20 23:59',
+                shouldShow: true
+            };
+
+
+
+            if (type === 'gachaPools') {
+                newItem.advice = '';
+                newItem.image = './卡池/image.png';
+            } else if (type === 'specialWeapons') {
+                newItem.advice = '';
+                newItem.image = './专武/image.png';
+            } else if (type === 'sixStar') {
+                newItem.image = './六星/image.png';
+            } else if (type === 'huodong') {
+                newItem.advice = '';
+                newItem.image = './活动角色/image.png';
+            }
+
+            configData[type].push(newItem);
+            renderList(type);
+        }
+
+        // 删除项目
+        function removeItem(type, index) {
+            if (confirm('确定要删除这个项目吗？')) {
+                configData[type].splice(index, 1);
+                renderList(type);
+            }
+        }
+
+        // 添加关键词
+        function addKeyword() {
+            if (!configData.highlightKeywords) configData.highlightKeywords = [];
+            configData.highlightKeywords.push({ keyword: '新关键词', className: 'highlight-red' });
+            renderKeywords();
+        }
+
+        // 更新关键词
+        function updateKeyword(index, key, value) {
+            configData.highlightKeywords[index][key] = value;
+        }
+
+        // 删除关键词
+        function removeKeyword(index) {
+            if (confirm('确定要删除这个关键词吗？')) {
+                configData.highlightKeywords.splice(index, 1);
+                renderKeywords();
+            }
+        }
+
+        // 生成配置
+        function generateConfig() {
+            if (!configData) {
+                alert('请先加载配置文件！');
+                return;
+            }
+
+            const config = `// config.js
+const configData = ${JSON.stringify(configData, null, 2)};
+
+// 导出配置数据
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = configData;
+} else {
+    window.configData = configData;
+}`;
+
+            document.getElementById('config-output').value = config;
+        }
+
+        // 下载配置
+        function downloadConfig() {
+            if (!configData) {
+                alert('请先加载配置文件！');
+                return;
+            }
+
+            generateConfig();
+            const content = document.getElementById('config-output').value;
+            const blob = new Blob([content], { type: 'application/javascript' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'config.js';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // 复制到剪贴板
+        function copyToClipboard() {
+            const output = document.getElementById('config-output');
+            output.select();
+            document.execCommand('copy');
+            alert('配置已复制到剪贴板！');
+        }
+
+        // 重置
+        function resetToDefault() {
+            if (confirm('确定要重置所有修改吗？')) {
+                configData = null;
+                originalConfigText = '';
+                isOriginalLoaded = false;
+
+                document.getElementById('originalConfig').style.display = 'none';
+                document.getElementById('dropZone').style.display = 'block';
+
+                // 清空所有显示
+                ['activities', 'gachaPools', 'sixStar', 'specialWeapons', 'huodong'].forEach(type => {
+                    const container = document.getElementById(`${type}-list`);
+                    container.innerHTML = '<p style="color: #999; text-align: center;">请先加载 config.js</p>';
+                });
+
+                document.getElementById('keywords-list').innerHTML = '<p style="color: #999; text-align: center;">请先加载 config.js</p>';
+                document.getElementById('config-output').value = '';
+            }
+        }
+
+        // 初始化提示
+        document.addEventListener('DOMContentLoaded', function () {
+            ['activities', 'gachaPools', 'sixStar', 'specialWeapons', 'huodong'].forEach(type => {
+                const container = document.getElementById(`${type}-list`);
+                container.innerHTML = '<p style="color: #999; text-align: center;">请拖拽或选择 config.js 文件开始编辑</p>';
+            });
+
+            document.getElementById('keywords-list').innerHTML = '<p style="color: #999; text-align: center;">请拖拽或选择 config.js 文件开始编辑</p>';
+        });
+    </script>
+</body>
+
+</html>
