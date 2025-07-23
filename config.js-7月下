@@ -233,17 +233,17 @@ const configData = {
   ],
   "activities": [
     {
-      "name": "剧情活动1-8月",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/14 23:59",
+      "name": "剧情活动1",
+      "start": "2025/06/30 14:00",
+      "end": "2025/07/14 23:59",
       "status": null,
       "statusText": "",
       "shouldShow": true
     },
     {
       "name": "露娜塔",
-      "start": "2025/08/09 12:00",
-      "end": "2025/08/14 23:59",
+      "start": "2025/07/09 12:00",
+      "end": "2025/07/14 23:59",
       "status": null,
       "statusText": "",
       "shouldShow": true
@@ -274,8 +274,8 @@ const configData = {
     },
     {
       "name": "高难4倍掉落",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/05 04:59",
+      "start": "2025/07/15 14:00",
+      "end": "2025/07/22 04:59",
       "status": null,
       "statusText": "",
       "shouldShow": true
@@ -334,66 +334,6 @@ const configData = {
       "end": "2025/07/30 23:59",
       "status": null,
       "statusText": "",
-      "shouldShow": true
-    },
-    {
-      "name": "复刻剧情活动1-8月",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/06 23:59",
-      "shouldShow": true
-    },
-    {
-      "name": "N4",
-      "start": "2025/08/05 05:00",
-      "end": "2025/08/08 04:59",
-      "shouldShow": true
-    },
-    {
-      "name": "H4",
-      "start": "2025/08/05 05:00",
-      "end": "2025/08/14 04:59",
-      "shouldShow": true
-    },
-    {
-      "name": "N6",
-      "start": "2025/08/08 05:00",
-      "end": "2025/08/14 04:59",
-      "shouldShow": true
-    },
-    {
-      "name": "「圣迹调查&神殿调查关卡」 掉落量4倍庆典",
-      "start": "2025/08/08 05:00",
-      "end": "2025/08/14 04:59",
-      "shouldShow": true
-    },
-    {
-      "name": "次元断层",
-      "start": "2025/08/09 12:00",
-      "end": "2025/08/214 23:59",
-      "shouldShow": true
-    },
-    {
-      "name": "精选扭蛋「可璃亚（堕天使）」「普雷西娅（堕天使）」",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/11 10:59",
-      "shouldShow": true
-    },
-    {
-      "name": "「克莉丝提娜（狂野）」复刻",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/04 10:59",
-      "shouldShow": true
-    },
-    {
-      "name": "「姬塔（术士）」「毗伽菈」复刻",
-      "start": "2025/08/04 11:00",
-      "end": "2025/08/07 10:59",
-      "shouldShow": true
-    },
-    {
-      "name": "公主庆典扭蛋「可可萝（公主）」",
-      "start": "2025/08/11 11:00",
-      "end": "2025/08/14 10:59",
       "shouldShow": true
     }
   ],
@@ -497,38 +437,6 @@ const configData = {
       "shouldShow": true,
       "status": null,
       "statusText": ""
-    },
-    {
-      "name": "妹三家",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/11 10:59",
-      "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
-      "image": "./卡池/妹三家.png"
-    },
-    {
-      "name": "兔克",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/04 10:59",
-      "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
-      "image": "./卡池/兔克.png"
-    },
-    {
-      "name": "姬塔兔兔",
-      "start": "2025/08/04 11:00",
-      "end": "2025/08/07 10:59",
-      "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
-      "image": "./卡池/姬塔兔兔.png"
-    },
-    {
-      "name": "蝶妈",
-      "start": "2025/08/11 11:00",
-      "end": "2025/08/14 10:59",
-      "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
-      "image": "./卡池/蝶妈.png"
     }
   ],
   "sixStar": [
@@ -552,13 +460,6 @@ const configData = {
       "start": "2025/07/15 00:00",
       "end": "2025/07/30 23:59",
       "shouldShow": true
-    },
-    {
-      "name": "tp",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/30 23:59",
-      "shouldShow": true,
-      "image": "./六星/tp.png"
     }
   ],
   "specialWeapons": [
@@ -697,46 +598,6 @@ const configData = {
       "start": "2025/07/15 14:00",
       "end": "2025/07/30 23:59",
       "shouldShow": true
-    },
-    {
-      "name": "蝶妈",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/30 23:59",
-      "shouldShow": true,
-      "advice": "开专建议：等攻略。",
-      "image": "./专武/蝶妈.png"
-    },
-    {
-      "name": "狂虎",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/30 23:59",
-      "shouldShow": true,
-      "advice": "开专建议：等攻略。",
-      "image": "./专武/狂虎.png"
-    },
-    {
-      "name": "兔克",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/30 23:59",
-      "shouldShow": true,
-      "advice": "开专建议：等攻略。",
-      "image": "./专武/兔克.png"
-    },
-    {
-      "name": "奶牛-2",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/30 23:59",
-      "shouldShow": true,
-      "advice": "二专开专建议：等攻略。",
-      "image": "./专武/奶牛-2.png"
-    },
-    {
-      "name": "吃货-2",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/30 23:59",
-      "shouldShow": true,
-      "advice": "二专开专建议：等攻略。",
-      "image": "./专武/吃货-2.png"
     }
   ],
   "huodong": [
@@ -755,7 +616,7 @@ const configData = {
 
 // 导出配置数据
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    module.exports = configData;
+  module.exports = configData;
 } else {
-    window.configData = configData;
+  window.configData = configData;
 }
