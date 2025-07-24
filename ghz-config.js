@@ -28,9 +28,12 @@ const GHZconfigData = {
       "./工会战/d4-2a.jpg"
     ],
     "d5Images": [
-      "./工会战/d5-1.jpg"
+      "./工会战/d5-1.png"
     ],
-    "d6Images": [],
+    "d6Images": [
+      "./工会战/玩具喵-abc.png",
+      "./工会战/玩具喵d1.png"
+    ],
     "showBigImg": false,
     "bigImgSrc": ""
   };
