@@ -32,7 +32,17 @@ const GHZconfigData = {
     ],
     "d6Images": [
       "./工会战/玩具喵-abc.png",
-      "./工会战/玩具喵d1.png"
+      "./工会战/玩具喵d1.png",
+      "./工会战/玩具喵d2.png",
+      "./工会战/玩具喵d3.png",
+      "./工会战/玩具喵d4.png",
+      "./工会战/玩具喵d5.png",
+      "./工会战/玩具喵d6.png",
+      "./工会战/花舞d1.png",
+      "./工会战/花舞d2.png",
+      "./工会战/花舞d3.png",
+      "./工会战/花舞d4.png",
+      "./工会战/花舞d6.png",
     ],
     "showBigImg": false,
     "bigImgSrc": ""
