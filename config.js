@@ -227,8 +227,56 @@ const configData = {
       "className": "highlight-orange"
     },
     {
-      "keyword": "测试关键词",
-      "className": "highlight-blue"
+      "keyword": "猪妹（右一）：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "寿命长，使用场合多，早有早享受。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "盾妹（左一）：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "可根据余钻补，不强求持有",
+      "className": "highlight-orange"
+    },
+    {
+      "keyword": "魔法姬塔：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "没有的非常建议补抽",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "兔兔：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "姬塔>120出货，且余钻>15万。",
+      "className": "highlight-orange"
+    },
+    {
+      "keyword": "必开，推荐交球。",
+      "className": "highlight-orange"
+    },
+    {
+      "keyword": "用到的时候看轴需要开。",
+      "className": "highlight-orange"
+    },
+    {
+      "keyword": "没啥用，需要再开。",
+      "className": "highlight-orange"
+    },
+    {
+      "keyword": "主JJC，有就开。",
+      "className": "highlight-orange"
+    },
+    {
+      "keyword": "钻不多的请慎重考虑（最起码得有12w以上，马上准备必抽限定连发了）。",
+      "className": "highlight-orange"
     }
   ],
   "activities": [
@@ -503,7 +551,7 @@ const configData = {
       "start": "2025/07/30 14:00",
       "end": "2025/08/11 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：猪妹（右一）：寿命长，使用场合多，早有早享受。常驻可等歪，也可等9月下的超得。加速版本不急获取，国服工会战会跳过几期优质刀，钻不多的请慎重考虑（最起码得有12w以上，马上准备必抽限定连发了）。<br />盾妹（左一）：决定抽猪妹且>150抽出货后，可根据余钻补，不强求持有。",
       "image": "./卡池/妹三家.png"
     },
     {
@@ -511,7 +559,7 @@ const configData = {
       "start": "2025/07/30 14:00",
       "end": "2025/08/04 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：不建议补，没用。",
       "image": "./卡池/兔克.png"
     },
     {
@@ -519,7 +567,7 @@ const configData = {
       "start": "2025/08/04 11:00",
       "end": "2025/08/07 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：魔法姬塔：没有的非常建议补抽，还有很长的强势期，且是属性版本重要角色，比本月的猪妹池子还重要！抽抽抽抽！！！<br />兔兔：姬塔>120出货，且余钻>12万。",
       "image": "./卡池/姬塔兔兔.png"
     },
     {
@@ -527,7 +575,7 @@ const configData = {
       "start": "2025/08/11 11:00",
       "end": "2025/08/14 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：不建议补，9月（上）有新FES（姐妹弓），追进度的玩家建议缺多个FES角色时再抽FES池子一起捞，这样比较省钻。",
       "image": "./卡池/蝶妈.png"
     }
   ],
@@ -703,7 +751,7 @@ const configData = {
       "start": "2025/07/30 14:00",
       "end": "2025/08/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略。",
+      "advice": "开专建议：必开，推荐交球。",
       "image": "./专武/蝶妈.png"
     },
     {
@@ -711,7 +759,7 @@ const configData = {
       "start": "2025/07/30 14:00",
       "end": "2025/08/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略。",
+      "advice": "开专建议：用到的时候看轴需要开。",
       "image": "./专武/狂虎.png"
     },
     {
@@ -719,7 +767,7 @@ const configData = {
       "start": "2025/07/30 14:00",
       "end": "2025/08/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略。",
+      "advice": "开专建议：没啥用，需要再开。",
       "image": "./专武/兔克.png"
     },
     {
@@ -727,7 +775,7 @@ const configData = {
       "start": "2025/07/30 14:00",
       "end": "2025/08/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略。",
+      "advice": "二专开专建议：主JJC，有就开。",
       "image": "./专武/奶牛-2.png"
     },
     {
@@ -735,7 +783,7 @@ const configData = {
       "start": "2025/07/30 14:00",
       "end": "2025/08/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略。",
+      "advice": "二专开专建议：主JJC，有就开。",
       "image": "./专武/吃货-2.png"
     }
   ],
