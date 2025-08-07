@@ -30,7 +30,7 @@
                         <th>
                             <div class="section-title">表格更新时间</div>
                         </th>
-                        <th>2025年7月30日</th>
+                        <th>2025年8月7日</th>
                         <th>
                             <div class="section-title">图片生成时间</div>
                         </th>
@@ -40,9 +40,9 @@
                     </tr>
                     <tr>
                         <th>等级上限</th>
-                        <th>289级</th>
+                        <th>292级</th>
                         <th>专武上限</th>
-                        <th>290级</th>
+                        <th>300级</th>
                     </tr>
                     <tr>
                         <th>装备上限</th>
@@ -192,6 +192,8 @@
             <p>攻略资料来源如下</p>
             <p><a href="https://space.bilibili.com/25586360">B站：Columba-丘比</p>
             <p><a href="https://space.bilibili.com/2574869">B站：南条鸡腿子</p>
+            <p><a href="https://github.com/jdfifdj/PCRoneP">项目地址：Github</p>
+            <p><a href="https://console.tencentcloud.com/edgeone">网站搭建：EdgeOne</p>
         </footer>
 
         <!-- 图片预览弹窗 -->
@@ -282,7 +284,7 @@
 
                         // 开始前10天内显示，开始后2天内显示
                         pool.shouldShow = (daysBeforeStart <= 15 && daysBeforeStart > 0) ||
-                            (daysAfterEnd <= 2 && daysAfterEnd >= 0) ||
+                            (daysAfterEnd <= 1 && daysAfterEnd >= 0) ||
                             (now >= start && now <= end);
                     });
 
@@ -292,8 +294,8 @@
                         const daysBeforeStart = (start - now) / (1000 * 60 * 60 * 24);
                         const daysAfterEnd = (now - end) / (1000 * 60 * 60 * 24); // 新增
 
-                        star.shouldShow = (daysBeforeStart <= 7 && daysBeforeStart > 0) ||
-                            (daysAfterEnd <= 2 && daysAfterEnd >= 0) ||
+                        star.shouldShow = (daysBeforeStart <= 8 && daysBeforeStart > 0) ||
+                            (daysAfterEnd <= 1 && daysAfterEnd >= 0) ||
                             (now >= start && now <= end);
                     });
 
@@ -314,8 +316,8 @@
                         const daysBeforeStart = (start - now) / (1000 * 60 * 60 * 24);
                         const daysAfterEnd = (now - end) / (1000 * 60 * 60 * 24); // 新增
 
-                        weapon.shouldShow = (daysBeforeStart <= 6 && daysBeforeStart > 0) ||
-                            (daysAfterEnd <= 2 && daysAfterEnd >= 0) ||
+                        weapon.shouldShow = (daysBeforeStart <= 5 && daysBeforeStart > 0) ||
+                            (daysAfterEnd <= 1 && daysAfterEnd >= 0) ||
                             (now >= start && now <= end);
                     });
 

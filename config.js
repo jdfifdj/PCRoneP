@@ -277,6 +277,38 @@ const configData = {
     {
       "keyword": "钻不多的请慎重考虑（最起码得有12w以上，马上准备必抽限定连发了）。",
       "className": "highlight-orange"
+    },
+    {
+      "keyword": "「佩可莉姆（圣诞节）」：20号开始免费十连，钻>18w，免费十连没出货可补圣吃。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「克蕾琪塔（圣诞节）」：圣吃180以上出的可以补。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「千歌（圣诞节）」",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「绫音（圣诞节）」",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「克莉丝提娜（圣诞节）」",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「秋乃（圣诞节）」",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「宫子（圣诞节）」",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "年度垫底角色之一，仓管。",
+      "className": "highlight-orange"
     }
   ],
   "activities": [
@@ -443,6 +475,126 @@ const configData = {
       "start": "2025/08/11 11:00",
       "end": "2025/08/14 10:59",
       "shouldShow": true
+    },
+    {
+      "name": "精选扭蛋 [佩可莉姆（圣诞节）」「克蕾琪塔（圣诞节）」",
+      "start": "2025/08/14 14:00",
+      "end": "2025/08/29 10:59",
+      "shouldShow": true
+    },
+    {
+      "name": "「茜里（圣诞节）」复刻",
+      "start": "2025/08/14 14:00",
+      "end": "2025/08/18 10:59",
+      "shouldShow": true
+    },
+    {
+      "name": "剧情活动「Cry·Baby·Christmas 为谁存在的幸福之日」",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/28 23:59",
+      "shouldShow": true
+    },
+    {
+      "name": "复刻剧情活动「快乐进行时 幸福的双子天使与圣诞夜礼物」",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/21 23:59",
+      "shouldShow": true
+    },
+    {
+      "name": "「高难关卡」掉落量4倍庆典",
+      "start": "2025/08/14 05:00",
+      "end": "2025/08/20 04:59",
+      "shouldShow": true
+    },
+    {
+      "name": "斗技场",
+      "start": "2025/08/17 05:00",
+      "end": "2025/08/21 23:59",
+      "shouldShow": true
+    },
+    {
+      "name": "免费十连（最多130连）",
+      "start": "2025/08/20 05:00",
+      "end": "2025/09/02 04:59",
+      "shouldShow": true
+    },
+    {
+      "name": "「普通关卡」装备掉落量6倍、玛那掉落量4倍庆典",
+      "start": "2025/08/20 05:00",
+      "end": "2025/08/31 23:59",
+      "shouldShow": true
+    },
+    {
+      "name": "「困难关卡」掉落量6倍庆典",
+      "start": "2025/08/20 05:00",
+      "end": "2025/08/31 04:59",
+      "shouldShow": true
+    },
+    {
+      "name": "「圣迹调查&神殿调查关卡」掉落量6倍庆典",
+      "start": "2025/08/20 05:00",
+      "end": "2025/08/31 04:59",
+      "shouldShow": true
+    },
+    {
+      "name": "「探索关卡」掉落量6倍庆典",
+      "start": "2025/08/20 05:00",
+      "end": "2025/08/31 04:59",
+      "shouldShow": true
+    },
+    {
+      "name": "大师币获得量5倍庆典",
+      "start": "2025/08/20 05:00",
+      "end": "2025/08/31 04:59",
+      "shouldShow": true
+    },
+    {
+      "name": "体力消费时玩家经验值获得量3倍庆典",
+      "start": "2025/08/20 05:00",
+      "end": "2025/08/31 04:59",
+      "shouldShow": true
+    },
+    {
+      "name": "「地下城」玛那掉落量4倍庆典",
+      "start": "2025/08/20 05:00",
+      "end": "2025/08/31 04:59",
+      "shouldShow": true
+    },
+    {
+      "name": "「高难关卡」掉落量6倍庆典",
+      "start": "2025/08/20 05:00",
+      "end": "2025/09/03 04:59",
+      "shouldShow": true
+    },
+    {
+      "name": "「伊莉亚（礼服）」复刻",
+      "start": "2025/08/25 11:00",
+      "end": "2025/08/29 10:59",
+      "shouldShow": true
+    },
+    {
+      "name": "「千歌（圣诞节）」「绫音（圣诞节）」「克莉丝提娜（圣诞节）」「秋乃（圣诞节）」「宫子（圣诞节）」复刻",
+      "start": "2025/08/20 11:00",
+      "end": "2025/08/25 10:59",
+      "shouldShow": true
+    },
+    {
+      "name": "圣诞节活动登录活动",
+      "start": "2025/08/24 05:00",
+      "end": "2025/08/26 04:59",
+      "shouldShow": true
+    },
+    {
+      "name": "露娜塔",
+      "start": "2025/08/23 12:00",
+      "end": "2025/08/28 23:59",
+      "shouldShow": true
+    },
+    {
+      "name": "工会战",
+      "start": "2025/08/24 05:00",
+      "end": "2025/08/28 23:59",
+      "shouldShow": true
     }
   ],
   "gachaPools": [
@@ -577,6 +729,38 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：不建议补，9月（上）有新FES（姐妹弓），追进度的玩家建议缺多个FES角色时再抽FES池子一起捞，这样比较省钻。",
       "image": "./卡池/蝶妈.png"
+    },
+    {
+      "name": "圣吃",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/29 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：「佩可莉姆（圣诞节）」：20号开始免费十连，钻>18w，免费十连没出货可补圣吃。出场较少，偏对策，但期间免费十连，钻多可补。<br/>「克蕾琪塔（圣诞节）」：圣吃180以上出的可以补。年度垫底角色之一，仓管。",
+      "image": "./卡池/圣吃.png"
+    },
+    {
+      "name": "圣妹",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/18 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/圣妹.png"
+    },
+    {
+      "name": "自选4",
+      "start": "2025/08/20 11:00",
+      "end": "2025/08/25 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：「千歌（圣诞节）」：等攻略<br/>「绫音（圣诞节）」：等攻略<br/>「克莉丝提娜（圣诞节）」：等攻略<br/>「秋乃（圣诞节）」：等攻略<br/>「宫子（圣诞节）」：等攻略<br/>",
+      "image": "./卡池/自选4.png"
+    },
+    {
+      "name": "礼yly",
+      "start": "2025/08/25 11:00",
+      "end": "2025/08/29 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/礼yly.png"
     }
   ],
   "sixStar": [
@@ -607,6 +791,13 @@ const configData = {
       "end": "2025/08/30 23:59",
       "shouldShow": true,
       "image": "./六星/tp.png"
+    },
+    {
+      "name": "祈梨",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/31 23:59",
+      "shouldShow": true,
+      "image": "./六星/祈梨.png"
     }
   ],
   "specialWeapons": [
@@ -785,6 +976,54 @@ const configData = {
       "shouldShow": true,
       "advice": "二专开专建议：主JJC，有就开。",
       "image": "./专武/吃货-2.png"
+    },
+    {
+      "name": "圣姐",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/31 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/圣姐.png"
+    },
+    {
+      "name": "圣妹",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/31 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/圣妹.png"
+    },
+    {
+      "name": "圣骑",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/31 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/圣骑.png"
+    },
+    {
+      "name": "圣锤",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/31 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/圣锤-2.png"
+    },
+    {
+      "name": "圣胡",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/31 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/圣胡-2.png"
+    },
+    {
+      "name": "圣千",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/31 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/圣千-2.png"
     }
   ],
   "huodong": [
