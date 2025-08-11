@@ -309,6 +309,38 @@ const configData = {
     {
       "keyword": "年度垫底角色之一，仓管。",
       "className": "highlight-orange"
+    },
+    {
+      "keyword": "需要在开",
+      "className": "highlight-orange"
+    },
+    {
+      "keyword": "必开专武，推荐交球",
+      "className": "highlight-orange"
+    },
+    {
+      "keyword": "以下建议请结合自己的实际钻石来决定，请优先确保接下来10月份的重要限定能拿下。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "有钻建议补",
+      "className": "highlight-blue"
+    },
+    {
+      "keyword": "（9w+）",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "（15w+）",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "（18w+）",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "但终会下岗（抽11月的花仓唯就行），没有的可以忍到她下岗，钻很多再考虑补",
+      "className": "highlight-orange"
     }
   ],
   "activities": [
@@ -743,7 +775,7 @@ const configData = {
       "start": "2025/08/14 12:00",
       "end": "2025/08/18 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：不建议补，角色不弱，但作用极小，仅限钻超多的全收集党抽。",
       "image": "./卡池/圣妹.png"
     },
     {
@@ -751,7 +783,7 @@ const configData = {
       "start": "2025/08/20 11:00",
       "end": "2025/08/25 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：「千歌（圣诞节）」：等攻略<br/>「绫音（圣诞节）」：等攻略<br/>「克莉丝提娜（圣诞节）」：等攻略<br/>「秋乃（圣诞节）」：等攻略<br/>「宫子（圣诞节）」：等攻略<br/>",
+      "advice": "抽卡建议：<br/>以下建议请结合自己的实际钻石来决定，请优先确保接下来10月份的重要限定能拿下。<br/><br/>「千歌（圣诞节）」：不建议补，如今召唤机制几乎无用，专2圣千buff依旧太低。<br/>「绫音（圣诞节）」：有钻建议补（9w+），深域/EX7都能用，会战能打3阶段满补刀，会战水物理刀也能用一段时间。<br/>「克莉丝提娜（圣诞节）」：有钻建议补（15w+），羁绊可使所有克总【Tp上升+3】，属性版本六星克总依旧很常用，圣克2专后也有不错表现。<br/>「秋乃（圣诞节）」：不建议补，截至日服版本一直仓管，目前等待2专翻身。<br/>「宫子（圣诞节）」：不建议补，截至日服版本一直仓管，目前等待2专翻身。<br/>",
       "image": "./卡池/自选4.png"
     },
     {
@@ -759,7 +791,7 @@ const configData = {
       "start": "2025/08/25 11:00",
       "end": "2025/08/29 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：有钻建议补（18w+），短期内还是一线角色，但终会下岗（抽11月的花仓唯就行），没有的可以忍到她下岗，钻很多再考虑补。",
       "image": "./卡池/礼yly.png"
     }
   ],
@@ -982,7 +1014,7 @@ const configData = {
       "start": "2025/08/14 12:00",
       "end": "2025/08/31 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：需要在开，30专可用，出场次数低。",
       "image": "./专武/圣姐.png"
     },
     {
@@ -990,7 +1022,7 @@ const configData = {
       "start": "2025/08/14 12:00",
       "end": "2025/08/31 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：需要在开，出场次数低。",
       "image": "./专武/圣妹.png"
     },
     {
@@ -998,7 +1030,7 @@ const configData = {
       "start": "2025/08/14 12:00",
       "end": "2025/08/31 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：必开专武，推荐交球。光物理坦克，会战和PVE经常用。",
       "image": "./专武/圣骑.png"
     },
     {
@@ -1006,7 +1038,7 @@ const configData = {
       "start": "2025/08/14 12:00",
       "end": "2025/08/31 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：有就开，工会战、pve、深域出场多。",
       "image": "./专武/圣锤-2.png"
     },
     {
@@ -1014,7 +1046,7 @@ const configData = {
       "start": "2025/08/14 12:00",
       "end": "2025/08/31 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：有就开，pve出场率多点。",
       "image": "./专武/圣胡-2.png"
     },
     {
@@ -1022,7 +1054,7 @@ const configData = {
       "start": "2025/08/14 12:00",
       "end": "2025/08/31 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：有就开，主jjc。",
       "image": "./专武/圣千-2.png"
     }
   ],
