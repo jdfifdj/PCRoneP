@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公主连结7月一图流</title>
+    <link rel="stylesheet" href="./css/html.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>公主连结8月一图流</h1>
+            <!-- 背景图片 -->
+            <div class="img-container">
+                <img src="background-image.png" alt="七月活动" class="img-preview"
+                    @click="showImageModal('background-image.png')">
+            </div>
+            <!-- 表格数据 -->
+
+            <div class="card">
+                <table>
+                    <tr>
+                        <th colspan="4" style="background-color: red;">
+                            <h2 style="color: yellow;">基本信息</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="section-title">表格更新时间</div>
+                        </th>
+                        <th>2025年8月7日</th>
+                        <th>
+                            <div class="section-title">图片生成时间</div>
+                        </th>
+                        <th>
+                            <div>{{ currentTime }}</div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>等级上限</th>
+                        <th>292级</th>
+                        <th>专武上限</th>
+                        <th>300级</th>
+                    </tr>
+                    <tr>
+                        <th>装备上限</th>
+                        <th>品级 31</th>
+                        <th>最低装备</th>
+                        <th>品级 30</th>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 倒计时显示 -->
+
+
+            <!-- 动态活动表格 -->
+            <div class="card">
+                <table>
+                    <tr>
+                        <th colspan="4" style="background-color: red;">
+                            <h2 style="color: yellow;">重要活动</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>名称</th>
+                        <th>开始时间</th>
+                        <th>结束时间</th>
+                        <th>当前状态</th>
+                    </tr>
+                    <!-- 添加v-show根据activity.shouldShow控制显示 -->
+                    <tr v-for="(activity, index) in activities" :key="index" v-show="activity.shouldShow">
+                        <th>{{ activity.name }}</th>
+                        <td>{{ formatDate(activity.start) }}</td>
+                        <td>{{ formatDate(activity.end) }}</td>
+                        <td :class="'status-' + activity.status">{{ activity.statusText }}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 修改卡池表格表头 -->
+            <div class="card">
+                <table>
+                    <tr>
+                        <th colspan="3" style="background-color: red;"> <!-- 修改colspan为3 -->
+                            <h2 style="color: yellow;">卡池抽取</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>卡池名称</th>
+                        <th>当前状态</th> <!-- 新增状态列 -->
+                        <th>抽取建议</th>
+                    </tr>
+                    <!-- 为卡池添加时间控制 -->
+                    <tr v-for="(pool, index) in gachaPools" :key="`gacha-${index}`" v-show="pool.shouldShow">
+                        <td>
+                            <div class="img-container">
+                                <img :src="pool.image" :alt="pool.name" class="img-preview"
+                                    @click="showImageModal(pool.image)">
+                            </div>
+                        </td>
+                        <!-- 新增状态单元格 -->
+                        <td :class="'status-' + pool.status">{{ pool.statusText }}</td>
+                        <th v-html="highlightText(pool.advice)"></th>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 本月六星 -->
+            <div class="card">
+                <table>
+                    <tr>
+                        <th colspan="1" style="background-color: red;">
+                            <h2 style="color: yellow;">本月六星</h2>
+                        </th>
+                    </tr>
+                    <!-- 为六星添加时间控制 -->
+                    <tr v-for="(star, index) in sixStar" :key="`six-${index}`" v-show="star.shouldShow">
+                        <td>
+                            <div class="img-container">
+                                <img :src="star.image" :alt="star.name" class="img-preview"
+                                    @click="showImageModal(star.image)">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 专武表格 -->
+            <div class="card">
+                <table>
+                    <tr>
+                        <th colspan="2" style="background-color: red;">
+                            <h2 style="color: yellow;">本月专武</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>开专角色</th>
+                        <th>开专建议</th>
+                    </tr>
+                    <!-- 为专武添加时间控制 -->
+                    <tr v-for="(weapon, index) in specialWeapons" :key="`weapon-${index}`" v-show="weapon.shouldShow">
+                        <td>
+                            <div class="img-container">
+                                <img :src="weapon.image" :alt="weapon.name" class="img-preview"
+                                    @click="showImageModal(weapon.image)">
+                            </div>
+                        </td>
+                        <th v-html="highlightText(weapon.advice)"></th>
+                    </tr>
+                </table>
+            </div>
+
+
+            <!-- 活动赠送角色 -->
+            <div class="card">
+                <table>
+                    <tr>
+                        <th colspan="2" style="background-color: red;">
+                            <h2 style="color: yellow;">活动赠送角色</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>活动角色</th>
+                        <th>刷取建议</th>
+                    </tr>
+                    <!-- 为活动角色添加时间控制 -->
+                    <tr v-for="(weapon, index) in huodong" :key="`weapon-${index}`" v-show="weapon.shouldShow">
+                        <td>
+                            <div class="img-container">
+                                <img :src="weapon.image" :alt="weapon.name" class="img-preview"
+                                    @click="showImageModal(weapon.image)">
+                            </div>
+                        </td>
+                        <th v-html="highlightText(weapon.advice)"></th>
+                    </tr>
+                </table>
+            </div>
+
+            <div style="text-align:center;">
+                <a href="./index.html" style="color:red;text-decoration:none;">
+                    <h3>点击返回首页</h3>
+                </a>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>公主连结一图流 - 展示版</p>
+            <p>攻略资料来源如下</p>
+            <p><a href="https://space.bilibili.com/25586360">B站：Columba-丘比</p>
+            <p><a href="https://space.bilibili.com/2574869">B站：南条鸡腿子</p>
+            <p><a href="https://github.com/jdfifdj/PCRoneP">项目地址：Github</p>
+            <p><a href="https://console.tencentcloud.com/edgeone">网站搭建：EdgeOne</p>
+        </footer>
+
+        <!-- 图片预览弹窗 -->
+        <div class="modal" id="imageModal" v-if="showModal">
+            <div class="modal-content">
+                <span class="close-btn" @click="closeImageModal">&times;</span>
+                <img :src="modalImage" alt="预览" style="max-width: 100%; max-height: 90vh;">
+            </div>
+        </div>
+    </div>
+    <script src="./config.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: configData,
+            methods: {
+                updateCurrentTime() {
+                    const now = new Date();
+                    const year = now.getFullYear();
+                    const month = String(now.getMonth() + 1).padStart(2, '0');
+                    const day = String(now.getDate()).padStart(2, '0');
+                    const hours = String(now.getHours()).padStart(2, '0');
+                    const minutes = String(now.getMinutes()).padStart(2, '0');
+                    const seconds = String(now.getSeconds()).padStart(2, '0');
+
+                    this.currentTime = `${year} 年 ${month} 月 ${day} 日 ${hours}:${minutes}:${seconds}`;
+                },
+
+                highlightText(text) {
+                    // 对每个关键词进行转义处理
+                    this.highlightKeywords.forEach(item => {
+                        const escapedKeyword = item.keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                        const regex = new RegExp(escapedKeyword, 'g');
+                        text = text.replace(regex, `<span class="${item.className}">${item.keyword}</span>`);
+                    });
+                    return text;
+                },
+                formatDate(dateStr) {
+                    return dateStr.replace(/(\d{4})\/(\d{2})\/(\d{2})/g, '$1年$2月$3日');
+                },
+                updateActivityStatus() {
+                    const now = new Date();
+
+                    // 更新活动状态
+                    this.activities.forEach(activity => {
+                        const start = new Date(activity.start);
+                        const end = new Date(activity.end);
+
+                        // 计算时间差（毫秒）
+                        const daysBeforeStart = (start - now) / (1000 * 60 * 60 * 24);
+                        const daysAfterEnd = (now - end) / (1000 * 60 * 60 * 24);
+
+                        if (now < start) {
+                            activity.status = 'unstarted';
+                            activity.statusText = '未开始';
+                            // 距离开始超过10天则隐藏
+                            activity.shouldShow = daysBeforeStart <= 8;
+                        } else if (now > end) {
+                            activity.status = 'ended';
+                            activity.statusText = '已结束';
+                            // 距离结束超过2天则隐藏
+                            activity.shouldShow = daysAfterEnd <= 1;
+                        } else {
+                            activity.status = 'ongoing';
+                            activity.statusText = '进行中';
+                            activity.shouldShow = true;
+                        }
+                    });
+
+                    // 更新卡池显示状态
+                    this.gachaPools.forEach(pool => {
+                        const start = new Date(pool.start);
+                        const end = new Date(pool.end);
+                        const daysBeforeStart = (start - now) / (1000 * 60 * 60 * 24);
+                        const daysAfterEnd = (now - end) / (1000 * 60 * 60 * 24); // 正确定义
+
+                        if (now < start) {
+                            pool.status = 'unstarted';
+                            pool.statusText = '未开始';
+                        } else if (now > end) {
+                            pool.status = 'ended';
+                            pool.statusText = '已结束';
+                        } else {
+                            pool.status = 'ongoing';
+                            pool.statusText = '进行中';
+                        }
+
+                        // 开始前10天内显示，开始后2天内显示
+                        pool.shouldShow = (daysBeforeStart <= 15 && daysBeforeStart > 0) ||
+                            (daysAfterEnd <= 1 && daysAfterEnd >= 0) ||
+                            (now >= start && now <= end);
+                    });
+
+                    this.sixStar.forEach(star => {
+                        const start = new Date(star.start);
+                        const end = new Date(star.end);
+                        const daysBeforeStart = (start - now) / (1000 * 60 * 60 * 24);
+                        const daysAfterEnd = (now - end) / (1000 * 60 * 60 * 24); // 新增
+
+                        star.shouldShow = (daysBeforeStart <= 8 && daysBeforeStart > 0) ||
+                            (daysAfterEnd <= 1 && daysAfterEnd >= 0) ||
+                            (now >= start && now <= end);
+                    });
+
+                    this.huodong.forEach(role => {
+                        const start = new Date(role.start);
+                        const end = new Date(role.end);
+                        const daysBeforeStart = (start - now) / (1000 * 60 * 60 * 24);
+                        const daysAfterEnd = (now - end) / (1000 * 60 * 60 * 24); // 新增
+
+                        role.shouldShow = (daysBeforeStart <= 2 && daysBeforeStart > 0) ||
+                            (daysAfterEnd <= 2 && daysAfterEnd >= 0) ||
+                            (now >= start && now <= end);
+                    });
+
+                    this.specialWeapons.forEach(weapon => {
+                        const start = new Date(weapon.start);
+                        const end = new Date(weapon.end);
+                        const daysBeforeStart = (start - now) / (1000 * 60 * 60 * 24);
+                        const daysAfterEnd = (now - end) / (1000 * 60 * 60 * 24); // 新增
+
+                        weapon.shouldShow = (daysBeforeStart <= 5 && daysBeforeStart > 0) ||
+                            (daysAfterEnd <= 1 && daysAfterEnd >= 0) ||
+                            (now >= start && now <= end);
+                    });
+
+                },
+                showImageModal(imageSrc) {
+                    this.modalImage = imageSrc;
+                    this.showModal = true;
+                },
+                closeImageModal() {
+                    this.showModal = false;
+                }
+            },
+            mounted() {
+                // 初始化时间更新
+                this.updateCurrentTime();
+                setInterval(this.updateCurrentTime, 1000);
+
+                // 初始化活动状态
+                this.updateActivityStatus();
+                // 每小时更新一次活动状态
+                setInterval(this.updateActivityStatus, 3600000);
+            }
+        });
+    </script>
+</body>
+
+</html>

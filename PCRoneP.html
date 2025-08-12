@@ -4,8 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>公主连结7月一图流</title>
+    <title id="page-title">公主连结7月一图流</title>
     <link rel="stylesheet" href="./css/html.css">
+    <script>
+        // 获取当前月份并更新标题
+        document.addEventListener('DOMContentLoaded', function() {
+            const now = new Date();
+            const month = now.getMonth() + 1; // getMonth()返回0-11
+            const monthName = month + '月';
+            
+            // 更新title标签
+            document.getElementById('page-title').textContent = '公主连结' + monthName + '一图流';
+            
+            // 更新h1标签
+            document.querySelector('h1').textContent = '公主连结' + monthName + '一图流';
+        });
+    </script>
 </head>
 
 <body>
@@ -58,26 +72,24 @@
 
             <!-- 动态活动表格 -->
             <div class="card">
-                <table>
-                    <tr>
-                        <th colspan="4" style="background-color: red;">
-                            <h2 style="color: yellow;">重要活动</h2>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>名称</th>
-                        <th>开始时间</th>
-                        <th>结束时间</th>
-                        <th>当前状态</th>
-                    </tr>
-                    <!-- 添加v-show根据activity.shouldShow控制显示 -->
-                    <tr v-for="(activity, index) in activities" :key="index" v-show="activity.shouldShow">
-                        <th>{{ activity.name }}</th>
-                        <td>{{ formatDate(activity.start) }}</td>
-                        <td>{{ formatDate(activity.end) }}</td>
-                        <td :class="'status-' + activity.status">{{ activity.statusText }}</td>
-                    </tr>
-                </table>
+                <h2 style="background-color: red; color: yellow; padding: 10px; text-align: center; border-radius: 5px;">重要活动</h2>
+                <div class="activity-list">
+                    <div v-for="(activity, index) in activities" :key="index" v-show="activity.shouldShow" class="activity-item">
+                        <div class="activity-icon">
+                            <!-- 这里可以添加活动图标 -->
+                            <img v-if="activity.icon" :src="activity.icon" alt="活动图标" class="activity-icon-img">
+                        </div>
+                        <div class="activity-content">
+                            <h3>{{ activity.name }}</h3>
+                            <div class="activity-time">
+                                {{ formatDate(activity.start) }} - {{ formatDate(activity.end) }}
+                            </div>
+                            <div class="activity-countdown" :class="getCountdownText(activity).class">
+                                {{ getCountdownText(activity).text }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- 修改卡池表格表头 -->
@@ -221,6 +233,46 @@
                     const seconds = String(now.getSeconds()).padStart(2, '0');
 
                     this.currentTime = `${year} 年 ${month} 月 ${day} 日 ${hours}:${minutes}:${seconds}`;
+                },
+
+                // 添加缺失的getCountdownText函数
+                getCountdownText(activity) {
+                    const now = new Date();
+                    const start = new Date(activity.start);
+                    const end = new Date(activity.end);
+                    const oneDay = 24 * 60 * 60 * 1000;
+                    const oneHour = 60 * 60 * 1000;
+                    const oneMinute = 60 * 1000;
+
+                    if (now < start) {
+                        // 活动未开始
+                        const diff = start - now;
+                        const days = Math.floor(diff / oneDay);
+                        const hours = Math.floor((diff % oneDay) / oneHour);
+                        const minutes = Math.floor((diff % oneHour) / oneMinute);
+                        return {
+                            class: 'countdown-unstarted',
+                            text: `距开始: ${days}天${hours}小时${minutes}分`
+                        };
+                    } else if (now > end) {
+                        // 活动已结束
+                        const diff = now - end;
+                        const days = Math.floor(diff / oneDay);
+                        return {
+                            class: 'countdown-ended',
+                            text: `已结束: ${days}天`
+                        };
+                    } else {
+                        // 活动进行中
+                        const diff = end - now;
+                        const days = Math.floor(diff / oneDay);
+                        const hours = Math.floor((diff % oneDay) / oneHour);
+                        const minutes = Math.floor((diff % oneHour) / oneMinute);
+                        return {
+                            class: 'countdown-ongoing',
+                            text: `剩余: ${days}天${hours}小时${minutes}分`
+                        };
+                    }
                 },
 
                 highlightText(text) {

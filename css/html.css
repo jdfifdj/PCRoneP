@@ -1,4 +1,4 @@
- /* 基础样式 */
+/* 基础样式 */
  * {
     box-sizing: border-box;
     margin: 0;
@@ -266,4 +266,113 @@ footer {
 
 .img-preview:hover {
     transform: scale(1.05);
+}
+
+
+/* 活动列表样式 */
+.activity-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* 减小间距 */
+}
+
+.activity-item {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px; /* 减小内边距 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #dc3545;
+    transition: transform 0.3s;
+}
+
+.activity-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.activity-icon {
+    min-width: 40px; /* 减小图标容器大小 */
+    height: 40px; /* 减小图标容器大小 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* 减小图标容器大小 */
+}
+
+.activity-icon-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.activity-content {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.activity-content h3 {
+    font-size: 14px; /* 减小标题字体大小 */
+    margin-bottom: 5px; /* 减小标题下边距 */
+    color: #333;
+}
+
+.activity-time {
+    font-size: 12px; /* 减小时间字体大小 */
+    color: #666;
+    margin-bottom: 3px; /* 减小时间下边距 */
+}
+
+.activity-countdown {
+    font-size: 12px; /* 减小倒计时字体大小 */
+    font-weight: bold;
+}
+
+.countdown-unstarted {
+    color: #e67e22;
+}
+
+.countdown-ongoing {
+    color: #27ae60;
+}
+
+.countdown-ended {
+    color: #e74c3c;
+}
+
+/* 添加图标样式类 */
+.icon-drive {
+    content: "🚗";
+}
+
+.icon-money {
+    content: "💰";
+}
+
+.icon-dungeon {
+    content: "🏆";
+}
+
+.icon-investigation {
+    content: "🔍";
+}
+
+.icon-exploration {
+    content: "🗺️";
+}
+
+.icon-normal {
+    content: "🎮";
+}
+
+.icon-master {
+    content: "👑";
+}
+
+.icon-dimension {
+    content: "🌌";
+}
+
+.icon-gacha {
+    content: "🎁";
 }

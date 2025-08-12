@@ -407,8 +407,7 @@
             document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
 
-            // 修复引用错误，使用tabName参数获取对应的标签
-            document.querySelector('[onclick="switchTab(\'' + tabName + '\')"]').classList.add('active');
+            event.target.classList.add('active');
             document.getElementById(tabName).classList.add('active');
 
             if (tabName === 'export') {
@@ -438,147 +437,73 @@
                 return;
             }
 
-            // 预定义图片路径选项
-            const imagePaths = {
-    huodong: [
-        "./活动角色/h1.png"
-    ],
-    gachaPools: [
-        "./卡池/万圣智.png",
-        "./卡池/兔克.png",
-        "./卡池/圣吃.png",
-        "./卡池/圣妹.png",
-        "./卡池/妹三家.png",
-        "./卡池/姬塔兔兔.png",
-        "./卡池/火电.png",
-        "./卡池/狗妈.png",
-        "./卡池/礼yly.png",
-        "./卡池/自选3.png",
-        "./卡池/自选4.png",
-        "./卡池/蝶妈.png"
-    ],
-    sixStar: [
-        "./六星/61.png",
-        "./六星/tp.png",
-        "./六星/狼.png",
-        "./六星/祈梨.png",
-        "./六星/驴.png"
-    ],
-    activities: [
-        "./图标/主线关卡.png",
-        "./图标/团队战.png",
-        "./图标/困难关卡.png",
-        "./图标/圣迹调查.png",
-        "./图标/大师币.png",
-        "./图标/妈.png",
-        "./图标/宝箱.png",
-        "./图标/庆典.png",
-        "./图标/扭蛋.png",
-        "./图标/探索.png",
-        "./图标/竞技场.png",
-        "./图标/露娜塔.png"
-    ],
-    specialWeapons: [
-        "./专武/万圣七七香.png",
-        "./专武/万圣智.png",
-        "./专武/万圣松鼠.png",
-        "./专武/兔克.png",
-        "./专武/凯露-2.png",
-        "./专武/吃货-2.png",
-        "./专武/圣千-2.png",
-        "./专武/圣妹.png",
-        "./专武/圣姐.png",
-        "./专武/圣胡-2.png",
-        "./专武/圣锤-2.png",
-        "./专武/圣骑.png",
-        "./专武/大眼-2.png",
-        "./专武/奶牛-2.png",
-        "./专武/奶龙.png",
-        "./专武/布丁-2.png",
-        "./专武/忍-2.png",
-        "./专武/探险熊.png",
-        "./专武/暴击弓-2.png",
-        "./专武/灰狐狸.png",
-        "./专武/狂虎.png",
-        "./专武/蝶妈.png"
-    ]
-};
-
-            // 生成图片选择框的辅助函数
-            function generateImageSelect(type, index, currentImage, imageKey = 'image') {
-                const paths = imagePaths[type] || [];
-                let html = '<div class="form-group">\n' +
-                    '    <label>' + (imageKey === 'icon' ? '图标' : '图片') + '路径:</label>\n' +
-                    '    <select onchange="updateItem(\'' + type + '\', ' + index + ', \'' + imageKey + '\', this.value)">\n';
-                
-                paths.forEach(path => {
-                    const selected = currentImage === path ? 'selected' : '';
-                    html += '<option value="' + path + '" ' + selected + '>' + path + '</option>\n';
-                });
-                
-                html += '    </select>\n' +
-                        '</div>';
-
-                return html;
-            }
-
-            container.innerHTML = items.map((item, index) => {
-                let commonFields = `
-                    <div class="item-card">
-                        <div class="form-group">
-                            <label>名称:</label>
-                            <input type="text" value="${item.name || ''}" onchange="updateItem('${type}', ${index}, 'name', this.value)" placeholder="名称">
-                        </div>`;
-
-                let timeFields = `
-                        <div class="form-group">
-                            <label>开始时间:</label>
-                            <input type="text" value="${item.start || ''}" onchange="updateItem('${type}', ${index}, 'start', this.value)" placeholder="例如: 2025/08/29 05:00">
-                        </div>
-                        <div class="form-group">
-                            <label>结束时间:</label>
-                            <input type="text" value="${item.end || ''}" onchange="updateItem('${type}', ${index}, 'end', this.value)" placeholder="例如: 2025/09/13 04:59">
-                        </div>`;
-
-                let adviceField = '';
-                if (type === 'gachaPools' || type === 'specialWeapons' || type === 'huodong') {
-                    adviceField = `
-                        <div class="form-group">
-                            <label>${type === 'gachaPools' ? '抽卡' : type === 'specialWeapons' ? '开专' : '刷取'}建议:</label>
-                            <textarea onchange="updateItem('${type}', ${index}, 'advice', this.value)" placeholder="建议内容">${item.advice || ''}</textarea>
-                        </div>`;
-                }
-
-                let imageField = '';
-                if (type === 'gachaPools' || type === 'sixStar' || type === 'specialWeapons' || type === 'huodong') {
-                    imageField = generateImageSelect(type, index, item.image || '');
-                } else if (type === 'activities') {
-                    imageField = generateImageSelect(type, index, item.icon || '', 'icon');
-                }
-
-                let switchFields = `
-                        <div class="form-group form-switch">
-                            <label>
-                                <input type="checkbox" ${item.shouldShow ? 'checked' : ''} onchange="updateItem('${type}', ${index}, 'shouldShow', this.checked)">
-                                显示
-                            </label>
-                        </div>
+            container.innerHTML = items.map((item, index) => `
+                <div class="item">
+                    <div class="item-header">
+                        <strong>${item.name || '未命名'}</strong>
                         <button class="btn-danger" onclick="removeItem('${type}', ${index})">🗑️ 删除</button>
-                    </div>`;
+                    </div>
+                    ${renderForm(type, item, index)}
+                </div>
+            `).join('');
+        }
 
-                switch (type) {
-                    case 'activities':
-                        return commonFields + imageField + timeFields + switchFields;
-                    case 'gachaPools':
-                    case 'specialWeapons':
-                    case 'huodong':
-                        return commonFields + adviceField + imageField + timeFields + switchFields;
-                    case 'sixStar':
-                        return commonFields + imageField + timeFields + switchFields;
-                    default:
-                        return commonFields;
-                }
-            }).join('');
+        // 渲染表单
+        function renderForm(type, item, index) {
+            const commonFields = `
+                <div class="form-group">
+                    <label>名称</label>
+                    <input type="text" value="${item.name || ''}" onchange="updateItem('${type}', ${index}, 'name', this.value)">
+                </div>
+            `;
+
+            const timeFields = `
+                <div class="form-group">
+                    <label>开始时间</label>
+                    <input type="text" value="${item.start || ''}" onchange="updateItem('${type}', ${index}, 'start', this.value)" placeholder="2025/07/20 12:00">
+                </div>
+                <div class="form-group">
+                    <label>结束时间</label>
+                    <input type="text" value="${item.end || ''}" onchange="updateItem('${type}', ${index}, 'end', this.value)" placeholder="2025/07/20 23:59">
+                </div>
+            `;
+
+            const switchFields = `
+                <div class="form-group">
+                    <label>是否显示</label>
+                    <select onchange="updateItem('${type}', ${index}, 'shouldShow', this.value === 'true')">
+                        <option value="true" ${item.shouldShow !== false ? 'selected' : ''}>是</option>
+                        <option value="false" ${item.shouldShow === false ? 'selected' : ''}>否</option>
+                    </select>
+                </div>
+            `;
+
+            const imageField = `
+                <div class="form-group">
+                    <label>图片路径</label>
+                    <input type="text" value="${item.image || ''}" onchange="updateItem('${type}', ${index}, 'image', this.value)">
+                </div>
+            `;
+
+            const adviceField = `
+                <div class="form-group">
+                    <label>建议内容</label>
+                    <textarea onchange="updateItem('${type}', ${index}, 'advice', this.value)">${item.advice || ''}</textarea>
+                </div>
+            `;
+
+            switch (type) {
+                case 'activities':
+                    return commonFields + timeFields + switchFields;
+                case 'gachaPools':
+                case 'specialWeapons':
+                case 'huodong':
+                    return commonFields + adviceField + imageField + timeFields + switchFields;
+                case 'sixStar':
+                    return commonFields + imageField + timeFields + switchFields;
+                default:
+                    return commonFields;
+            }
         }
 
         // 渲染关键词
@@ -623,102 +548,19 @@
                 shouldShow: true
             };
 
-            // 预定义图片路径选项
-            const imagePaths = {
-    huodong: [
-        "./活动角色/h1.png"
-    ],
-    gachaPools: [
-        "./卡池/万圣智.png",
-        "./卡池/兔克.png",
-        "./卡池/圣吃.png",
-        "./卡池/圣妹.png",
-        "./卡池/妹三家.png",
-        "./卡池/姬塔兔兔.png",
-        "./卡池/火电.png",
-        "./卡池/狗妈.png",
-        "./卡池/礼yly.png",
-        "./卡池/自选3.png",
-        "./卡池/自选4.png",
-        "./卡池/蝶妈.png"
-    ],
-    sixStar: [
-        "./六星/61.png",
-        "./六星/tp.png",
-        "./六星/狼.png",
-        "./六星/祈梨.png",
-        "./六星/驴.png"
-    ],
-    activities: [
-        "./图标/主线关卡.png",
-        "./图标/团队战.png",
-        "./图标/困难关卡.png",
-        "./图标/圣迹调查.png",
-        "./图标/大师币.png",
-        "./图标/妈.png",
-        "./图标/宝箱.png",
-        "./图标/庆典.png",
-        "./图标/扭蛋.png",
-        "./图标/探索.png",
-        "./图标/竞技场.png",
-        "./图标/露娜塔.png"
-    ],
-    specialWeapons: [
-        "./专武/万圣七七香.png",
-        "./专武/万圣智.png",
-        "./专武/万圣松鼠.png",
-        "./专武/兔克.png",
-        "./专武/凯露-2.png",
-        "./专武/吃货-2.png",
-        "./专武/圣千-2.png",
-        "./专武/圣妹.png",
-        "./专武/圣姐.png",
-        "./专武/圣胡-2.png",
-        "./专武/圣锤-2.png",
-        "./专武/圣骑.png",
-        "./专武/大眼-2.png",
-        "./专武/奶牛-2.png",
-        "./专武/奶龙.png",
-        "./专武/布丁-2.png",
-        "./专武/忍-2.png",
-        "./专武/探险熊.png",
-        "./专武/暴击弓-2.png",
-        "./专武/灰狐狸.png",
-        "./专武/狂虎.png",
-        "./专武/蝶妈.png"
-    ]
-};
 
-            // 生成表单HTML的辅助函数
-            function generateImageSelect(type, currentImage) {
-                const paths = imagePaths[type] || [];
-                let html = '<div class="form-group">\n' +
-                    '    <label>图片路径:</label>\n' +
-                    '    <select onchange="updateItem(\'' + type + '\', ' + configData[type].length + ', \'image\', this.value)">\n';
-                
-                paths.forEach(path => {
-                    const selected = currentImage === path ? 'selected' : '';
-                    html += '        <option value="' + path + '" ' + selected + '>' + path + '</option>\n';
-                });
-                
-                html += '    </select>\n' +
-                        '</div>';
-                return html;
-            }
 
             if (type === 'gachaPools') {
                 newItem.advice = '抽卡建议：等攻略';
-                newItem.image = imagePaths.gachaPools[0] || './卡池/image.png';
+                newItem.image = './卡池/image.png';
             } else if (type === 'specialWeapons') {
                 newItem.advice = '开专建议：等攻略';
-                newItem.image = imagePaths.specialWeapons[0] || './专武/image.png';
+                newItem.image = './专武/image.png';
             } else if (type === 'sixStar') {
-                newItem.image = imagePaths.sixStar[0] || './六星/image.png';
+                newItem.image = './六星/image.png';
             } else if (type === 'huodong') {
                 newItem.advice = '等攻略';
-                newItem.image = imagePaths.huodong[0] || './活动角色/image.png';
-            } else if (type === 'activities') {
-                newItem.icon = imagePaths.activities[0] || './图标/露娜塔.png';
+                newItem.image = './活动角色/image.png';
             }
 
             configData[type].push(newItem);
@@ -831,4 +673,5 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
         });
     </script>
 </body>
+
 </html>
