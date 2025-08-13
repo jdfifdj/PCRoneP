@@ -535,7 +535,7 @@ const configData = {
       "start": "2025/08/20 11:00",
       "end": "2025/08/25 10:59",
       "shouldShow": true,
-      "icon": "./图标/庆典.png"
+      "icon": "./图标/扭蛋.png"
     },
     {
       "name": "圣诞节活动登录活动",

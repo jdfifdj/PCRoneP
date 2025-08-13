@@ -1,9 +1,17 @@
+/* 引入OPPO Sans 4.0字体 */
+@font-face {
+    font-family: 'OPPO Sans 4.0';
+    src: url('../字体/OPPO Sans 4.0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* 基础样式 */
  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-family: 'OPPO Sans 4.0', 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
 body {
@@ -20,10 +28,56 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+/* 响应式容器调整 */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        border-radius: 8px;
+    }
+}
+
+/* 手机端进一步调整 */
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #f5f5f5;
+    }
+    body {
+        padding: 5px;
+    }
+}
+
+/* 其他原有样式保持不变 */
 h1 {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
+}
+
+/* 响应式标题大小调整 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
 }
 
 /* 添加多种高亮样式 */
@@ -75,14 +129,10 @@ h1 {
 /* 表格样式 */
 table {
     border: 2px solid #333;
-    /* 外边框加粗 */
     border-collapse: collapse;
     margin: 30px auto;
-    /* 水平居中 */
     width: 90%;
-    /* 保留边距 */
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    /* 添加投影 */
 }
 
 th,
@@ -98,13 +148,43 @@ th {
     font-weight: bold;
 }
 
-/* 响应式表格 */
+/* 响应式表格 - 原有样式 */
 @media (max-width: 768px) {
-
+    table {
+        width: 100%;
+        margin: 15px 0;
+    }
     th,
     td {
         padding: 8px 5px;
         font-size: 14px;
+    }
+}
+
+/* 手机端表格优化 */
+@media (max-width: 480px) {
+    /* 为表格添加滚动容器 */
+    .card {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 10px 5px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+    }
+    table {
+        min-width: 400px;
+        width: 100%;
+        font-size: 12px;
+        border: 1px solid #333;
+    }
+    th,
+    td {
+        padding: 6px 3px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+    }
+    th {
+        background-color: #f2f2f2;
     }
 }
 
@@ -273,14 +353,14 @@ footer {
 .activity-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px; /* 减小间距 */
+    gap: 10px;
 }
 
 .activity-item {
     display: flex;
     background-color: #fff;
     border-radius: 8px;
-    padding: 10px; /* 减小内边距 */
+    padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-left: 4px solid #dc3545;
     transition: transform 0.3s;
@@ -292,12 +372,12 @@ footer {
 }
 
 .activity-icon {
-    min-width: 40px; /* 减小图标容器大小 */
-    height: 40px; /* 减小图标容器大小 */
+    min-width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px; /* 减小图标容器大小 */
+    width: 40px;
 }
 
 .activity-icon-img {
@@ -311,20 +391,27 @@ footer {
     margin-left: 10px;
 }
 
+/* 重要活动标题加粗 */
 .activity-content h3 {
-    font-size: 14px; /* 减小标题字体大小 */
-    margin-bottom: 5px; /* 减小标题下边距 */
+    font-size: 14px;
+    margin-bottom: 5px;
     color: #333;
+    font-weight: bold;
+}
+
+/* 剩余时间加粗 */
+.activity-countdown {
+    font-weight: bold;
 }
 
 .activity-time {
-    font-size: 12px; /* 减小时间字体大小 */
+    font-size: 12px;
     color: #666;
-    margin-bottom: 3px; /* 减小时间下边距 */
+    margin-bottom: 3px;
 }
 
 .activity-countdown {
-    font-size: 12px; /* 减小倒计时字体大小 */
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -375,4 +462,71 @@ footer {
 
 .icon-gacha {
     content: "🎁";
+}
+
+/* 响应式活动列表 */
+@media (max-width: 768px) {
+    .activity-list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 8px;
+    }
+    .activity-item {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .activity-item {
+        padding: 6px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .activity-icon {
+        min-width: 30px;
+        height: 30px;
+        width: 30px;
+        margin-bottom: 5px;
+    }
+    .activity-content {
+        margin-left: 0;
+    }
+    .activity-content h3 {
+        font-size: 13px;
+        margin-bottom: 3px;
+    }
+    .activity-time,
+    .activity-countdown {
+        font-size: 11px;
+    }
+}
+
+/* 图片样式优化 */
+.img-container {
+    max-width: 1200px;
+    margin: 10px auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* 手机端图片调整 */
+@media (max-width: 480px) {
+    .img-container {
+        margin: 5px 0;
+        padding: 0 5px;
+    }
+    .img-preview {
+        transition: none;
+    }
+    .img-preview:hover {
+        transform: none; /* 手机端移除悬停效果 */
+    }
 }
