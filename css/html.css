@@ -374,8 +374,13 @@ footer {
 /* 活动列表样式 */
 .activity-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 6px;
+}
+
+/* 专武列表样式 - 保持2列 */
+.card:has(.special-weapon-item) .activity-list {
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .activity-item {
@@ -491,7 +496,7 @@ footer {
 /* 响应式活动列表 */
 @media (max-width: 768px) {
     .activity-list {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 6px;
     }
 
@@ -506,6 +511,11 @@ footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    /* 保持专武列表在手机设备下为2列 */
+    .card:has(.special-weapon-item) .activity-list {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .activity-icon {
