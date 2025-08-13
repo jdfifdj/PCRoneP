@@ -141,28 +141,26 @@
             </div>
 
             <!-- 专武表格 -->
+            <!-- 专武部分 - 应用增大尺寸的样式 -->
             <div class="card">
-                <table>
-                    <tr>
-                        <th colspan="2" style="background-color: red;">
-                            <h2 style="color: yellow;">本月专武</h2>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>开专角色</th>
-                        <th>开专建议</th>
-                    </tr>
-                    <!-- 为专武添加时间控制 -->
-                    <tr v-for="(weapon, index) in specialWeapons" :key="`weapon-${index}`" v-show="weapon.shouldShow">
-                        <td>
-                            <div class="img-container">
-                                <img :src="weapon.image" :alt="weapon.name" class="img-preview"
-                                    @click="showImageModal(weapon.image)">
+                <h2 style="background-color: red; color: yellow; padding: 10px; text-align: center; border-radius: 5px;">本月专武</h2>
+                <div class="activity-list">
+                    <div v-for="(weapon, index) in specialWeapons" :key="`weapon-${index}`" v-show="weapon.shouldShow" class="activity-item special-weapon-item">
+                        <div class="activity-icon special-weapon-icon">
+                            <img :src="weapon.image" alt="专武图标" class="activity-icon-img">
+                        </div>
+                        <div class="activity-content special-weapon-content">
+                            <h3>{{ weapon.name }}</h3>
+                            <div class="activity-time special-weapon-time">
+                                {{ formatDate(weapon.start) }} - {{ formatDate(weapon.end) }}
                             </div>
-                        </td>
-                        <th v-html="highlightText(weapon.advice)"></th>
-                    </tr>
-                </table>
+                            <div class="activity-countdown special-weapon-countdown" :class="getCountdownText(weapon).class">
+                                {{ getCountdownText(weapon).text }}
+                            </div>
+                            <div class="activity-advice special-weapon-advice" v-html="highlightText(weapon.advice)"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
@@ -244,34 +242,64 @@
                     const oneHour = 60 * 60 * 1000;
                     const oneMinute = 60 * 1000;
 
+                    // 检查是否是专武
+                    const isSpecialWeapon = activity.category === 'specialWeapon';
+
                     if (now < start) {
-                        // 活动未开始
                         const diff = start - now;
                         const days = Math.floor(diff / oneDay);
                         const hours = Math.floor((diff % oneDay) / oneHour);
                         const minutes = Math.floor((diff % oneHour) / oneMinute);
-                        return {
-                            class: 'countdown-unstarted',
-                            text: `距开始: ${days}天${hours}小时${minutes}分`
-                        };
+
+                        if (isSpecialWeapon) {
+                            // 专武未开始
+                            return {
+                                class: 'countdown-unstarted',
+                                text: `距开专还有: ${days}天${hours}小时${minutes}分`
+                            };
+                        } else {
+                            // 活动未开始
+                            return {
+                                class: 'countdown-unstarted',
+                                text: `距开始: ${days}天${hours}小时${minutes}分`
+                            };
+                        }
                     } else if (now > end) {
-                        // 活动已结束
                         const diff = now - end;
                         const days = Math.floor(diff / oneDay);
-                        return {
-                            class: 'countdown-ended',
-                            text: `已结束: ${days}天`
-                        };
+
+                        if (isSpecialWeapon) {
+                            // 专武已结束
+                            return {
+                                class: 'countdown-ended',
+                                text: `本月已开专时间: ${this.formatDate(activity.start)} (已结束: ${days}天)`
+                            };
+                        } else {
+                            // 活动已结束
+                            return {
+                                class: 'countdown-ended',
+                                text: `已结束: ${days}天`
+                            };
+                        }
                     } else {
-                        // 活动进行中
                         const diff = end - now;
                         const days = Math.floor(diff / oneDay);
                         const hours = Math.floor((diff % oneDay) / oneHour);
                         const minutes = Math.floor((diff % oneHour) / oneMinute);
-                        return {
-                            class: 'countdown-ongoing',
-                            text: `剩余: ${days}天${hours}小时${minutes}分`
-                        };
+
+                        if (isSpecialWeapon) {
+                            // 专武进行中
+                            return {
+                                class: 'countdown-ongoing',
+                                text: `已开专时间： ${days}天${hours}小时${minutes}分`
+                            };
+                        } else {
+                            // 活动进行中
+                            return {
+                                class: 'countdown-ongoing',
+                                text: `剩余: ${days}天${hours}小时${minutes}分`
+                            };
+                        }
                     }
                 },
 

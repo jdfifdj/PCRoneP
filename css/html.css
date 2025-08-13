@@ -530,3 +530,83 @@ footer {
         transform: none; /* 手机端移除悬停效果 */
     }
 }
+
+/* 专武建议样式 */
+.activity-advice {
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* 手机端专武建议调整 */
+@media (max-width: 480px) {
+    .activity-advice {
+        font-size: 11px;
+    }
+}
+
+/* 专武部分样式调整 */
+.special-weapon-item {
+    padding: 15px;
+}
+
+.special-weapon-icon {
+    min-width: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.special-weapon-content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.special-weapon-time {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.special-weapon-countdown {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.special-weapon-advice {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* 响应式媒体查询 - 平板设备 */
+@media (max-width: 768px) {
+    .special-weapon-icon {
+        min-width: 80px;
+        height: 80px;
+        width: 80px;
+    }
+    .special-weapon-content h3 {
+        font-size: 16px;
+    }
+    .special-weapon-time,
+    .special-weapon-countdown,
+    .special-weapon-advice {
+        font-size: 14px;
+    }
+}
+
+/* 响应式媒体查询 - 手机设备 */
+@media (max-width: 480px) {
+    .special-weapon-icon {
+        min-width: 60px;
+        height: 60px;
+        width: 60px;
+    }
+    .special-weapon-content h3 {
+        font-size: 14px;
+    }
+    .special-weapon-time,
+    .special-weapon-countdown,
+    .special-weapon-advice {
+        font-size: 13px;
+    }
+}

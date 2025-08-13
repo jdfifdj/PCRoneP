@@ -619,94 +619,105 @@ const configData = {
   ],
   "specialWeapons": [
     {
-      "name": "蝶妈",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/30 23:59",
-      "shouldShow": true,
-      "advice": "开专建议：必开，推荐交球。",
-      "image": "./专武/蝶妈.png"
+        "name": "蝶妈",
+        "start": "2025/07/30 14:00",
+        "end": "2025/08/30 23:59",
+        "shouldShow": true,
+        "advice": "开专建议：必开，推荐交球。",
+        "image": "./专武/蝶妈.png",
+        "category": "specialWeapon"
     },
     {
-      "name": "狂虎",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/30 23:59",
-      "shouldShow": true,
-      "advice": "开专建议：用到的时候看轴需要开。",
-      "image": "./专武/狂虎.png"
+        "name": "狂虎",
+        "start": "2025/07/30 14:00",
+        "end": "2025/08/30 23:59",
+        "shouldShow": true,
+        "advice": "开专建议：用到的时候看轴需要开。",
+        "image": "./专武/狂虎.png",
+        "category": "specialWeapon"
     },
     {
-      "name": "兔克",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/30 23:59",
-      "shouldShow": true,
-      "advice": "开专建议：没啥用，需要再开。",
-      "image": "./专武/兔克.png"
+        "name": "兔克",
+        "start": "2025/07/30 14:00",
+        "end": "2025/08/30 23:59",
+        "shouldShow": true,
+        "advice": "开专建议：没啥用，需要再开。",
+        "image": "./专武/兔克.png",
+        "category": "specialWeapon"
     },
     {
-      "name": "奶牛-2",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/30 23:59",
-      "shouldShow": true,
-      "advice": "二专开专建议：主JJC，有就开。",
-      "image": "./专武/奶牛-2.png"
+        "name": "奶牛-2",
+        "start": "2025/07/30 14:00",
+        "end": "2025/08/30 23:59",
+        "shouldShow": true,
+        "advice": "二专开专建议：主JJC，有就开。",
+        "image": "./专武/奶牛-2.png",
+        "category": "specialWeapon"
     },
     {
-      "name": "吃货-2",
-      "start": "2025/07/30 14:00",
-      "end": "2025/08/30 23:59",
-      "shouldShow": true,
-      "advice": "二专开专建议：主JJC，有就开。",
-      "image": "./专武/吃货-2.png"
+        "name": "吃货-2",
+        "start": "2025/07/30 14:00",
+        "end": "2025/08/30 23:59",
+        "shouldShow": true,
+        "advice": "二专开专建议：主JJC，有就开。",
+        "image": "./专武/吃货-2.png",
+        "category": "specialWeapon"
     },
     {
-      "name": "圣姐",
-      "start": "2025/08/14 12:00",
-      "end": "2025/08/31 23:59",
-      "shouldShow": true,
-      "advice": "开专建议：需要在开，30专可用，出场次数低。",
-      "image": "./专武/圣姐.png"
+        "name": "圣姐",
+        "start": "2025/08/14 12:00",
+        "end": "2025/08/31 23:59",
+        "shouldShow": true,
+        "advice": "开专建议：需要在开，30专可用，出场次数低。",
+        "image": "./专武/圣姐.png",
+        "category": "specialWeapon"
     },
     {
-      "name": "圣妹",
-      "start": "2025/08/14 12:00",
-      "end": "2025/08/31 23:59",
-      "shouldShow": true,
-      "advice": "开专建议：需要在开，出场次数低。",
-      "image": "./专武/圣妹.png"
+        "name": "圣妹",
+        "start": "2025/08/14 12:00",
+        "end": "2025/08/31 23:59",
+        "shouldShow": true,
+        "advice": "开专建议：需要在开，出场次数低。",
+        "image": "./专武/圣妹.png",
+        "category": "specialWeapon"
     },
     {
-      "name": "圣骑",
-      "start": "2025/08/14 12:00",
-      "end": "2025/08/31 23:59",
-      "shouldShow": true,
-      "advice": "开专建议：必开专武，推荐交球。光物理坦克，会战和PVE经常用。",
-      "image": "./专武/圣骑.png"
+        "name": "圣骑",
+        "start": "2025/08/14 12:00",
+        "end": "2025/08/31 23:59",
+        "shouldShow": true,
+        "advice": "开专建议：必开专武，推荐交球。光物理坦克，会战和PVE经常用。",
+        "image": "./专武/圣骑.png",
+        "category": "specialWeapon"
     },
     {
-      "name": "圣锤",
-      "start": "2025/08/14 12:00",
-      "end": "2025/08/31 23:59",
-      "shouldShow": true,
-      "advice": "二专开专建议：有就开，工会战、pve、深域出场多。",
-      "image": "./专武/圣锤-2.png"
+        "name": "圣锤",
+        "start": "2025/08/14 12:00",
+        "end": "2025/08/31 23:59",
+        "shouldShow": true,
+        "advice": "二专开专建议：有就开，工会战、pve、深域出场多。",
+        "image": "./专武/圣锤-2.png",
+        "category": "specialWeapon"
     },
     {
-      "name": "圣胡",
-      "start": "2025/08/14 12:00",
-      "end": "2025/08/31 23:59",
-      "shouldShow": true,
-      "advice": "二专开专建议：有就开，pve出场率多点。",
-      "image": "./专武/圣胡-2.png"
+        "name": "圣胡",
+        "start": "2025/08/14 12:00",
+        "end": "2025/08/31 23:59",
+        "shouldShow": true,
+        "advice": "二专开专建议：有就开，pve出场率多点。",
+        "image": "./专武/圣胡-2.png",
+        "category": "specialWeapon"
     },
     {
-      "name": "圣千",
-      "start": "2025/08/14 12:00",
-      "end": "2025/08/31 23:59",
-      "shouldShow": true,
-      "advice": "二专开专建议：有就开，主jjc。",
-      "image": "./专武/圣千-2.png"
+        "name": "圣千",
+        "start": "2025/08/14 12:00",
+        "end": "2025/08/31 23:59",
+        "shouldShow": true,
+        "advice": "二专开专建议：有就开，主jjc。",
+        "image": "./专武/圣千-2.png",
+        "category": "specialWeapon"
     }
-  ],
+    ],
   "huodong": [],
   "showModal": false,
   "modalImage": ""

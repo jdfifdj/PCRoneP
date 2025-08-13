@@ -546,6 +546,10 @@
                         <div class="form-group">
                             <label>${type === 'gachaPools' ? '抽卡' : type === 'specialWeapons' ? '开专' : '刷取'}建议:</label>
                             <textarea onchange="updateItem('${type}', ${index}, 'advice', this.value)" placeholder="建议内容">${item.advice || ''}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>类别:</label>
+                            <input type="text" value="${item.category || (type === 'specialWeapons' ? 'specialWeapon' : '')}" onchange="updateItem('${type}', ${index}, 'category', this.value)" ${type === 'specialWeapons' ? 'readonly' : ''} placeholder="类别">
                         </div>`;
                 }
 
@@ -712,6 +716,7 @@
             } else if (type === 'specialWeapons') {
                 newItem.advice = '开专建议：等攻略';
                 newItem.image = imagePaths.specialWeapons[0] || './专武/image.png';
+                newItem.category = 'specialWeapon';
             } else if (type === 'sixStar') {
                 newItem.image = imagePaths.sixStar[0] || './六星/image.png';
             } else if (type === 'huodong') {
