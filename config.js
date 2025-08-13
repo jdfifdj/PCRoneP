@@ -386,7 +386,7 @@ const configData = {
     {
       "name": "次元断层",
       "start": "2025/08/09 12:00",
-      "end": "2025/08/21 23:59",
+      "end": "2025/08/14 23:59",
       "shouldShow": true,
       "icon": "./图标/露娜塔.png"
     },

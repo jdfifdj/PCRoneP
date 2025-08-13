@@ -7,7 +7,7 @@
 }
 
 /* 基础样式 */
- * {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -44,6 +44,7 @@ body {
         border-radius: 0;
         background-color: #f5f5f5;
     }
+
     body {
         padding: 5px;
     }
@@ -62,6 +63,7 @@ h1 {
         font-size: 1.8rem;
         margin-bottom: 15px;
     }
+
     h2 {
         font-size: 1.5rem;
     }
@@ -72,9 +74,11 @@ h1 {
         font-size: 1.5rem;
         margin-bottom: 10px;
     }
+
     h2 {
         font-size: 1.2rem;
     }
+
     h3 {
         font-size: 1.1rem;
     }
@@ -154,6 +158,7 @@ th {
         width: 100%;
         margin: 15px 0;
     }
+
     th,
     td {
         padding: 8px 5px;
@@ -163,6 +168,7 @@ th {
 
 /* 手机端表格优化 */
 @media (max-width: 480px) {
+
     /* 为表格添加滚动容器 */
     .card {
         overflow-x: auto;
@@ -171,18 +177,21 @@ th {
         margin-bottom: 15px;
         border-radius: 8px;
     }
+
     table {
         min-width: 400px;
         width: 100%;
         font-size: 12px;
         border: 1px solid #333;
     }
+
     th,
     td {
         padding: 6px 3px;
         font-size: 12px;
         border: 1px solid #ddd;
     }
+
     th {
         background-color: #f2f2f2;
     }
@@ -349,21 +358,36 @@ footer {
 }
 
 
+/* 分类框样式 */
+.category-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #dc3545;
+    padding: 8px 12px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
 /* 活动列表样式 */
 .activity-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 6px;
 }
 
 .activity-item {
     display: flex;
     background-color: #fff;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid #dc3545;
+    border-radius: 6px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 3px solid #dc3545;
     transition: transform 0.3s;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .activity-item:hover {
@@ -372,12 +396,12 @@ footer {
 }
 
 .activity-icon {
-    min-width: 40px;
-    height: 40px;
+    min-width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
+    width: 30px;
 }
 
 .activity-icon-img {
@@ -388,13 +412,13 @@ footer {
 
 .activity-content {
     flex: 1;
-    margin-left: 10px;
+    margin-left: 8px;
 }
 
 /* 重要活动标题加粗 */
 .activity-content h3 {
-    font-size: 14px;
-    margin-bottom: 5px;
+    font-size: 12px;
+    margin-bottom: 3px;
     color: #333;
     font-weight: bold;
 }
@@ -405,13 +429,13 @@ footer {
 }
 
 .activity-time {
-    font-size: 12px;
+    font-size: 10px;
     color: #666;
-    margin-bottom: 3px;
+    margin-bottom: 1px;
 }
 
 .activity-countdown {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -468,36 +492,41 @@ footer {
 @media (max-width: 768px) {
     .activity-list {
         grid-template-columns: repeat(1, 1fr);
-        gap: 8px;
+        gap: 6px;
     }
+
     .activity-item {
-        padding: 8px;
+        padding: 5px;
     }
 }
 
 @media (max-width: 480px) {
     .activity-item {
-        padding: 6px;
+        padding: 5px;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+
     .activity-icon {
         min-width: 30px;
         height: 30px;
         width: 30px;
-        margin-bottom: 5px;
+        margin-bottom: 3px;
     }
+
     .activity-content {
         margin-left: 0;
     }
+
     .activity-content h3 {
-        font-size: 13px;
-        margin-bottom: 3px;
+        font-size: 12px;
+        margin-bottom: 2px;
     }
+
     .activity-time,
     .activity-countdown {
-        font-size: 11px;
+        font-size: 10px;
     }
 }
 
@@ -523,11 +552,14 @@ footer {
         margin: 5px 0;
         padding: 0 5px;
     }
+
     .img-preview {
         transition: none;
     }
+
     .img-preview:hover {
-        transform: none; /* 手机端移除悬停效果 */
+        transform: none;
+        /* 手机端移除悬停效果 */
     }
 }
 
@@ -551,9 +583,9 @@ footer {
 }
 
 .special-weapon-icon {
-    min-width: 100px;
-    height: 100px;
-    width: 100px;
+    min-width: 150px;
+    height: 150px;
+    width: 150px;
 }
 
 .special-weapon-content h3 {
@@ -580,13 +612,15 @@ footer {
 /* 响应式媒体查询 - 平板设备 */
 @media (max-width: 768px) {
     .special-weapon-icon {
-        min-width: 80px;
-        height: 80px;
-        width: 80px;
+        min-width: 120px;
+        height: 120px;
+        width: 120px;
     }
+
     .special-weapon-content h3 {
         font-size: 16px;
     }
+
     .special-weapon-time,
     .special-weapon-countdown,
     .special-weapon-advice {
@@ -597,16 +631,94 @@ footer {
 /* 响应式媒体查询 - 手机设备 */
 @media (max-width: 480px) {
     .special-weapon-icon {
-        min-width: 60px;
-        height: 60px;
-        width: 60px;
+        min-width: 90px;
+        height: 90px;
+        width: 90px;
     }
+
     .special-weapon-content h3 {
         font-size: 14px;
     }
+
     .special-weapon-time,
     .special-weapon-countdown,
     .special-weapon-advice {
         font-size: 13px;
     }
+}
+
+/* 活动分类样式 */
+.activity-category {
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+
+.category-separator {
+    height: 10px;
+    background-color: #fff;
+    margin-top: 8px;
+    border-bottom: 1px dashed #ccc;
+}
+
+/* 调整活动项样式 */
+.activity-item {
+    margin-top: 8px;
+    padding: 5px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.activity-icon {
+    margin-right: 15px;
+}
+
+.activity-icon-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+/* 专武图片样式 */
+.special-weapon-icon .activity-icon-img {
+    width: 100%;
+    height: 100%;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-time {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.activity-countdown {
+    font-weight: bold;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+.countdown-unstarted {
+    color: #FE9900;
+    background-color: #e6f2ff;
+}
+
+.countdown-ongoing {
+    color: #008000;
+    background-color: #e6ffe6;
+}
+
+.countdown-ended {
+    color: #cc0000;
+    background-color: #ffe6e6;
+}
+.activity-category h3 {
+    text-align: center;
 }

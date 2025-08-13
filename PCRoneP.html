@@ -20,6 +20,9 @@
             document.querySelector('h1').textContent = '公主连结' + monthName + '一图流';
         });
     </script>
+    <style>
+        
+    </style>
 </head>
 
 <body>
@@ -74,20 +77,25 @@
             <div class="card">
                 <h2 style="background-color: red; color: yellow; padding: 10px; text-align: center; border-radius: 5px;">重要活动</h2>
                 <div class="activity-list">
-                    <div v-for="(activity, index) in activities" :key="index" v-show="activity.shouldShow" class="activity-item">
-                        <div class="activity-icon">
-                            <!-- 这里可以添加活动图标 -->
-                            <img v-if="activity.icon" :src="activity.icon" alt="活动图标" class="activity-icon-img">
-                        </div>
-                        <div class="activity-content">
-                            <h3>{{ activity.name }}</h3>
-                            <div class="activity-time">
-                                {{ formatDate(activity.start) }} - {{ formatDate(activity.end) }}
+                    <div v-for="(category, categoryKey) in groupedActivities" :key="categoryKey" class="activity-category">
+                        <h3 style="background-color: orange; color: white; padding: 5px; border-radius: 3px;">{{ categoryNames[categoryKey] || '其他' }}</h3>
+                        <div v-for="(activity, index) in category" :key="index" class="activity-item">
+                            <div class="activity-icon">
+                                <!-- 这里可以添加活动图标 -->
+                                <img v-if="activity.icon" :src="activity.icon" alt="活动图标" class="activity-icon-img">
                             </div>
-                            <div class="activity-countdown" :class="getCountdownText(activity).class">
-                                {{ getCountdownText(activity).text }}
+                            <div class="activity-content">
+                                <h4>{{ activity.name }}</h4>
+                                <div class="activity-time">
+                                    {{ formatDate(activity.start) }} - {{ formatDate(activity.end) }}
+                                </div>
+                                <div class="activity-countdown" :class="getCountdownText(activity).class">
+                                    {{ getCountdownText(activity).text }}
+                                </div>
                             </div>
                         </div>
+                        <!-- 分类间隔 -->
+                        <div class="category-separator"></div>
                     </div>
                 </div>
             </div>
@@ -217,9 +225,66 @@
     <script src="./config.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.min.js"></script>
     <script>
+        // 定义分类映射
+        const categoryMap = {
+            './图标/主线关卡.png': 1,
+            './图标/困难关卡.png': 1,
+            './图标/圣迹调查.png': 1,
+            './图标/探索.png': 1,
+            './图标/大师币.png': 1,
+            './图标/庆典.png': 2,
+            './图标/露娜塔.png': 2,
+            './图标/团队战.png': 2,
+            './图标/竞技场.png': 2,
+            './图标/扭蛋.png': 3,
+            './图标/宝箱.png': 3,
+            './图标/妈.png': 3
+        };
+
+        // 分类名称映射
+        const categoryNames = {
+            1: '探索类',
+            2: '活动类',
+            3: '抽卡类'
+        };
+
         new Vue({
             el: '#app',
-            data: configData,
+            data: {
+                ...configData,
+                categoryMap: categoryMap,
+                categoryNames: categoryNames
+            },
+            computed: {
+                // 按分类排序后的活动
+                sortedActivities() {
+                    return [...this.activities]
+                        .filter(activity => activity.shouldShow)
+                        .sort((a, b) => {
+                            const categoryA = this.categoryMap[a.icon] || 999;
+                            const categoryB = this.categoryMap[b.icon] || 999;
+
+                            if (categoryA !== categoryB) {
+                                return categoryA - categoryB;
+                            }
+
+                            // 同类活动按开始时间排序
+                            return new Date(a.start) - new Date(b.start);
+                        });
+                },
+                // 按分类分组的活动
+                groupedActivities() {
+                    const groups = {};
+                    this.sortedActivities.forEach(activity => {
+                        const category = this.categoryMap[activity.icon] || 999;
+                        if (!groups[category]) {
+                            groups[category] = [];
+                        }
+                        groups[category].push(activity);
+                    });
+                    return groups;
+                }
+            },
             methods: {
                 updateCurrentTime() {
                     const now = new Date();
