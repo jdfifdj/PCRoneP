@@ -42,6 +42,7 @@ body {
         padding: 5px;
         box-shadow: none;
         border-radius: 0;
+        border: none;
         background-color: #f5f5f5;
     }
 
@@ -185,16 +186,45 @@ th {
         border: 1px solid #333;
     }
 
-    th,
-    td {
+    th, td {
         padding: 6px 3px;
         font-size: 12px;
         border: 1px solid #ddd;
+        vertical-align: top;
+    }
+
+    .card table .activity-time,
+    .card table .activity-countdown {
+        font-size: 10px;
     }
 
     th {
         background-color: #f2f2f2;
     }
+}
+
+/* 卡池时间和倒计时样式 */
+.card table .activity-time {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #666;
+}
+
+.card table .activity-countdown {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.countdown-expired {
+    color: #dc3545;
+}
+
+.countdown-warning {
+    color: #ffc107;
+}
+
+.countdown-normal {
+    color: #28a745;
 }
 
 /* 状态颜色样式 */

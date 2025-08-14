@@ -347,7 +347,7 @@ const configData = {
     {
       "name": "剧情活动1-8月",
       "start": "2025/07/30 14:00",
-      "end": "2025/08/14 23:59",
+      "end": "2025/08/13 23:59",
       "status": null,
       "statusText": "",
       "shouldShow": true,

@@ -120,6 +120,12 @@
                                 <img :src="pool.image" :alt="pool.name" class="img-preview"
                                     @click="showImageModal(pool.image)">
                             </div>
+                            <div class="activity-time">
+                                {{ formatDate(pool.start) }} - {{ formatDate(pool.end) }}
+                            </div>
+                            <div class="activity-countdown" :class="getCountdownText(pool).class">
+                                {{ getCountdownText(pool).text }}
+                            </div>
                         </td>
                         <!-- 新增状态单元格 -->
                         <td :class="'status-' + pool.status">{{ pool.statusText }}</td>
@@ -243,7 +249,7 @@
 
         // 分类名称映射
         const categoryNames = {
-            1: '关卡类',
+            1: '探索类',
             2: '活动类',
             3: '抽卡类'
         };
@@ -401,7 +407,7 @@
                             activity.status = 'ended';
                             activity.statusText = '已结束';
                             // 距离结束超过2天则隐藏
-                            activity.shouldShow = daysAfterEnd <= 1;
+                            activity.shouldShow = daysAfterEnd <= 0;
                         } else {
                             activity.status = 'ongoing';
                             activity.statusText = '进行中';
