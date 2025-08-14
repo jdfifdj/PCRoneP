@@ -336,24 +336,28 @@
                             };
                         }
                     } else if (now > end) {
-                        const diff = now - end;
-                        const days = Math.floor(diff / oneDay);
+                        const diff = end - start;
+                        const totalDays = Math.floor(diff / oneDay);
+                        const totalHours = Math.floor((diff % oneDay) / oneHour);
+                        const totalMinutes = Math.floor((diff % oneHour) / oneMinute);
+
+                        const daysAfterEnd = Math.floor((now - end) / oneDay);
 
                         if (isSpecialWeapon) {
                             // 专武已结束
                             return {
                                 class: 'countdown-ended',
-                                text: `本月已开专时间: ${this.formatDate(activity.start)} (已结束: ${days}天)`
+                                text: `本月已开专时间: ${totalDays}天${totalHours}小时${totalMinutes}分 (已结束: ${daysAfterEnd}天)`
                             };
                         } else {
                             // 活动已结束
                             return {
                                 class: 'countdown-ended',
-                                text: `已结束: ${days}天`
+                                text: `已结束: ${daysAfterEnd}天`
                             };
                         }
                     } else {
-                        const diff = end - now;
+                        const diff = now - start;
                         const days = Math.floor(diff / oneDay);
                         const hours = Math.floor((diff % oneDay) / oneHour);
                         const minutes = Math.floor((diff % oneHour) / oneMinute);
@@ -366,9 +370,13 @@
                             };
                         } else {
                             // 活动进行中
+                            const remainingDiff = end - now;
+                            const remainingDays = Math.floor(remainingDiff / oneDay);
+                            const remainingHours = Math.floor((remainingDiff % oneDay) / oneHour);
+                            const remainingMinutes = Math.floor((remainingDiff % oneHour) / oneMinute);
                             return {
                                 class: 'countdown-ongoing',
-                                text: `剩余: ${days}天${hours}小时${minutes}分`
+                                text: `剩余: ${remainingDays}天${remainingHours}小时${remainingMinutes}分`
                             };
                         }
                     }
