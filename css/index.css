@@ -4,7 +4,93 @@ body {
     padding: 0;
     background-color: #f9f7f7;
     color: #333;
-    font-size: 16px;
+    font-size: clamp(14px, 3vw, 16px);
+  }
+  
+  /* 移动端优化 */
+  @media screen and (max-width: 768px) {
+    .app-container {
+      flex-direction: column;
+    }
+    
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding: 10px;
+      z-index: 100;
+      transition: all 0.3s ease;
+    }
+    
+    .sidebar.collapsed {
+      width: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    
+    .sidebar-header {
+      margin-bottom: 10px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    
+    .menu-items {
+      display: flex;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      scrollbar-width: none;
+      width: 100%;
+    }
+    
+    .menu-items::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .menu-item {
+      margin-right: 10px;
+      margin-bottom: 0;
+      white-space: nowrap;
+    }
+    
+    .main-content {
+      max-width: 100vw;
+      padding: 15px 10px;
+    }
+    
+    .main-content.expanded {
+      max-width: 100vw;
+      width: 100vw;
+    }
+    
+    .toggle-btn {
+      display: flex;
+      right: 10px;
+      top: 10px;
+    }
+    
+    .up-group {
+      min-width: 100%;
+    }
+    
+    .up-list {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .article-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* 平板设备优化 */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .up-group {
+      min-width: 100%;
+    }
+    
+    .up-list {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
   }
   .app-container {
     display: flex;
