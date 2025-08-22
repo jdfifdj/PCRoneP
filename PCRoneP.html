@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">公主连结7月一图流</title>
+    <title id="page-title">公主连结8月一图流</title>
     <link rel="stylesheet" href="./css/html.css">
     <script>
         // 获取当前月份并更新标题
@@ -47,7 +47,7 @@
                         <th>
                             <div class="section-title">表格更新时间</div>
                         </th>
-                        <th>2025年8月7日</th>
+                        <th>2025年8月22日</th>
                         <th>
                             <div class="section-title">图片生成时间</div>
                         </th>
@@ -240,10 +240,11 @@
             './图标/大师币.png': 2,
             './图标/庆典.png': 2,
             './图标/露娜塔.png': 2,
+            './图标/地下城.png': 2,
             './图标/团队战.png': 2,
             './图标/竞技场.png': 2,
             './图标/扭蛋.png': 3,
-            './图标/宝箱.png': 3,
+            './图标/宝箱.png': 2,
             './图标/妈.png': 3
         };
 
@@ -442,7 +443,7 @@
                         }
 
                         // 开始前10天内显示，开始后2天内显示
-                        pool.shouldShow = (daysBeforeStart <= 15 && daysBeforeStart > 0) ||
+                        pool.shouldShow = (daysBeforeStart <= 10 && daysBeforeStart > 0) ||
                             (daysAfterEnd <= 1 && daysAfterEnd >= 0) ||
                             (now >= start && now <= end);
                     });

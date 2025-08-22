@@ -557,6 +557,146 @@ const configData = {
       "end": "2025/08/28 23:59",
       "shouldShow": true,
       "icon": "./图标/团队战.png"
+    },
+    {
+      "name": "公主庆典扭蛋「静流&璃乃」",
+      "start": "2025/08/29 16:00",
+      "end": "2025/09/01 17:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "剧情活动「迎春梦想家们！ 新年陨石碎碎平安！？」",
+      "start": "2025/08/29 16:00",
+      "end": "2025/09/12 04:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "复刻剧情活动「温泉忘年 奇谭 为新年的日出干杯」",
+      "start": "2025/08/29 16:00",
+      "end": "2025/09/05 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "「静流（情人节）」「可可萝（礼服）」复刻",
+      "start": "2025/09/04 11:00",
+      "end": "2025/09/08 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "精选扭蛋「初音（新年）」「香澄（新年）」",
+      "start": "2025/09/01 18:00",
+      "end": "2025/09/15 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "「美里（新年）」「帆稀（新年）」复刻",
+      "start": "2025/09/01 18:00",
+      "end": "2025/09/04 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "新年活动 特别登录奖励",
+      "start": "2025/09/01 05:00",
+      "end": "2025/09/04 04:59",
+      "shouldShow": true,
+      "icon": "./图标/宝箱.png"
+    },
+    {
+      "name": "谨贺新年特别纪念登录活动",
+      "start": "2025/09/01 05:00",
+      "end": "2025/09/11 04:59",
+      "shouldShow": true,
+      "icon": "./图标/宝箱.png"
+    },
+    {
+      "name": "「普通关卡」掉落量4倍庆典",
+      "start": "2025/09/03 05:00",
+      "end": "2025/09/08 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「困难关卡」掉落量4倍庆典",
+      "start": "2025/09/03 05:00",
+      "end": "2025/09/08 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "斗技场开启",
+      "start": "2025/09/04 05:00",
+      "end": "2025/09/08 23:59",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "「雪菲（新年）」「佩可莉姆（新年）」「似似花（新年）」「伊莉亚（新年）」复刻",
+      "start": "2025/09/08 11:00",
+      "end": "2025/09/13 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "「普通关卡」装备掉落量6倍、玛那掉落量4倍庆典",
+      "start": "2025/09/08 05:00",
+      "end": "2025/09/13 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「困难关卡」掉落量4倍庆典",
+      "start": "2025/09/08 05:00",
+      "end": "2025/09/13 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "大师币获得量3倍庆典",
+      "start": "2025/09/08 05:00",
+      "end": "2025/09/13 04:59",
+      "shouldShow": true,
+      "icon": "./图标/大师币.png"
+    },
+    {
+      "name": "「圣迹调查&神殿调查关卡」掉落量4倍庆典",
+      "start": "2025/09/08 05:00",
+      "end": "2025/09/13 04:59",
+      "shouldShow": true,
+      "icon": "./图标/圣迹调查.png"
+    },
+    {
+      "name": "「探索关卡」掉落量4倍庆典",
+      "start": "2025/09/08 05:00",
+      "end": "2025/09/13 04:59",
+      "shouldShow": true,
+      "icon": "./图标/探索.png"
+    },
+    {
+      "name": "「高难关卡」掉落量4倍庆典",
+      "start": "2025/09/08 05:00",
+      "end": "2025/09/16 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "露娜之塔",
+      "start": "2025/09/09 12:00",
+      "end": "2025/09/14 23:59",
+      "shouldShow": true,
+      "icon": "./图标/露娜塔.png"
+    },
+    {
+      "name": "特别地下城",
+      "start": "2025/09/09 05:00",
+      "end": "2025/09/14 04:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
     }
   ],
   "gachaPools": [
@@ -599,6 +739,46 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：有钻建议补（18w+），短期内还是一线角色，但终会下岗（抽11月的花仓唯就行），没有的可以忍到她下岗，钻很多再考虑补。",
       "image": "./卡池/礼yly.png"
+    },
+    {
+      "name": "公主庆典扭蛋「静流&璃乃」",
+      "start": "2025/08/29 16:00",
+      "end": "2025/09/01 17:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/姐妹.png"
+    },
+    {
+      "name": "「静流（情人节）」「可可萝（礼服）」复刻",
+      "start": "2025/09/04 11:00",
+      "end": "2025/09/08 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/情姐.png"
+    },
+    {
+      "name": "精选扭蛋「初音（新年）」「香澄（新年）",
+      "start": "2025/09/01 18:00",
+      "end": "2025/09/15 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/新年初音.png"
+    },
+    {
+      "name": "「美里（新年）」「帆稀（新年）」复刻",
+      "start": "2025/09/01 18:00",
+      "end": "2025/09/04 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/春圣母.png"
+    },
+    {
+      "name": "「雪菲（新年）」「佩可莉姆（新年）」「似似花（新年）」「伊莉亚（新年）」复刻",
+      "start": "2025/09/08 11:00",
+      "end": "2025/09/13 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/自选5.png"
     }
   ],
   "sixStar": [
@@ -615,109 +795,170 @@ const configData = {
       "end": "2025/08/31 23:59",
       "shouldShow": true,
       "image": "./六星/祈梨.png"
+    },
+    {
+      "name": "嘉夜",
+      "start": "2025/08/29 16:00",
+      "end": "2025/09/30 04:59",
+      "shouldShow": true,
+      "image": "./六星/嘉夜.png"
     }
   ],
   "specialWeapons": [
     {
-        "name": "蝶妈",
-        "start": "2025/07/30 14:00",
-        "end": "2025/08/30 23:59",
-        "shouldShow": true,
-        "advice": "开专建议：必开，推荐交球。",
-        "image": "./专武/蝶妈.png",
-        "category": "specialWeapon"
+      "name": "蝶妈",
+      "start": "2025/07/30 14:00",
+      "end": "2025/08/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：必开，推荐交球。",
+      "image": "./专武/蝶妈.png",
+      "category": "specialWeapon"
     },
     {
-        "name": "狂虎",
-        "start": "2025/07/30 14:00",
-        "end": "2025/08/30 23:59",
-        "shouldShow": true,
-        "advice": "开专建议：用到的时候看轴需要开。",
-        "image": "./专武/狂虎.png",
-        "category": "specialWeapon"
+      "name": "狂虎",
+      "start": "2025/07/30 14:00",
+      "end": "2025/08/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：用到的时候看轴需要开。",
+      "image": "./专武/狂虎.png",
+      "category": "specialWeapon"
     },
     {
-        "name": "兔克",
-        "start": "2025/07/30 14:00",
-        "end": "2025/08/30 23:59",
-        "shouldShow": true,
-        "advice": "开专建议：没啥用，需要再开。",
-        "image": "./专武/兔克.png",
-        "category": "specialWeapon"
+      "name": "兔克",
+      "start": "2025/07/30 14:00",
+      "end": "2025/08/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：没啥用，需要再开。",
+      "image": "./专武/兔克.png",
+      "category": "specialWeapon"
     },
     {
-        "name": "奶牛-2",
-        "start": "2025/07/30 14:00",
-        "end": "2025/08/30 23:59",
-        "shouldShow": true,
-        "advice": "二专开专建议：主JJC，有就开。",
-        "image": "./专武/奶牛-2.png",
-        "category": "specialWeapon"
+      "name": "奶牛-2",
+      "start": "2025/07/30 14:00",
+      "end": "2025/08/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：主JJC，有就开。",
+      "image": "./专武/奶牛-2.png",
+      "category": "specialWeapon"
     },
     {
-        "name": "吃货-2",
-        "start": "2025/07/30 14:00",
-        "end": "2025/08/30 23:59",
-        "shouldShow": true,
-        "advice": "二专开专建议：主JJC，有就开。",
-        "image": "./专武/吃货-2.png",
-        "category": "specialWeapon"
+      "name": "吃货-2",
+      "start": "2025/07/30 14:00",
+      "end": "2025/08/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：主JJC，有就开。",
+      "image": "./专武/吃货-2.png",
+      "category": "specialWeapon"
     },
     {
-        "name": "圣姐",
-        "start": "2025/08/14 12:00",
-        "end": "2025/08/31 23:59",
-        "shouldShow": true,
-        "advice": "开专建议：需要在开，30专可用，出场次数低。",
-        "image": "./专武/圣姐.png",
-        "category": "specialWeapon"
+      "name": "圣姐",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/31 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：需要在开，30专可用，出场次数低。",
+      "image": "./专武/圣姐.png",
+      "category": "specialWeapon"
     },
     {
-        "name": "圣妹",
-        "start": "2025/08/14 12:00",
-        "end": "2025/08/31 23:59",
-        "shouldShow": true,
-        "advice": "开专建议：需要在开，出场次数低。",
-        "image": "./专武/圣妹.png",
-        "category": "specialWeapon"
+      "name": "圣妹",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/31 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：需要在开，出场次数低。",
+      "image": "./专武/圣妹.png",
+      "category": "specialWeapon"
     },
     {
-        "name": "圣骑",
-        "start": "2025/08/14 12:00",
-        "end": "2025/08/31 23:59",
-        "shouldShow": true,
-        "advice": "开专建议：必开专武，推荐交球。光物理坦克，会战和PVE经常用。",
-        "image": "./专武/圣骑.png",
-        "category": "specialWeapon"
+      "name": "圣骑",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/31 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：必开专武，推荐交球。光物理坦克，会战和PVE经常用。",
+      "image": "./专武/圣骑.png",
+      "category": "specialWeapon"
     },
     {
-        "name": "圣锤",
-        "start": "2025/08/14 12:00",
-        "end": "2025/08/31 23:59",
-        "shouldShow": true,
-        "advice": "二专开专建议：有就开，工会战、pve、深域出场多。",
-        "image": "./专武/圣锤-2.png",
-        "category": "specialWeapon"
+      "name": "圣锤",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/31 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：有就开，工会战、pve、深域出场多。",
+      "image": "./专武/圣锤-2.png",
+      "category": "specialWeapon"
     },
     {
-        "name": "圣胡",
-        "start": "2025/08/14 12:00",
-        "end": "2025/08/31 23:59",
-        "shouldShow": true,
-        "advice": "二专开专建议：有就开，pve出场率多点。",
-        "image": "./专武/圣胡-2.png",
-        "category": "specialWeapon"
+      "name": "圣胡",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/31 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：有就开，pve出场率多点。",
+      "image": "./专武/圣胡-2.png",
+      "category": "specialWeapon"
     },
     {
-        "name": "圣千",
-        "start": "2025/08/14 12:00",
-        "end": "2025/08/31 23:59",
-        "shouldShow": true,
-        "advice": "二专开专建议：有就开，主jjc。",
-        "image": "./专武/圣千-2.png",
-        "category": "specialWeapon"
+      "name": "圣千",
+      "start": "2025/08/14 12:00",
+      "end": "2025/08/31 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：有就开，主jjc。",
+      "image": "./专武/圣千-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "春圣母",
+      "start": "2025/08/29 16:00",
+      "end": "2025/09/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/春圣母.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "初音、栞",
+      "start": "2025/08/29 16:00",
+      "end": "2025/09/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/初音、栞.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "春龙妈",
+      "start": "2025/08/29 16:00",
+      "end": "2025/09/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/龙马.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "江深",
+      "start": "2025/08/29 16:00",
+      "end": "2025/09/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/江深.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "情姐-2",
+      "start": "2025/08/29 16:00",
+      "end": "2025/09/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/情姐-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "情理-2",
+      "start": "2025/08/29 16:00",
+      "end": "2025/09/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/情理-2.png",
+      "category": "specialWeapon"
     }
-    ],
+  ],
   "huodong": [],
   "showModal": false,
   "modalImage": ""
