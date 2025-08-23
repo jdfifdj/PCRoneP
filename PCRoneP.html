@@ -237,22 +237,23 @@
             './图标/困难关卡.png': 1,
             './图标/圣迹调查.png': 1,
             './图标/探索.png': 1,
-            './图标/大师币.png': 2,
+            './图标/大师币.png': 1,
             './图标/庆典.png': 2,
             './图标/露娜塔.png': 2,
             './图标/地下城.png': 2,
             './图标/团队战.png': 2,
             './图标/竞技场.png': 2,
             './图标/扭蛋.png': 3,
-            './图标/宝箱.png': 2,
-            './图标/妈.png': 3
+            './图标/宝箱.png': 4,
+            './图标/妈.png': 4
         };
 
         // 分类名称映射
         const categoryNames = {
             1: '探索类',
             2: '活动类',
-            3: '抽卡类'
+            3: '抽卡类',
+            4: '庆典类'
         };
 
         new Vue({
@@ -411,7 +412,7 @@
                             activity.status = 'unstarted';
                             activity.statusText = '未开始';
                             // 距离开始超过10天则隐藏
-                            activity.shouldShow = daysBeforeStart <= 8;
+                            activity.shouldShow = daysBeforeStart <= 10;
                         } else if (now > end) {
                             activity.status = 'ended';
                             activity.statusText = '已结束';

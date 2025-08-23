@@ -514,7 +514,7 @@ const configData = {
       "start": "2025/08/20 05:00",
       "end": "2025/08/31 04:59",
       "shouldShow": true,
-      "icon": "./图标/庆典.png"
+      "icon": "./图标/地下城.png"
     },
     {
       "name": "「高难关卡」掉落量6倍庆典",
