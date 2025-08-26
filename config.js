@@ -35,275 +35,11 @@ const configData = {
       "className": "highlight-blue"
     },
     {
-      "keyword": "开专推荐直接交球",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "30专可以用JJC高手可满",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "深域满专最好",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "正常刷活动即可。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "免费十连覆盖",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "如果没嫖到，三井以上可考虑补，钻少不补",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "有这个角色就必开。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "JJC选手就开了，其他场合用到再开也可以。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "JJC防守有需求就开，默认满。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "JJC角色，需要的开专就可以。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "有这个角色就开专，考虑到深域要用可以满专",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "需要再拉。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "随意。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "解放望：建议补",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "513：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "免责：余钻多（3井以上），且明确知道自己在干嘛的可补",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "水女仆：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "水猫剑：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "水狐狸：钻多就补",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "水狼：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "（起码3井以上吧）",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "水流夏：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "水初音/水星：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "水病娇：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "水望：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "学猫：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "学爆：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "富婆：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "小黄：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "瓜忍：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "瓜眼：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "猫仓唯：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "鬼裁：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "瓜狗：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "开，拉满",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "必抽！不抽是人？",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "没钻的可以等25号开始有免费十连。",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "20W钻以上可以抽。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "钻多且抽学猫，且学猫>180出货，才补。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "12w钻以上没有的推荐抽。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "火电:",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "流沙：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "必抽。",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": ">120且钻多就补井",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "JJC和EX7对策角色，需要就开。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "JJC角色，需要就开。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "有这个角色就开。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "20w+以上推荐补。火属性重要角色之一，寿命长，出场率中上。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "猪妹（右一）：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "寿命长，使用场合多，早有早享受。",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "盾妹（左一）：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "可根据余钻补，不强求持有",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "魔法姬塔：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "没有的非常建议补抽",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "兔兔：",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "姬塔>120出货，且余钻>15万。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "必开，推荐交球。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "用到的时候看轴需要开。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "没啥用，需要再开。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "主JJC，有就开。",
-      "className": "highlight-orange"
-    },
-    {
-      "keyword": "钻不多的请慎重考虑（最起码得有12w以上，马上准备必抽限定连发了）。",
-      "className": "highlight-orange"
-    },
-    {
       "keyword": "「佩可莉姆（圣诞节）」：20号开始免费十连，钻>18w，免费十连没出货可补圣吃。",
       "className": "highlight-red"
     },
     {
       "keyword": "「克蕾琪塔（圣诞节）」：圣吃180以上出的可以补。",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "「千歌（圣诞节）」",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "「绫音（圣诞节）」",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "「克莉丝提娜（圣诞节）」",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "「秋乃（圣诞节）」",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "「宫子（圣诞节）」",
       "className": "highlight-red"
     },
     {
@@ -315,7 +51,7 @@ const configData = {
       "className": "highlight-orange"
     },
     {
-      "keyword": "必开专武，推荐交球",
+      "keyword": "必开，推荐交球",
       "className": "highlight-orange"
     },
     {
@@ -340,6 +76,82 @@ const configData = {
     },
     {
       "keyword": "但终会下岗（抽11月的花仓唯就行），没有的可以忍到她下岗，钻很多再考虑补",
+      "className": "highlight-orange"
+    },
+    {
+      "keyword": "必开",
+      "className": "highlight-orange"
+    },
+    {
+      "keyword": "必抽",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「初音（新年）」",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「香澄（新年）」",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "有强度但出场率不算高，连同春星抽很划算，老玩家建议无脑抽，除非抽0井1春初音（没钻抽到「初音（新年）」就停手）。",
+      "className": "highlight-orange"
+    },
+    {
+      "keyword": "不抽这个池子",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「雪菲（新年）」",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「佩可莉姆（新年）」",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「似似花（新年）」",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「伊莉亚（新年）」",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「静流（情人节）」",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「可可萝（礼服）」",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「帆稀（新年）」",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「美里（新年）」",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "钻多才建议补",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "目前可以不补",
+      "className": "highlight-orange"
+    },
+    {
+      "keyword": "（15w+）",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "（6w+）",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "不用刻意补，补春龙妈的话看抽数（>150）补。",
       "className": "highlight-orange"
     }
   ],
@@ -745,7 +557,7 @@ const configData = {
       "start": "2025/08/29 16:00",
       "end": "2025/09/01 17:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：不抽这个池子。强度低，同时是fes角色，可以等下次fes池子歪出来。",
       "image": "./卡池/姐妹.png"
     },
     {
@@ -753,7 +565,7 @@ const configData = {
       "start": "2025/09/04 11:00",
       "end": "2025/09/08 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：<br/>「静流（情人节）」：有钻建议补（6w+），进度不是落后太多的话，一定要补，这样属性版本深域才跟得上进度.<br/>「可可萝（礼服）」：不建议补，截至日服版本一直仓管，目前等待2专翻身礼妈。",
       "image": "./卡池/情姐.png"
     },
     {
@@ -761,7 +573,7 @@ const configData = {
       "start": "2025/09/01 18:00",
       "end": "2025/09/15 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：<br/>「初音（新年）」：必抽。出场率较高，接下来连打好几期会战，快下岗时开专武接着上班。<br/>「香澄（新年）」：有强度但出场率不算高，连同春星抽很划算，老玩家建议无脑抽，除非抽0井1春初音（没钻抽到「初音（新年）」就停手）。",
       "image": "./卡池/新年初音.png"
     },
     {
@@ -769,7 +581,7 @@ const configData = {
       "start": "2025/09/01 18:00",
       "end": "2025/09/04 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：<br/>「帆稀（新年）」：钻多才建议补（15w+），虽然理论非必要，也亏大师球，但对游戏体验的提升较大。<br/>「美里（新年）」：不用刻意补，补春龙妈的话看抽数（>150）补。",
       "image": "./卡池/春圣母.png"
     },
     {
@@ -777,7 +589,7 @@ const configData = {
       "start": "2025/09/08 11:00",
       "end": "2025/09/13 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：<br/>「雪菲（新年）」：不建议补，使用率大幅降低，没有非用不可的场合。<br/>「佩可莉姆（新年）」：不建议补，截至日服版本一直仓管，目前等待2专翻身。<br/>「似似花（新年）」：目前可以不补，没有以前强势，风属性法队会换一批常用角色。<br/>「伊莉亚（新年）」：不建议补，属性版本会战有出场过几次，但不抽不影响体验。",
       "image": "./卡池/自选5.png"
     }
   ],
@@ -909,7 +721,7 @@ const configData = {
       "start": "2025/08/29 16:00",
       "end": "2025/09/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：必开，30可用",
       "image": "./专武/春圣母.png",
       "category": "specialWeapon"
     },
@@ -918,7 +730,7 @@ const configData = {
       "start": "2025/08/29 16:00",
       "end": "2025/09/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：必开，推荐交球",
       "image": "./专武/初音、栞.png",
       "category": "specialWeapon"
     },
@@ -927,16 +739,16 @@ const configData = {
       "start": "2025/08/29 16:00",
       "end": "2025/09/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：必开，推荐交球",
       "image": "./专武/龙马.png",
       "category": "specialWeapon"
     },
     {
-      "name": "江深",
+      "name": "春深",
       "start": "2025/08/29 16:00",
       "end": "2025/09/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：30意思一下就行了，没什么用",
       "image": "./专武/江深.png",
       "category": "specialWeapon"
     },
@@ -945,7 +757,7 @@ const configData = {
       "start": "2025/08/29 16:00",
       "end": "2025/09/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：必开",
       "image": "./专武/情姐-2.png",
       "category": "specialWeapon"
     },
@@ -954,12 +766,21 @@ const configData = {
       "start": "2025/08/29 16:00",
       "end": "2025/09/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：可开专收藏，出场率很低",
       "image": "./专武/情理-2.png",
       "category": "specialWeapon"
     }
   ],
-  "huodong": [],
+  "huodong": [
+    {
+      "name": "祈梨新年",
+      "start": "2025/08/29 05:00",
+      "end": "2025/09/12 23:59",
+      "shouldShow": true,
+      "advice": "jjc进攻角色。拉到31-0满级即可。",
+      "image": "./活动角色/祈梨新年.jpg"
+    }
+  ],
   "showModal": false,
   "modalImage": ""
 };
