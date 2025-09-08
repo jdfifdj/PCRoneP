@@ -47,7 +47,7 @@
                         <th>
                             <div class="section-title">表格更新时间</div>
                         </th>
-                        <th>2025年9月1日</th>
+                        <th>2025年9月8日</th>
                         <th>
                             <div class="section-title">图片生成时间</div>
                         </th>
@@ -477,7 +477,7 @@
                         const daysBeforeStart = (start - now) / (1000 * 60 * 60 * 24);
                         const daysAfterEnd = (now - end) / (1000 * 60 * 60 * 24); // 新增
 
-                        weapon.shouldShow = (daysBeforeStart <= 5 && daysBeforeStart > 0) ||
+                        weapon.shouldShow = (daysBeforeStart <= 7 && daysBeforeStart > 0) ||
                             (daysAfterEnd <= 0 && daysAfterEnd >= 0) ||
                             (now >= start && now <= end);
                     });

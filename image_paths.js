@@ -1,18 +1,23 @@
 const imagePaths = {
     huodong: [
-        "./活动角色/h1.png"
+        "./活动角色/h1.png",
+        "./活动角色/h3.png",
+        "./活动角色/祈梨新年.jpg"
     ],
     gachaPools: [
+        "./卡池/ue.png",
         "./卡池/圣吃.png",
         "./卡池/圣妹.png",
         "./卡池/姐妹.png",
         "./卡池/情姐.png",
         "./卡池/新年初音.png",
         "./卡池/春圣母.png",
+        "./卡池/水nnk.png",
         "./卡池/礼yly.png",
         "./卡池/自选4.png",
         "./卡池/自选5.png",
-        "./卡池/蝶妈.png"
+        "./卡池/蝶妈.png",
+        "./卡池/解放望-513.png"
     ],
     sixStar: [
         "./六星/61.png",
@@ -38,6 +43,7 @@ const imagePaths = {
         "./图标/露娜塔.png"
     ],
     specialWeapons: [
+        "./专武/513.png",
         "./专武/兔克.png",
         "./专武/初音、栞.png",
         "./专武/吃货-2.png",
@@ -54,6 +60,8 @@ const imagePaths = {
         "./专武/江深.png",
         "./专武/狂虎.png",
         "./专武/蝶妈.png",
+        "./专武/解放望.png",
+        "./专武/解放龙拳.png",
         "./专武/龙马.png"
     ]
 };

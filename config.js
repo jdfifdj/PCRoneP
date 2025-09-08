@@ -302,6 +302,97 @@ const configData = {
       "end": "2025/09/14 04:59",
       "shouldShow": true,
       "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "精选扭蛋「优衣（星幽）」",
+      "start": "2025/09/15 11:00",
+      "end": "2025/09/24 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "「望（解放者）」「矛依未（解放者）」复刻",
+      "start": "2025/09/24 11:00",
+      "end": "2025/09/29 08:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "「似似花（夏日）」复刻",
+      "start": "2025/09/24 11:00",
+      "end": "2025/09/29 08:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "剧情活动「I Wish紧紧握住这双手」【前篇】",
+      "start": "2025/09/15 11:00",
+      "end": "2025/10/11 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "「困难关卡」掉落量4倍庆典",
+      "start": "2025/09/16 05:00",
+      "end": "2025/09/29 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "斗技场开启",
+      "start": "2025/09/17 12:00",
+      "end": "2025/09/21 23:59",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "剧情活动「I Wish紧紧握住这双手」【后篇】",
+      "start": "2025/09/22 12:00",
+      "end": "2025/10/11 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "「普通关卡」装备掉落量4倍、玛那掉落量3倍庆典",
+      "start": "2025/09/21 05:00",
+      "end": "2025/09/29 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "大师币获得量3倍庆典",
+      "start": "2025/09/21 05:00",
+      "end": "2025/09/29 04:59",
+      "shouldShow": true,
+      "icon": "./图标/大师币.png"
+    },
+    {
+      "name": "「地下城」玛那掉落量4倍庆典",
+      "start": "2025/09/21 05:00",
+      "end": "2025/09/29 04:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "复刻剧情活动「解放伊甸园在终将再会的未来」【前篇】",
+      "start": "2025/09/24 12:00",
+      "end": "2025/10/7 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "「水瓶座」团队战",
+      "start": "2025/09/24 05:00",
+      "end": "2025/09/28 23:59",
+      "shouldShow": true,
+      "icon": "./图标/团队战.png"
+    },
+    {
+      "name": "复刻剧情活动「解放伊甸园在终将再会的未来」【后篇】",
+      "start": "2025/09/29 14:00",
+      "end": "2025/10/07 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
     }
   ],
   "gachaPools": [
@@ -384,6 +475,30 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：<br/>「雪菲（新年）」：不建议补，使用率大幅降低，没有非用不可的场合。<br/>「佩可莉姆（新年）」：不建议补，截至日服版本一直仓管，目前等待2专翻身。<br/>「似似花（新年）」：目前可以不补，没有以前强势，风属性法队会换一批常用角色。<br/>「伊莉亚（新年）」：不建议补，属性版本会战有出场过几次，但不抽不影响体验。",
       "image": "./卡池/自选5.png"
+    },
+    {
+      "name": "精选扭蛋「优衣（星幽）」",
+      "start": "2025/09/15 11:00",
+      "end": "2025/09/25 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/ue.png"
+    },
+    {
+      "name": "「望（解放者）」「矛依未（解放者）」复刻",
+      "start": "2025/09/24 11:00",
+      "end": "2025/09/29 8:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/解放望-513.png"
+    },
+    {
+      "name": "「似似花（夏日）」复刻",
+      "start": "2025/09/24 11:00",
+      "end": "2025/09/29 08:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/水nnk.png"
     }
   ],
   "sixStar": [
@@ -562,6 +677,33 @@ const configData = {
       "advice": "二专开专建议：可开专收藏，出场率很低",
       "image": "./专武/情理-2.png",
       "category": "specialWeapon"
+    },
+    {
+      "name": "513",
+      "start": "2025/09/15 11:00",
+      "end": "2025/09/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/513.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "解放龙拳",
+      "start": "2025/09/15 11:00",
+      "end": "2025/09/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/解放龙拳.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "解放望",
+      "start": "2025/09/15 11:00",
+      "end": "2025/09/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/解放望.png",
+      "category": "specialWeapon"
     }
   ],
   "huodong": [
@@ -572,6 +714,14 @@ const configData = {
       "shouldShow": true,
       "advice": "jjc进攻角色。拉到31-0满级即可。",
       "image": "./活动角色/祈梨新年.jpg"
+    },
+    {
+      "name": "h3",
+      "start": "2025/09/15 11:00",
+      "end": "2025/10/11 23:59",
+      "shouldShow": true,
+      "advice": "等攻略",
+      "image": "./活动角色/h3.png"
     }
   ],
   "showModal": false,
