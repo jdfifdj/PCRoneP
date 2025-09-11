@@ -153,7 +153,11 @@ const configData = {
     {
       "keyword": "不用刻意补，补春龙妈的话看抽数（>150）补。",
       "className": "highlight-orange"
-    }
+    },
+    {
+      "keyword": "默认满专",
+      "className": "highlight-orange"
+    },
   ],
   "activities": [
     {
@@ -683,7 +687,7 @@ const configData = {
       "start": "2025/09/15 11:00",
       "end": "2025/09/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：专武后几个月内常见角色，深域光1-10、3-10、4-10重要。开升建议方面，默认满专。",
       "image": "./专武/513.png",
       "category": "specialWeapon"
     },
@@ -692,7 +696,7 @@ const configData = {
       "start": "2025/09/15 11:00",
       "end": "2025/09/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：没什么用，偶尔在PJJC防守上用。",
       "image": "./专武/解放龙拳.png",
       "category": "specialWeapon"
     },
@@ -701,7 +705,7 @@ const configData = {
       "start": "2025/09/15 11:00",
       "end": "2025/09/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：默认满专,资源不够就先开专用着。",
       "image": "./专武/解放望.png",
       "category": "specialWeapon"
     }
