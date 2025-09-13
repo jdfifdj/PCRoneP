@@ -158,6 +158,22 @@ const configData = {
       "keyword": "默认满专",
       "className": "highlight-orange"
     },
+    {
+      "keyword": "不建议抽",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「望（解放者）」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「矛依未（解放者）」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "抽新不抽旧，仅钻多可考虑补票",
+      "className": "highlight-red"
+    }
   ],
   "activities": [
     {
@@ -485,7 +501,7 @@ const configData = {
       "start": "2025/09/15 11:00",
       "end": "2025/09/25 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：不建议抽，出场率较低，需要很特定的环境才有高收益，且高光几乎被简中服跳过。PVE场合均有替代，公会有一俩只就可以了。",
       "image": "./卡池/ue.png"
     },
     {
@@ -493,7 +509,7 @@ const configData = {
       "start": "2025/09/24 11:00",
       "end": "2025/09/29 8:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：<br/>「望（解放者）」：抽新不抽旧，仅钻多可考虑补票，作用还不少，但严格来说非必须，所以作为复刻，且属性版本之前，不太建议补抽。<br/>「矛依未（解放者）」：抽新不抽旧，仅钻多可考虑补票，最多再用一小段时间就完全下岗，可以不补（就算打不过深域也不补，宁愿落后也不要浪费钻）。",
       "image": "./卡池/解放望-513.png"
     },
     {
@@ -501,7 +517,7 @@ const configData = {
       "start": "2025/09/24 11:00",
       "end": "2025/09/29 08:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，仅钻多可考虑补票，能保齐后面水属性新角色的话，可以不补水花。",
       "image": "./卡池/水nnk.png"
     }
   ],
@@ -724,7 +740,7 @@ const configData = {
       "start": "2025/09/15 11:00",
       "end": "2025/10/11 23:59",
       "shouldShow": true,
-      "advice": "等攻略",
+      "advice": "jjc进攻角色。拉到31-0满级即可。",
       "image": "./活动角色/h3.png"
     }
   ],
