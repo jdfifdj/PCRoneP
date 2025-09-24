@@ -43,7 +43,12 @@ const GHZconfigData = {
     "./工会战/set刀/猫d4.png",
     "./工会战/set刀/猫d5.png",
     "./工会战/set刀/猫d6.png",
-    "./工会战/set刀/猫d7.png"
+    "./工会战/set刀/猫d7.png",
+    "./工会战/set刀/花舞d1.png",
+    "./工会战/set刀/花舞d2.png",
+    "./工会战/set刀/花舞d3.png",
+    "./工会战/set刀/花舞d4.png",
+    "./工会战/set刀/花舞d5.png"
   ],
   "showBigImg": false,
   "bigImgSrc": ""
