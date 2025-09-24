@@ -36,6 +36,8 @@ const GHZconfigData = {
     "./工会战/d5/d5-3.jpg"
   ],
   "d6Images": [
+    "./工会战/set刀/3.png",
+    "./工会战/set刀/4.png",
     "./工会战/set刀/猫abc.png",
     "./工会战/set刀/猫d1.png",
     "./工会战/set刀/猫d2.png",
