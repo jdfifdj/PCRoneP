@@ -391,7 +391,7 @@ const configData = {
       "start": "2025/09/21 05:00",
       "end": "2025/09/29 04:59",
       "shouldShow": true,
-      "icon": "./图标/地下城.png"
+      "icon": "./图标/马娜.png"
     },
     {
       "name": "复刻剧情活动「解放伊甸园在终将再会的未来」【前篇】",
@@ -468,7 +468,7 @@ const configData = {
       "start": "2025/9/29 5:00",
       "end": "2025/10/10 4:59",
       "shouldShow": true,
-      "icon": "./图标/妈.png"
+      "icon": "./图标/体力.png"
     },
     {
       "name": "大师币获得量5倍庆典",
@@ -496,14 +496,14 @@ const configData = {
       "start": "2025/9/29 5:00",
       "end": "2025/10/10 4:59",
       "shouldShow": true,
-      "icon": "./图标/妈.png"
+      "icon": "./图标/经验.png"
     },
     {
       "name": "「地下城」玛那掉落量4倍庆典",
       "start": "2025/9/29 5:00",
       "end": "2025/10/10 4:59",
       "shouldShow": true,
-      "icon": "./图标/地下城.png"
+      "icon": "./图标/马娜.png"
     },
     {
       "name": "「佩可莉姆（超负荷）」「凯露（超负荷）」复刻",
