@@ -171,9 +171,21 @@ const configData = {
       "className": "highlight-red"
     },
     {
-      "keyword": "抽新不抽旧，仅钻多可考虑补票",
+      "keyword": "抽新不抽旧",
       "className": "highlight-red"
-    }
+    },
+    {
+      "keyword": "必抽+人权+免费十连，这不抽诗人啊？",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「佩可莉姆（超负荷）」:",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「凯露（超负荷）」:",
+      "className": "highlight-red"
+    },
   ],
   "activities": [
     {
@@ -679,7 +691,7 @@ const configData = {
       "start": "2025/9/29 18:00",
       "end": "2025/10/6 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：必抽+人权+免费十连，这不抽诗人啊？",
       "image": "./卡池/星猫.png"
     },
     {
@@ -687,7 +699,7 @@ const configData = {
       "start": "2025/10/6 11:00",
       "end": "2025/10/13 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：</br>「佩可莉姆（超负荷）」:抽新不抽旧，此强度没有补的必要。</br>「凯露（超负荷）」:抽新不抽旧，此强度没有补的必要。",
       "image": "./卡池/超载吃猫.png"
     }
   ],
