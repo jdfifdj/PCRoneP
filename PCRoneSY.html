@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公主连结9月深域作业参考</title>
+  <link rel="stylesheet" href="./css/ghz.css">
+  <link rel="icon" href="./图标/水妈.png" type="image/png">
+</head>
+
+<body>
+  <div id="app">
+    <h1 class="title">公主连结深域作业参考</h1>
+    <h2 class="title">点击图片可以放大</h1>
+      <div class="tab-container">
+        <button class="tab" v-for="(tab, index) in tabs" :key="index" @click="activeTab = index">
+          {{ tab }}
+        </button>
+      </div>
+
+      <div class="content">
+        <div v-if="activeTab === 0" class="image-grid">
+          <div class="image-item" v-for="(img, imgIndex) in d1Images" :key="imgIndex" @click="showModal(img)">
+            <img :src="img" alt="前言">
+          </div>
+          <div class="image-item" >
+            <a>会长好友码：1327302213172</a>
+          </div>
+        </div>
+        <div v-if="activeTab === 1" class="image-grid">
+          <div class="image-item" v-for="(img, imgIndex) in d2Images" :key="imgIndex" @click="showModal(img)">
+            <img :src="img" alt="玩具喵Official">
+          </div>
+          <div class="image-item">
+            <a>图片可能更新不及时，具体可以点下图看最新视频</a>
+            <a href="https://www.bilibili.com/video/BV15VJkzVEGw">
+              <img src="./深域/喵1.jpg" alt="玩具喵作业链接">
+              </a>
+          </div>
+        </div>
+        <div v-if="activeTab === 2" class="image-grid">
+          <div class="image-item" v-for="(img, imgIndex) in d3Images" :key="imgIndex" @click="showModal(img)">
+            <img :src="img" alt="Columba-丘比">
+          </div>
+          <div class="image-item">
+            <a>图片可能更新不及时，具体可以点下图看最新视频</a>
+            <a href="https://www.bilibili.com/video/BV1H7nfzBEQw">
+              <img src="./深域/丘比-暗.jpg" alt="丘比作业链接">
+              </a>
+          </div>
+          <div class="image-item">
+            <a>图片可能更新不及时，具体可以点下图看最新视频</a>
+            <a href="https://www.bilibili.com/video/BV1HJnfzTENf/">
+              <img src="./深域/丘比-光.jpg" alt="丘比作业链接">
+              </a>
+          </div>
+          <div class="image-item">
+            <a>图片可能更新不及时，具体可以点下图看最新视频</a>
+            <a href="https://www.bilibili.com/video/BV1cJnfzTEkp">
+              <img src="./深域/丘比-风.jpg" alt="丘比作业链接">
+              </a>
+          </div>
+          <div class="image-item">
+            <a>图片可能更新不及时，具体可以点下图看最新视频</a>
+            <a href="https://www.bilibili.com/video/BV1cJnfzTEy3">
+              <img src="./深域/丘比-水.jpg" alt="丘比作业链接">
+              </a>
+          </div>
+          <div class="image-item">
+            <a>图片可能更新不及时，具体可以点下图看最新视频</a>
+            <a href="https://www.bilibili.com/video/BV1bPnfz7EPc">
+              <img src="./深域/丘比-火.jpg" alt="丘比作业链接">
+              </a>
+          </div>
+         
+        </div>
+
+      </div>
+
+      <!-- 放大图片的弹窗 -->
+      <div class="modal" :class="{ active: showBigImg }">
+        <img :src="bigImgSrc" alt="放大图片">
+        <button class="close-btn" @click="closeModal">×</button>
+      </div>
+
+      <div style="text-align:center;">
+        <a href="./index.html" style="color:red;text-decoration:none;">
+          <h3>点击返回首页</h3>
+        </a>
+      </div>
+
+      <footer>
+        <p>深域作业参考 - 展示版</p>
+        <p>攻略资料来源如下</p>
+        <p><a href="https://space.bilibili.com/25586360">B站：Columba-丘比</p>
+        <p><a href="https://space.bilibili.com/296496909">B站：玩具喵Official</p>
+      </footer>
+
+  </div>
+
+
+  <!-- 引入 Vue 2.6 -->
+  <script src="./sy-config.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.min.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: GHZconfigData,
+      methods: {
+        showModal(src) {
+          this.bigImgSrc = src;
+          this.showBigImg = true;
+          // 防止背景滚动
+          document.body.style.overflow = 'hidden';
+        },
+        closeModal() {
+          this.showBigImg = false;
+          this.bigImgSrc = '';
+          // 恢复背景滚动
+          document.body.style.overflow = '';
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
