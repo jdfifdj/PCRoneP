@@ -12,6 +12,7 @@ dir_to_array_map = {
     '前言': 'd1Images',
     '玩具喵': 'd2Images',
     '丘比': 'd3Images',
+    '台服作业': 'd4Images',
 }
 
 # 支持的图片扩展名

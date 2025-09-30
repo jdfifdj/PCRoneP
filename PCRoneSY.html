@@ -75,7 +75,12 @@
           </div>
          
         </div>
-
+        <div v-if="activeTab === 3" class="image-grid">
+          <div class="image-item" v-for="(img, imgIndex) in d4Images" :key="imgIndex" @click="showModal(img)">
+            <img :src="img" alt="台服作业">
+          </div>
+          
+        </div>
       </div>
 
       <!-- 放大图片的弹窗 -->
