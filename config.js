@@ -185,7 +185,7 @@ const configData = {
     {
       "keyword": "「凯露（超负荷）」:",
       "className": "highlight-red"
-    },
+    }
   ],
   "activities": [
     {
@@ -579,6 +579,118 @@ const configData = {
       "end": "2025/10/30 4:59",
       "shouldShow": true,
       "icon": "./图标/圣迹调查.png"
+    },
+    {
+      "name": "精选扭蛋「优妮（冬日）」「克罗依（冬日）」",
+      "start": "2025-10-16 11:00:00",
+      "end": "2025-10-30 10:59:00",
+      "shouldShow": true,
+      "icon": "./图标/水属性.png"
+    },
+    {
+      "name": "「兰法（夏日）」「忍（夏日）」复刻",
+      "start": "2025-10-16 11:00:00",
+      "end": "2025-10-20 10:59:00",
+      "shouldShow": true,
+      "icon": "./图标/水属性.png"
+    },
+    {
+      "name": "剧情活动「寒冬的盛夏与神圣学院的问题儿童」",
+      "start": "2025-10-13 16:00:00",
+      "end": "2025-10-27 23:59:00",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "复刻剧情活动「猫与粗点心咖啡厅 欢迎来到甜食党咖啡店」",
+      "start": "2025-10-13 16:00:00",
+      "end": "2025-10-20 23:59:00",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "「高难关卡」掉落量4倍庆典",
+      "start": "2025-10-13 05:00:00",
+      "end": "2025-10-22 04:59:00",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "「困难关卡」掉落量4倍庆典",
+      "start": "2025-10-10 05:00:00",
+      "end": "2025-10-30 04:59:00",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "兰德索尔杯",
+      "start": "2025-10-17 05:00:00",
+      "end": "2025-11-01 04:59:00",
+      "shouldShow": true,
+      "icon": "./图标/妈.png"
+    },
+    {
+      "name": "斗技场开启",
+      "start": "2025-10-17 05:00:00",
+      "end": "2025-10-21 23:59:00",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "「优衣（新年）」「日和莉（新年）」「可可萝（新年）」凯露（新年）」复刻",
+      "start": "2025-10-16 11:00:00",
+      "end": "2025-10-23 10:59:00",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "露娜之塔开启",
+      "start": "2025-10-22 12:00:00",
+      "end": "2025-10-27 23:59:00",
+      "shouldShow": true,
+      "icon": "./图标/露娜塔.png"
+    },
+    {
+      "name": "次元断层开启",
+      "start": "2025-10-22 12:00:00",
+      "end": "2025-10-27 23:59:00",
+      "shouldShow": true,
+      "icon": "./图标/露娜塔.png"
+    },
+    {
+      "name": "「普通关卡」装备掉落量6倍、玛那掉落量4倍庆典",
+      "start": "2025-10-22 05:00:00",
+      "end": "2025-10-30 04:59:00",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「地下城」玛那掉落量4倍庆典",
+      "start": "2025-10-22 05:00:00",
+      "end": "2025-10-30 04:59:00",
+      "shouldShow": true,
+      "icon": "./图标/马娜.png"
+    },
+    {
+      "name": "大师币获得量3倍庆典",
+      "start": "2025-10-22 05:00:00",
+      "end": "2025-10-30 04:59:00",
+      "shouldShow": true,
+      "icon": "./图标/大师币.png"
+    },
+    {
+      "name": "体力消费时玩家经验值获得量3倍庆典",
+      "start": "2025-10-22 05:00:00",
+      "end": "2025-10-30 04:59:00",
+      "shouldShow": true,
+      "icon": "./图标/经验.png"
+    },
+    {
+      "name": "「凯露（插班生）」复刻",
+      "start": "2025-10-26 11:00:00",
+      "end": "2025-10-30 10:59:00",
+      "shouldShow": true,
+      "icon": "./图标/火属性.png"
     }
   ],
   "gachaPools": [
@@ -701,6 +813,46 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：</br>「佩可莉姆（超负荷）」:抽新不抽旧，此强度没有补的必要。</br>「凯露（超负荷）」:抽新不抽旧，此强度没有补的必要。",
       "image": "./卡池/超载吃猫.png"
+    },
+    {
+      "name": "公主庆典扭蛋「厄里斯」",
+      "start": "2025-10-13 16:00:00",
+      "end": "2025-10-16 17:59:00",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/els.png"
+    },
+    {
+      "name": "精选扭蛋「优妮（冬日）」「克罗依（冬日）」",
+      "start": "2025-10-16 11:00:00",
+      "end": "2025-10-30 10:59:00",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/水2.png"
+    },
+    {
+      "name": "「兰法（夏日）」「忍（夏日）」复刻",
+      "start": "2025-10-16 11:00:00",
+      "end": "2025-10-20 10:59:00",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/自选6.png"
+    },
+    {
+      "name": "「优衣（新年）」「日和莉（新年）」「可可萝（新年）」凯露（新年）」复刻",
+      "start": "2025-10-16 11:00:00",
+      "end": "2025-10-23 10:59:00",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/新年自选.png"
+    },
+    {
+      "name": "「凯露（插班生）」复刻",
+      "start": "2025-10-26 11:00:00",
+      "end": "2025-10-30 10:59:00",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/学猫.png"
     }
   ],
   "sixStar": [
@@ -724,6 +876,13 @@ const configData = {
       "end": "2025/09/30 04:59",
       "shouldShow": true,
       "image": "./六星/嘉夜.png"
+    },
+    {
+      "name": "6星-破晓之星",
+      "start": "2025/10/13 05:00",
+      "end": "2025/10/30 23:59",
+      "shouldShow": true,
+      "image": "./六星/6星-破晓之星.png"
     }
   ],
   "specialWeapons": [
@@ -906,6 +1065,51 @@ const configData = {
       "advice": "开专建议：默认满专,资源不够就先开专用着。",
       "image": "./专武/解放望.png",
       "category": "specialWeapon"
+    },
+    {
+      "name": "工二力",
+      "start": "2025/10/13 05:00",
+      "end": "2025/10/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/工二力.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "工猫",
+      "start": "2025/10/13 05:00",
+      "end": "2025/10/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/工猫.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "黑姐姐",
+      "start": "2025/10/13 05:00",
+      "end": "2025/10/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/黑姐姐.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "姐姐-2",
+      "start": "2025/10/13 05:00",
+      "end": "2025/10/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/姐姐-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "妹弓-2",
+      "start": "2025/10/13 05:00",
+      "end": "2025/10/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/妹弓-2.png",
+      "category": "specialWeapon"
     }
   ],
   "huodong": [
@@ -932,7 +1136,7 @@ const configData = {
 
 // 导出配置数据
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    module.exports = configData;
+  module.exports = configData;
 } else {
-    window.configData = configData;
+  window.configData = configData;
 }
