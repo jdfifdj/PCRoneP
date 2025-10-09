@@ -185,7 +185,39 @@ const configData = {
     {
       "keyword": "「凯露（超负荷）」:",
       "className": "highlight-red"
-    }
+    },
+    {
+      "keyword": "有角色推荐开，风4-10默认满。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "用到再开。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "有这个角色就开。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「优衣（新年）」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「日和莉（新年）」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「可可萝（新年）」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「凯露（新年）」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "，属性版本后面越来越强。",
+      "className": "highlight-red"
+    },
   ],
   "activities": [
     {
@@ -637,7 +669,7 @@ const configData = {
       "icon": "./图标/竞技场.png"
     },
     {
-      "name": "「优衣（新年）」「日和莉（新年）」「可可萝（新年）」凯露（新年）」复刻",
+      "name": "「优衣（新年）」「日和莉（新年）」「可可萝（新年）」「凯露（新年）」复刻",
       "start": "2025/10/16 11:00",
       "end": "2025/10/23 10:59",
       "shouldShow": true,
@@ -819,7 +851,7 @@ const configData = {
       "start": "2025/10/13 16:00:00",
       "end": "2025/10/16 17:59:00",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：必抽。无需多言",
       "image": "./卡池/els.png"
     },
     {
@@ -839,11 +871,11 @@ const configData = {
       "image": "./卡池/自选6.png"
     },
     {
-      "name": "「优衣（新年）」「日和莉（新年）」「可可萝（新年）」凯露（新年）」复刻",
+      "name": "「优衣（新年）」「日和莉（新年）」「可可萝（新年）」「凯露（新年）」复刻",
       "start": "2025/10/16 11:00:00",
       "end": "2025/10/23 10:59:00",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。</br>「优衣（新年）」：除了光6-10初期开荒刚需之外就没有高光了</br>「日和莉（新年）」：后面没什么用了。</br>「可可萝（新年）」：后期只有一期工会战高光然后没什么用了。</br>「凯露（新年）」：以前太强了迟迟没有二专，所以还是不推荐抽。",
       "image": "./卡池/新年自选.png"
     },
     {
@@ -1071,7 +1103,7 @@ const configData = {
       "start": "2025/10/13 05:00",
       "end": "2025/10/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：用到再开。ex7早期作业有（ex7一般人谁早期打），工会战偶额有尾刀会有。",
       "image": "./专武/工二力.png",
       "category": "specialWeapon"
     },
@@ -1080,7 +1112,7 @@ const configData = {
       "start": "2025/10/13 05:00",
       "end": "2025/10/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：有角色推荐开，风4-10默认满。专武后PVP有一定上场率，风4-1O开荒初期刚需，需要跟狗妈自持其中一个，后期风物理多目标有用。",
       "image": "./专武/工猫.png",
       "category": "specialWeapon"
     },
@@ -1089,7 +1121,7 @@ const configData = {
       "start": "2025/10/13 05:00",
       "end": "2025/10/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：有这个角色就开。ex7会有刀，开专后jjc常客。",
       "image": "./专武/黑姐姐.png",
       "category": "specialWeapon"
     },
