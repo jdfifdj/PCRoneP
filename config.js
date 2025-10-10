@@ -215,7 +215,27 @@ const configData = {
       "className": "highlight-red"
     },
     {
-      "keyword": "，属性版本后面越来越强。",
+      "keyword": "「忍（夏日）」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「兰法（夏日）」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「优妮（冬日）」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「克罗依（冬日）」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "抽优妮>120抽可以补，具体看你的钻石。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "，否则水属性直接坐牢",
       "className": "highlight-red"
     },
   ],
@@ -859,7 +879,7 @@ const configData = {
       "start": "2025/10/16 11:00:00",
       "end": "2025/10/30 10:59:00",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：</br>「优妮（冬日）」：必抽，否则水属性直接坐牢。水属性核心辅助，长期人权级别。</br>「克罗依（冬日）」：抽优妮>120抽可以补，具体看你的钻石。短期水属性物理高光，但很快就失踪，尤其简中服加速，一眨眼就会下岗。",
       "image": "./卡池/水2.png"
     },
     {
@@ -867,7 +887,7 @@ const configData = {
       "start": "2025/10/16 11:00:00",
       "end": "2025/10/20 10:59:00",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。</br>「兰法（夏日）」：后面用不到了。</br>「忍（夏日）」：后面出场次数非常低。",
       "image": "./卡池/自选6.png"
     },
     {
@@ -883,7 +903,7 @@ const configData = {
       "start": "2025/10/26 11:00:00",
       "end": "2025/10/30 10:59:00",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/学猫.png"
     }
   ],
@@ -1099,7 +1119,7 @@ const configData = {
       "category": "specialWeapon"
     },
     {
-      "name": "工二力",
+      "name": "猫二力",
       "start": "2025/10/13 05:00",
       "end": "2025/10/30 23:59",
       "shouldShow": true,
@@ -1108,7 +1128,7 @@ const configData = {
       "category": "specialWeapon"
     },
     {
-      "name": "工猫",
+      "name": "咖啡猫",
       "start": "2025/10/13 05:00",
       "end": "2025/10/30 23:59",
       "shouldShow": true,
@@ -1121,7 +1141,7 @@ const configData = {
       "start": "2025/10/13 05:00",
       "end": "2025/10/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：有这个角色就开。ex7会有刀，开专后jjc常客。",
+      "advice": "开专建议：有这个角色就开。30可用，ex7会有刀，开专后jjc常客。",
       "image": "./专武/黑姐姐.png",
       "category": "specialWeapon"
     },
@@ -1130,7 +1150,7 @@ const configData = {
       "start": "2025/10/13 05:00",
       "end": "2025/10/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：可选择性上场，一般不会刚需。",
       "image": "./专武/姐姐-2.png",
       "category": "specialWeapon"
     },
@@ -1139,7 +1159,7 @@ const configData = {
       "start": "2025/10/13 05:00",
       "end": "2025/10/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：JJC和EX7大刀上场，深域上场次数不多。",
       "image": "./专武/妹弓-2.png",
       "category": "specialWeapon"
     }
