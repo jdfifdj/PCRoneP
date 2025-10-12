@@ -871,7 +871,7 @@ const configData = {
       "start": "2025/10/13 16:00:00",
       "end": "2025/10/16 17:59:00",
       "shouldShow": true,
-      "advice": "抽卡建议：必抽。无需多言",
+      "advice": "抽卡建议：必抽。无需多言。<div class='img-container-advice'><img src ='./卡池/fes补.png'></div></br><div class='img-container-advice'><img src ='./卡池/没有.jpg'></div>",
       "image": "./卡池/els.png"
     },
     {
