@@ -743,7 +743,14 @@ const configData = {
       "end": "2025/10/30 10:59",
       "shouldShow": true,
       "icon": "./图标/火属性.png"
-    }
+    },
+    {
+      "name": "「团队战」",
+      "start": "2025/10/25 05:00",
+      "end": "2025/10/29 23:59",
+      "shouldShow": true,
+      "icon": "./图标/团队战.png"
+    },
   ],
   "gachaPools": [
     {
