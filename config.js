@@ -751,6 +751,111 @@ const configData = {
       "shouldShow": true,
       "icon": "./图标/团队战.png"
     },
+    {
+      "name": "精选扭蛋「真琴（教官）」「惠理子（教官）」",
+      "start": "2025/10/30 16:00",
+      "end": "2025/11/04 10:59",
+      "shouldShow": true,
+      "icon": "./图标/暗属性.png"
+    },
+    {
+      "name": "「步美（怪盗）」复刻",
+      "start": "2025/10/30 16:00",
+      "end": "2025/11/02 10:59",
+      "shouldShow": true,
+      "icon": "./图标/暗属性.png"
+    },
+    {
+      "name": "剧情活动「冷酷·火爆·新兵训练营 魔鬼教官与鞭子与……糖果？」",
+      "start": "2025/10/30 16:00",
+      "end": "2025/11/13 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "复刻剧情活动「Dears 欢迎回来与我回来了的约定」",
+      "start": "2025/10/30 16:00",
+      "end": "2025/11/06 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "「高难关卡」掉落量4倍庆典",
+      "start": "2025/10/30 05:00",
+      "end": "2025/11/14 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "「可可萝（游骑兵）」复刻",
+      "start": "2025/11/02 11:00",
+      "end": "2025/11/05 10:59",
+      "shouldShow": true,
+      "icon": "./图标/风属性.png"
+    },
+    {
+      "name": "「咲恋（沙漠）」复刻",
+      "start": "2025/11/05 11:00",
+      "end": "2025/11/14 10:59",
+      "shouldShow": true,
+      "icon": "./图标/火属性.png"
+    },
+    {
+      "name": "斗技场开启",
+      "start": "2025/11/02 12:00",
+      "end": "2025/11/06 23:59",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "「普通关卡」装备掉落量6倍 玛那掉落量4倍庆典",
+      "start": "2025/11/07 05:00",
+      "end": "2025/11/14 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「困难关卡」掉落量4倍庆典",
+      "start": "2025/11/07 05:00",
+      "end": "2025/11/14 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "大师币获得量3倍庆典",
+      "start": "2025/11/07 05:00",
+      "end": "2025/11/14 04:59",
+      "shouldShow": true,
+      "icon": "./图标/大师币.png"
+    },
+    {
+      "name": "「圣迹调查&神殿调查关卡」掉落量4倍庆典",
+      "start": "2025/11/07 05:00",
+      "end": "2025/11/14 04:59",
+      "shouldShow": true,
+      "icon": "./图标/圣迹调查.png"
+    },
+    {
+      "name": "「探索关卡」掉落量4倍庆典",
+      "start": "2025/11/07 05:00",
+      "end": "2025/11/14 04:59",
+      "shouldShow": true,
+      "icon": "./图标/探索.png"
+    },
+    {
+      "name": "每日一次免费十连（最高免费50抽！）",
+      "start": "2025/11/10 05:00",
+      "end": "2025/11/15 04:59",
+      "shouldShow": true,
+      "icon": "./图标/宝箱.png"
+    },
+    {
+      "name": "露娜之塔",
+      "start": "2025/11/08 12:00",
+      "end": "2025/11/13 04:59",
+      "shouldShow": true,
+      "icon": "./图标/露娜塔.png"
+    }
   ],
   "gachaPools": [
     {
@@ -912,6 +1017,38 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/学猫.png"
+    },
+    {
+      "name": "精选扭蛋「真琴（教官）」「惠理子（教官）」",
+      "start": "2025/10/30 16:00",
+      "end": "2025/11/04 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/暗狼.png"
+    },
+    {
+      "name": "「步美（怪盗）」复刻",
+      "start": "2025/10/30 16:00",
+      "end": "2025/11/02 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/怪盗路人妹.png"
+    },
+    {
+      "name": "「可可萝（游骑兵）」复刻",
+      "start": "2025/11/02 11:00",
+      "end": "2025/11/05 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/狗妈.png"
+    },
+    {
+      "name": "「咲恋（沙漠）」复刻",
+      "start": "2025/11/05 11:00",
+      "end": "2025/11/14 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/火电.png"
     }
   ],
   "sixStar": [
@@ -1168,6 +1305,51 @@ const configData = {
       "shouldShow": true,
       "advice": "二专开专建议：JJC和EX7大刀上场，深域上场次数不多。",
       "image": "./专武/妹弓-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "狗妈",
+      "start": "2025/10/30 16:00",
+      "end": "2025/11/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/狗妈.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "狼栞",
+      "start": "2025/10/30 16:00",
+      "end": "2025/11/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/狼栞.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "莉莉",
+      "start": "2025/10/30 16:00",
+      "end": "2025/11/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/莉莉.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "江花-2",
+      "start": "2025/10/30 16:00",
+      "end": "2025/11/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/江花-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "忍扇-2",
+      "start": "2025/10/30 16:00",
+      "end": "2025/11/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/忍扇-2.png",
       "category": "specialWeapon"
     }
   ],
