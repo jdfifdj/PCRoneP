@@ -231,11 +231,35 @@ const configData = {
       "className": "highlight-red"
     },
     {
+      "keyword": "「真琴（教官）」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「惠理子（教官）」：",
+      "className": "highlight-red"
+    },
+    {
       "keyword": "抽优妮>120抽可以补，具体看你的钻石。",
       "className": "highlight-red"
     },
     {
       "keyword": "，否则水属性直接坐牢",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "本期卡池比较特殊，下半月2个大人权卡池要出来，实在没钻（9w）的可以不抽（不是前排的可以只抽一个），而且中间有5天免费十连[11/10-11/15]。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "没钻不抽。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "如果要抽0井1的情况下就抽她。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "建议交球，用处不少。",
       "className": "highlight-red"
     },
   ],
@@ -1023,7 +1047,7 @@ const configData = {
       "start": "2025/10/30 16:00",
       "end": "2025/11/04 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：本期卡池比较特殊，下半月2个大人权卡池要出来，实在没钻（9w）的可以不抽（不是前排的可以只抽一个），而且中间有5天免费十连[11/10-11/15]。</br></br>「真琴（教官）」：没钻不抽。深域出场率很少，高光基本上只在几期工会战，不是前排可以不抽。</br>「惠理子（教官）」：如果要抽0井1的情况下就抽她。较高强度常驻，越早歪出来越好，钻少可以不抽，但体验比较赌脸。</br>",
       "image": "./卡池/暗狼.png"
     },
     {
@@ -1031,7 +1055,7 @@ const configData = {
       "start": "2025/10/30 16:00",
       "end": "2025/11/02 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/怪盗路人妹.png"
     },
     {
@@ -1039,7 +1063,7 @@ const configData = {
       "start": "2025/11/02 11:00",
       "end": "2025/11/05 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/狗妈.png"
     },
     {
@@ -1047,7 +1071,7 @@ const configData = {
       "start": "2025/11/05 11:00",
       "end": "2025/11/14 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：建议20W余钻以上考虑补。",
       "image": "./卡池/火电.png"
     }
   ],
@@ -1312,7 +1336,7 @@ const configData = {
       "start": "2025/10/30 16:00",
       "end": "2025/11/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：有角色推荐开，风4-10默认满。可以直接交球。",
       "image": "./专武/狗妈.png",
       "category": "specialWeapon"
     },
@@ -1321,7 +1345,7 @@ const configData = {
       "start": "2025/10/30 16:00",
       "end": "2025/11/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：建议交球，用处不少。",
       "image": "./专武/狼栞.png",
       "category": "specialWeapon"
     },
@@ -1330,7 +1354,7 @@ const configData = {
       "start": "2025/10/30 16:00",
       "end": "2025/11/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：30可用，用到的次数不多。",
       "image": "./专武/莉莉.png",
       "category": "specialWeapon"
     },
@@ -1339,7 +1363,7 @@ const configData = {
       "start": "2025/10/30 16:00",
       "end": "2025/11/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：有角色有资源就开，会战用处比较少，深域作业偶尔有她，偶尔几次高光。",
       "image": "./专武/江花-2.png",
       "category": "specialWeapon"
     },
@@ -1348,7 +1372,7 @@ const configData = {
       "start": "2025/10/30 16:00",
       "end": "2025/11/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：比不过克总，用处基本上ex7堆队伍的，有资源多的就开吧",
       "image": "./专武/忍扇-2.png",
       "category": "specialWeapon"
     }
