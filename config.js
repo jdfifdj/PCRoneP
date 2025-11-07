@@ -879,6 +879,118 @@ const configData = {
       "end": "2025/11/13 04:59",
       "shouldShow": true,
       "icon": "./图标/露娜塔.png"
+    },
+    {
+      "name": "公主庆典扭蛋「银莲」",
+      "start": "2025/11/14 12:00",
+      "end": "2025/11/17 17:59",
+      "shouldShow": true,
+      "icon": "./图标/风属性.png"
+    },
+    {
+      "name": "剧情活动「花开时节的真挚情谊」",
+      "start": "2025/11/14 12:00",
+      "end": "2025/11/28 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "复刻剧情活动「连结・这片・碧蓝直至少女到达天际」",
+      "start": "2025/11/14 12:00",
+      "end": "2025/11/21 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "「普通关卡」掉落量 6 倍庆典",
+      "start": "2025/11/14 05:00",
+      "end": "2025/11/29 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「高难关卡」掉落量 6 倍庆典",
+      "start": "2025/11/14 05:00",
+      "end": "2025/11/29 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "「圣迹调查 & 神殿调查关卡」掉落量 6 倍庆典",
+      "start": "2025/11/14 05:00",
+      "end": "2025/11/29 04:59",
+      "shouldShow": true,
+      "icon": "./图标/圣迹调查.png"
+    },
+    {
+      "name": "每日任务体力获得量 4 倍",
+      "start": "2025/11/14 05:00",
+      "end": "2025/11/29 04:59",
+      "shouldShow": true,
+      "icon": "./图标/体力.png"
+    },
+    {
+      "name": "斗技场开启",
+      "start": "2025/11/15 12:00",
+      "end": "2025/11/19 23:59",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "精选扭蛋「镜华（春日）」「铃莓（春日）」",
+      "start": "2025/11/17 12:00",
+      "end": "2025/11/29 10:59",
+      "shouldShow": true,
+      "icon": "./图标/风属性.png"
+    },
+    {
+      "name": "「姬塔（术士）」「毗伽姐」复刻",
+      "start": "2025/11/17 12:00",
+      "end": "2025/11/22 10:59",
+      "shouldShow": true,
+      "icon": "./图标/暗属性.png"
+    },
+    {
+      "name": "「地下城」玛那掉落量 4 倍庆典",
+      "start": "2025/11/21 05:00",
+      "end": "2025/11/29 04:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "大师币获得量 3 倍庆典",
+      "start": "2025/11/21 05:00",
+      "end": "2025/11/29 04:59",
+      "shouldShow": true,
+      "icon": "./图标/大师币.png"
+    },
+    {
+      "name": "体力消费时玩家经验值获得量 3 倍庆典",
+      "start": "2025/11/21 05:00",
+      "end": "2025/11/29 04:59",
+      "shouldShow": true,
+      "icon": "./图标/经验.png"
+    },
+    {
+      "name": "露娜之塔开启",
+      "start": "2025/11/22 17:00",
+      "end": "2025/11/27 23:59",
+      "shouldShow": true,
+      "icon": "./图标/露娜塔.png"
+    },
+    {
+      "name": "「佩可莉姆（圣诞节）」复刻",
+      "start": "2025/11/22 11:00",
+      "end": "2025/11/26 10:59",
+      "shouldShow": true,
+      "icon": "./图标/水属性.png"
+    },
+    {
+      "name": "「双子座」团队战",
+      "start": "2025/11/24 05:00",
+      "end": "2025/11/28 23:59",
+      "shouldShow": true,
+      "icon": "./图标/团队战.png"
     }
   ],
   "gachaPools": [
@@ -1073,6 +1185,38 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：建议20W余钻以上考虑补。",
       "image": "./卡池/火电.png"
+    },
+    {
+      "name": "公主庆典扭蛋「银莲」",
+      "start": "2025/11/14 12:00",
+      "end": "2025/11/17 17:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/银莲.png"
+    },
+    {
+      "name": "精选扭蛋「镜华（春日）」「铃莓（春日）」",
+      "start": "2025/11/17 12:00",
+      "end": "2025/11/29 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/春cw.png"
+    },
+    {
+      "name": "「姬塔（术士）」「毗伽姐」复刻",
+      "start": "2025/11/17 12:00",
+      "end": "2025/11/22 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/魔塔.png"
+    },
+    {
+      "name": "「佩可莉姆（圣诞节）」复刻",
+      "start": "2025/11/22 11:00",
+      "end": "2025/11/26 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/圣吃2.png"
     }
   ],
   "sixStar": [
@@ -1374,6 +1518,51 @@ const configData = {
       "shouldShow": true,
       "advice": "二专开专建议：比不过克总，用处基本上ex7堆队伍的，有资源多的就开吧",
       "image": "./专武/忍扇-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "炼金花鼎",
+      "start": "2025/11/14 12:00",
+      "end": "2025/11/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/炼金花鼎.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "魔塔",
+      "start": "2025/11/14 12:00",
+      "end": "2025/11/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/魔塔.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "鼠鼠",
+      "start": "2025/11/14 12:00",
+      "end": "2025/11/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/鼠鼠.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "七七香-2",
+      "start": "2025/11/14 12:00",
+      "end": "2025/11/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/七七香-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "工菜-2",
+      "start": "2025/11/14 12:00",
+      "end": "2025/11/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/工菜-2.png",
       "category": "specialWeapon"
     }
   ],
