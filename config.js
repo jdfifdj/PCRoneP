@@ -262,6 +262,22 @@ const configData = {
       "keyword": "建议交球，用处不少。",
       "className": "highlight-red"
     },
+    {
+      "keyword": "「镜华（春日）」：非必要抽但是和水美空(12月份)至少要有一个，且比水美空强，如果抽0井1，就抽花仓唯。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「铃莓（春日）」：优先花CW，花CW井了可以不补。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「姬塔（术士）」：比较建议补抽，但余钻不能太低",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「毗伽姐」：姬塔>120出货，且余钻>15万就补。",
+      "className": "highlight-red"
+    },
   ],
   "activities": [
     {
@@ -1191,7 +1207,7 @@ const configData = {
       "start": "2025/11/14 12:00",
       "end": "2025/11/17 17:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：必抽。无需多言。没有的可以退群了。",
       "image": "./卡池/银莲.png"
     },
     {
@@ -1199,7 +1215,7 @@ const configData = {
       "start": "2025/11/17 12:00",
       "end": "2025/11/29 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：</br>「镜华（春日）」：非必要抽但是和水美空(12月份)至少要有一个，且比水美空强，如果抽0井1，就抽花仓唯。深域风5-10开荒，7-10可选。EX7风法大刀，可优化。公会战风法队输出，短期强，之后用得少，但未完全下岗。</br>「铃莓（春日）」：优先花CW，花CW井了可以不补。</br>",
       "image": "./卡池/春cw.png"
     },
     {
@@ -1207,7 +1223,7 @@ const configData = {
       "start": "2025/11/17 12:00",
       "end": "2025/11/22 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：</br>「姬塔（术士）」：比较建议补抽，但余钻不能太低，还有很长的强势期，且是属性版本重要角色。</br>「毗伽姐」：姬塔>120出货，且余钻>15万就补。</br>",
       "image": "./卡池/魔塔.png"
     },
     {
@@ -1215,7 +1231,7 @@ const configData = {
       "start": "2025/11/22 11:00",
       "end": "2025/11/26 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/圣吃2.png"
     }
   ],
@@ -1525,7 +1541,7 @@ const configData = {
       "start": "2025/11/14 12:00",
       "end": "2025/11/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：打ex7才用，30可用",
       "image": "./专武/炼金花鼎.png",
       "category": "specialWeapon"
     },
@@ -1534,7 +1550,7 @@ const configData = {
       "start": "2025/11/14 12:00",
       "end": "2025/11/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：必开，推荐交球，默认满",
       "image": "./专武/魔塔.png",
       "category": "specialWeapon"
     },
@@ -1543,7 +1559,7 @@ const configData = {
       "start": "2025/11/14 12:00",
       "end": "2025/11/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：30可用",
       "image": "./专武/鼠鼠.png",
       "category": "specialWeapon"
     },
@@ -1552,7 +1568,7 @@ const configData = {
       "start": "2025/11/14 12:00",
       "end": "2025/11/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：用到在说",
       "image": "./专武/七七香-2.png",
       "category": "specialWeapon"
     },
@@ -1561,7 +1577,7 @@ const configData = {
       "start": "2025/11/14 12:00",
       "end": "2025/11/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：用到在说",
       "image": "./专武/工菜-2.png",
       "category": "specialWeapon"
     }
