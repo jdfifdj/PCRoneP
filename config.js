@@ -1007,6 +1007,111 @@ const configData = {
       "end": "2025/11/28 23:59",
       "shouldShow": true,
       "icon": "./图标/团队战.png"
+    },
+    {
+      "name": "精选扭蛋「真步（梦想乐园）」「库露露」",
+      "start": "2025/11/29 14:00",
+      "end": "2025/12/15 10:59",
+      "shouldShow": true,
+      "icon": "./图标/光属性.png"
+    },
+    {
+      "name": "「伊莉亚（礼服）」复刻",
+      "start": "2025/11/29 14:00",
+      "end": "2025/12/04 10:59",
+      "shouldShow": true,
+      "icon": "./图标/风属性.png"
+    },
+    {
+      "name": "剧情活动「奇幻梦想大游行 宝石兔与秘密伙伴们」",
+      "start": "2025/11/29 14:00",
+      "end": "2025/12/13 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "复刻剧情活动「吸血鬼传闻 夜与美的盛宴」",
+      "start": "2025/11/29 14:00",
+      "end": "2025/12/06 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "「高难关卡」掉落量 4 倍庆典",
+      "start": "2025/11/29 05:00",
+      "end": "2025/12/15 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "「初音（新年）」「香澄（新年）」复刻",
+      "start": "2025/12/09 11:00",
+      "end": "2025/12/15 10:59",
+      "shouldShow": true,
+      "icon": "./图标/火属性.png"
+    },
+    {
+      "name": "「珠希（夏日）」「铃莓（夏日）」「咲恋（夏日）」「铃奈（夏日）」「佩可莉姆（夏日）」「凯露（夏日）」复刻",
+      "start": "2025/12/04 11:00",
+      "end": "2025/12/15 04:59",
+      "shouldShow": true,
+      "icon": "./图标/水属性.png"
+    },
+    {
+      "name": "露娜之塔开启",
+      "start": "2025/12/08 12:00",
+      "end": "2025/12/13 10:59",
+      "shouldShow": true,
+      "icon": "./图标/露娜塔.png"
+    },
+    {
+      "name": "特别地下城开启",
+      "start": "2025/12/08 05:00",
+      "end": "2025/12/13 04:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "「普通关卡」装备掉落量 6 倍、玛那掉落量 4 倍庆典",
+      "start": "2025/12/08 05:00",
+      "end": "2025/12/15 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「困难关卡」掉落量 4 倍庆典",
+      "start": "2025/12/08 05:00",
+      "end": "2025/12/30 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "大师币获得量 3 倍庆典",
+      "start": "2025/12/08 05:00",
+      "end": "2025/12/15 04:59",
+      "shouldShow": true,
+      "icon": "./图标/大师币.png"
+    },
+    {
+      "name": "「圣迹调查 & 神殿调查关卡」掉落量 4 倍庆典",
+      "start": "2025/12/08 05:00",
+      "end": "2025/12/15 04:59",
+      "shouldShow": true,
+      "icon": "./图标/圣迹调查.png"
+    },
+    {
+      "name": "「探索关卡」掉落量 4 倍庆典",
+      "start": "2025/12/08 05:00",
+      "end": "2025/12/15 04:59",
+      "shouldShow": true,
+      "icon": "./图标/探索.png"
+    },
+    {
+      "name": "斗技场",
+      "start": "2025/12/02 12:00",
+      "end": "2025/12/06 23:59",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
     }
   ],
   "gachaPools": [
@@ -1233,6 +1338,38 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/圣吃2.png"
+    },
+    {
+      "name": "精选扭蛋「真步（梦想乐园）」「库露露」",
+      "start": "2025/11/29 14:00",
+      "end": "2025/12/15 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/梦狐.png"
+    },
+    {
+      "name": "「伊莉亚（礼服）」复刻",
+      "start": "2025/11/29 14:00",
+      "end": "2025/12/04 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/复刻-派大星.png"
+    },
+    {
+      "name": "「初音（新年）」「香澄（新年）」复刻",
+      "start": "2025/12/09 11:00",
+      "end": "2025/12/15 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/礼yly-复刻.png"
+    },
+    {
+      "name": "「珠希（夏日）」「铃莓（夏日）」「咲恋（夏日）」「铃奈（夏日）」「佩可莉姆（夏日）」「凯露（夏日）」复刻",
+      "start": "2025/12/04 11:00",
+      "end": "2025/12/15 04:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/自选7.png"
     }
   ],
   "sixStar": [
@@ -1263,7 +1400,14 @@ const configData = {
       "end": "2025/10/30 23:59",
       "shouldShow": true,
       "image": "./六星/6星-破晓之星.png"
-    }
+    },
+    {
+      "name": "流夏",
+      "start": "2025/11/29 14:00",
+      "end": "2025/12/30 23:59",
+      "shouldShow": true,
+      "image": "./六星/流夏.png"
+    },
   ],
   "specialWeapons": [
     {
@@ -1579,6 +1723,50 @@ const configData = {
       "shouldShow": true,
       "advice": "二专开专建议：用到在说",
       "image": "./专武/工菜-2.png",
+      "category": "specialWeapon"
+    }, {
+      "name": "礼雪",
+      "start": "2025/11/29 12:00",
+      "end": "2025/12/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/礼雪.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "礼yly",
+      "start": "2025/11/29 12:00",
+      "end": "2025/12/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/礼yly.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水爆-2",
+      "start": "2025/11/29 12:00",
+      "end": "2025/12/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/水爆-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水电-2",
+      "start": "2025/11/29 12:00",
+      "end": "2025/12/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/水电-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水老师-2",
+      "start": "2025/11/29 12:00",
+      "end": "2025/12/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/水老师-2.png",
       "category": "specialWeapon"
     }
   ],
