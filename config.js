@@ -63,18 +63,6 @@ const configData = {
       "className": "highlight-blue"
     },
     {
-      "keyword": "（9w+）",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "（15w+）",
-      "className": "highlight-red"
-    },
-    {
-      "keyword": "（18w+）",
-      "className": "highlight-red"
-    },
-    {
       "keyword": "但终会下岗（抽11月的花仓唯就行），没有的可以忍到她下岗，钻很多再考虑补",
       "className": "highlight-orange"
     },
@@ -276,6 +264,18 @@ const configData = {
     },
     {
       "keyword": "「毗伽姐」：姬塔>120出货，且余钻>15万就补。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「真步（梦想乐园）」：10w钻以下就别抽了，以上就推荐抽，限定角色+中高强度。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「库露露」：优先抽真步，真步井了可以不补，可以等歪等超得。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "钻多（18w+）的可以补个「佩可莉姆（夏日）」，未来开专二，传奇水属性多目标打手。",
       "className": "highlight-red"
     },
   ],
@@ -1344,7 +1344,7 @@ const configData = {
       "start": "2025/11/29 14:00",
       "end": "2025/12/15 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：「真步（梦想乐园）」：10w钻以下就别抽了，以上就推荐抽，限定角色+中高强度。PVE：日常活动出场率中等，光法队可选辅助。光深域大量道中/5-10/9-10。EX7未通关可用。工会战：光法队可选辅助，出场率中等，寿命中，日服疑似濒临下岗。</br>「库露露」：优先抽真步，真步井了可以不补，可以等歪等超得。PVE：光深域大量道中。工会战：定位偏奶盾，辅助能力稍低，法刀坦克，但出法刀不一定需要上。</br>",
       "image": "./卡池/梦狐.png"
     },
     {
@@ -1352,7 +1352,7 @@ const configData = {
       "start": "2025/11/29 14:00",
       "end": "2025/12/04 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/复刻-派大星.png"
     },
     {
@@ -1360,7 +1360,7 @@ const configData = {
       "start": "2025/12/09 11:00",
       "end": "2025/12/15 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/礼yly-复刻.png"
     },
     {
@@ -1368,7 +1368,7 @@ const configData = {
       "start": "2025/12/04 11:00",
       "end": "2025/12/15 04:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：钻多（18w+）的可以补个「佩可莉姆（夏日）」，未来开专二，传奇水属性多目标打手。",
       "image": "./卡池/自选7.png"
     }
   ],
@@ -1729,7 +1729,7 @@ const configData = {
       "start": "2025/11/29 12:00",
       "end": "2025/12/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：风5-10用到再开",
       "image": "./专武/礼雪.png",
       "category": "specialWeapon"
     },
@@ -1738,7 +1738,7 @@ const configData = {
       "start": "2025/11/29 12:00",
       "end": "2025/12/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：风5-10用到再开",
       "image": "./专武/礼yly.png",
       "category": "specialWeapon"
     },
@@ -1747,7 +1747,7 @@ const configData = {
       "start": "2025/11/29 12:00",
       "end": "2025/12/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：资源多就开",
       "image": "./专武/水爆-2.png",
       "category": "specialWeapon"
     },
@@ -1756,7 +1756,7 @@ const configData = {
       "start": "2025/11/29 12:00",
       "end": "2025/12/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：有就开，尾刀加强，水属性上场的时候可用",
       "image": "./专武/水电-2.png",
       "category": "specialWeapon"
     },
@@ -1765,7 +1765,7 @@ const configData = {
       "start": "2025/11/29 12:00",
       "end": "2025/12/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：主JJC，需要就开",
       "image": "./专武/水老师-2.png",
       "category": "specialWeapon"
     }
