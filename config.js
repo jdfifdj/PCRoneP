@@ -1112,6 +1112,118 @@ const configData = {
       "end": "2025/12/06 23:59",
       "shouldShow": true,
       "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "公主庆典扭蛋「涅妃=涅拉」「涅亚（夏日）」",
+      "start": "2025/12/15 14:00",
+      "end": "2025/12/18 17:59",
+      "shouldShow": true,
+      "icon": "./图标/火属性.png"
+    },
+    {
+      "name": "剧情活动「集合吧做好事俱乐部！美空的愉快暑假」",
+      "start": "2025/12/15 14:00",
+      "end": "2025/12/29 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "复刻剧情活动「排干大间海水大作战 秘密主义者与禁断之海」",
+      "start": "2025/12/15 14:00",
+      "end": "2025/12/22 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "「普通关卡」掉落量 4 倍庆典",
+      "start": "2025/12/15 05:00",
+      "end": "2025/12/23 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "精选扭蛋「美空（夏日）」「莉莉（夏日）」",
+      "start": "2025/12/18 18:00",
+      "end": "2025/12/30 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "「似似花（夏日）」复刻",
+      "start": "2025/12/18 18:00",
+      "end": "2025/12/22 10:59",
+      "shouldShow": true,
+      "icon": "./图标/水属性.png"
+    },
+    {
+      "name": "深渊讨伐战开启",
+      "start": "2025/12/19 12:00",
+      "end": "2025/12/23 23:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "「真琴（夏日）」「真步（夏日）」「流夏（夏日）」「初音（夏日）」复刻",
+      "start": "2025/12/22 11:00",
+      "end": "2025/12/30 10:59",
+      "shouldShow": true,
+      "icon": "./图标/水属性.png"
+    },
+    {
+      "name": "斗技场开启",
+      "start": "2025/12/21 05:00",
+      "end": "2025/12/25 23:59",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "露娜之塔开启",
+      "start": "2025/12/23 12:00",
+      "end": "2025/12/28 23:59",
+      "shouldShow": true,
+      "icon": "./图标/露娜塔.png"
+    },
+    {
+      "name": "次元断层开启",
+      "start": "2025/12/23 12:00",
+      "end": "2025/12/28 23:59",
+      "shouldShow": true,
+      "icon": "./图标/露娜塔.png"
+    },
+    {
+      "name": "「普通关卡」装备掉落量 6 倍、玛那掉落量 4 倍庆典",
+      "start": "2025/12/23 05:00",
+      "end": "2025/12/30 10:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「地下城」玛那掉落量 4 倍庆典",
+      "start": "2025/12/23 05:00",
+      "end": "2025/12/30 10:59",
+      "shouldShow": true,
+      "icon": "./图标/马娜.png"
+    },
+    {
+      "name": "大师币获得量 3 倍庆典",
+      "start": "2025/12/23 05:00",
+      "end": "2025/12/30 10:59",
+      "shouldShow": true,
+      "icon": "./图标/大师币.png"
+    },
+    {
+      "name": "体力消费时玩家经验值获得 3 倍庆典",
+      "start": "2025/12/23 05:00",
+      "end": "2025/12/30 10:59",
+      "shouldShow": true,
+      "icon": "./图标/经验.png"
+    },
+    {
+      "name": "「狮子座」团队战",
+      "start": "2025/12/25 05:00",
+      "end": "2025/12/29 23:59",
+      "shouldShow": true,
+      "icon": "./图标/团队战.png"
     }
   ],
   "gachaPools": [
@@ -1353,7 +1465,7 @@ const configData = {
       "end": "2025/12/04 10:59",
       "shouldShow": true,
       "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
-      "image": "./卡池/复刻-派大星.png"
+      "image": "./卡池/礼yly-复刻.png"
     },
     {
       "name": "「初音（新年）」「香澄（新年）」复刻",
@@ -1361,7 +1473,7 @@ const configData = {
       "end": "2025/12/15 10:59",
       "shouldShow": true,
       "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
-      "image": "./卡池/礼yly-复刻.png"
+      "image": "./卡池/复刻-派大星.png"
     },
     {
       "name": "「珠希（夏日）」「铃莓（夏日）」「咲恋（夏日）」「铃奈（夏日）」「佩可莉姆（夏日）」「凯露（夏日）」复刻",
@@ -1370,6 +1482,38 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：钻多（18w+）的可以补个「佩可莉姆（夏日）」，未来开专二，传奇水属性多目标打手。",
       "image": "./卡池/自选7.png"
+    },
+    {
+      "name": "公主庆典扭蛋「涅妃=涅拉」「涅亚（夏日）」",
+      "start": "2025/12/15 14:00",
+      "end": "2025/12/18 17:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/涅妃.png"
+    },
+    {
+      "name": "精选扭蛋「美空（夏日）」「莉莉（夏日）」",
+      "start": "2025/12/18 18:00",
+      "end": "2025/12/30 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/水美空.png"
+    },
+    {
+      "name": "「似似花（夏日）」复刻",
+      "start": "2025/12/18 18:00",
+      "end": "2025/12/22 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/复刻-水nnk.png"
+    },
+    {
+      "name": "「真琴（夏日）」「真步（夏日）」「流夏（夏日）」「初音（夏日）」复刻",
+      "start": "2025/12/22 11:00",
+      "end": "2025/12/30 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/自选8.png"
     }
   ],
   "sixStar": [
@@ -1767,6 +1911,60 @@ const configData = {
       "shouldShow": true,
       "advice": "二专开专建议：主JJC，需要就开",
       "image": "./专武/水老师-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水哈哈剑",
+      "start": "2025/12/15 14:00",
+      "end": "2025/12/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/水哈哈剑.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水黄骑",
+      "start": "2025/12/15 14:00",
+      "end": "2025/12/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/水黄骑.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水nnk",
+      "start": "2025/12/15 14:00",
+      "end": "2025/12/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/水nnk.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水狐-2",
+      "start": "2025/12/15 14:00",
+      "end": "2025/12/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/水狐-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水狼-2",
+      "start": "2025/12/15 14:00",
+      "end": "2025/12/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/水狼-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水狗-2",
+      "start": "2025/12/15 14:00",
+      "end": "2025/12/30 23:59",
+      "shouldShow": true,
+      "advice": "二专开专建议：等攻略",
+      "image": "./专武/水狗-2.png",
       "category": "specialWeapon"
     }
   ],
