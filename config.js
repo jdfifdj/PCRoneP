@@ -278,6 +278,26 @@ const configData = {
       "keyword": "钻多（18w+）的可以补个「佩可莉姆（夏日）」，未来开专二，传奇水属性多目标打手。",
       "className": "highlight-red"
     },
+    {
+      "keyword": "「涅妃=涅拉」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「涅亚（夏日）」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": ">170才推荐补。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「美空（夏日）」：>160就补",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「莉莉（夏日）」：",
+      "className": "highlight-red"
+    },
   ],
   "activities": [
     {
@@ -1488,7 +1508,7 @@ const configData = {
       "start": "2025/12/15 14:00",
       "end": "2025/12/18 17:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：</br>「涅妃=涅拉」：必抽，火属性未来神，强度拉满。</br>「涅亚（夏日）」：常驻，没有大师碎片，>170才推荐补。</br>",
       "image": "./卡池/涅妃.png"
     },
     {
@@ -1496,7 +1516,7 @@ const configData = {
       "start": "2025/12/18 18:00",
       "end": "2025/12/30 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：</br>「美空（夏日）」：>160就补，风法一坨，未来前途渺茫。</br>「莉莉（夏日）」：必抽，水系物理核心，日服还在上班。</br>",
       "image": "./卡池/水美空.png"
     },
     {
@@ -1504,7 +1524,7 @@ const configData = {
       "start": "2025/12/18 18:00",
       "end": "2025/12/22 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/复刻-水nnk.png"
     },
     {
@@ -1512,7 +1532,7 @@ const configData = {
       "start": "2025/12/22 11:00",
       "end": "2025/12/30 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。</br>有人问「真步（夏日）」出二专补不补，我认为国服加速的情况下就没必要抽，因为明年3月就是「莱拉耶尔（圣诞节）」，她替代了水壶的火法主C地位（同时期还有免费十连）这不比抽水壶赚。",
       "image": "./卡池/自选8.png"
     }
   ],
@@ -1918,7 +1938,7 @@ const configData = {
       "start": "2025/12/15 14:00",
       "end": "2025/12/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：需要再开，火系人权太多了，不差这个",
       "image": "./专武/水哈哈剑.png",
       "category": "specialWeapon"
     },
@@ -1927,7 +1947,7 @@ const configData = {
       "start": "2025/12/15 14:00",
       "end": "2025/12/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：需要再开，一般没用",
       "image": "./专武/水黄骑.png",
       "category": "specialWeapon"
     },
@@ -1936,7 +1956,7 @@ const configData = {
       "start": "2025/12/15 14:00",
       "end": "2025/12/30 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：用就拉满。卡专武等级？你是什么顶级手动刀高手吗？",
       "image": "./专武/水nnk.png",
       "category": "specialWeapon"
     },
@@ -1945,7 +1965,7 @@ const configData = {
       "start": "2025/12/15 14:00",
       "end": "2025/12/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：拉满。未来一段时间火法主C。",
       "image": "./专武/水狐-2.png",
       "category": "specialWeapon"
     },
@@ -1954,7 +1974,7 @@ const configData = {
       "start": "2025/12/15 14:00",
       "end": "2025/12/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：随缘，喜欢就开吧",
       "image": "./专武/水狼-2.png",
       "category": "specialWeapon"
     },
@@ -1963,7 +1983,7 @@ const configData = {
       "start": "2025/12/15 14:00",
       "end": "2025/12/30 23:59",
       "shouldShow": true,
-      "advice": "二专开专建议：等攻略",
+      "advice": "二专开专建议：需要再开，强度不如水兔和未来水吃。",
       "image": "./专武/水狗-2.png",
       "category": "specialWeapon"
     }
