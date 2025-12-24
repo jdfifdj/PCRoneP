@@ -10,45 +10,41 @@ const GHZconfigData = {
   ],
   "activeTab": 0,
   "d1Images": [
-    "./工会战/d1/8497687a1ba1110bce17b04d1c6b1517189151967.png",
-    "./工会战/d1/a2d718d9632d01edc5b7d068b35f146c189151967.jpg"
+    "./工会战/d1/1888c099b3a1db41a8ea285fed1379a0189151967.jpg",
+    "./工会战/d1/3d2d552b864b49529eac35513efd63e2189151967.jpg",
+    "./工会战/d1/d1.jpg",
+    "./工会战/d1/ea79d98e198a40901f9d8ea0343e41fc189151967.jpg"
   ],
   "d2Images": [
-    "./工会战/d2/638116ab92c21bb7d7c9b8377cc0e418189151967.jpg"
+    "./工会战/d2/17c48ca71834a8e20b31747a0393c974189151967.jpg",
+    "./工会战/d2/1a18c86d3d0998e4df73b3d23e7e8060189151967.jpg",
+    "./工会战/d2/b7a7b5d735ef2d2c580ca0ea3a1ec773189151967.jpg"
   ],
   "d3Images": [
-    "./工会战/d3/0ffc175c123493c6b892dbbb37f9ea33189151967.jpg",
-    "./工会战/d3/8e02e228320b6b02a87bfe1294ee44e0189151967.jpg",
-    "./工会战/d3/95a75884363ec52c6de26f8f88460bb1189151967.jpg",
-    "./工会战/d3/9beb7fb0f63d631173eda912d0f2839b189151967.jpg",
-    "./工会战/d3/a69562d0f65c9753b4017e8a287fc4f4189151967.jpg"
+    "./工会战/d3/04077db71b845ef41e9bd568d2d8ad3b189151967.jpg",
+    "./工会战/d3/22346368ce9132bd4424ec68f0092a88189151967.png",
+    "./工会战/d3/9e007707a8df8b3b512c29db8516ff59189151967.jpg"
   ],
   "d4Images": [
-    "./工会战/d4/60d439572a737dc532dca797b0e4f997189151967.jpg",
-    "./工会战/d4/b8eb38efa7774d2018e29b1025c2340a189151967.jpg",
-    "./工会战/d4/df471a4b16473e8b33687f7a68bf1b1e189151967.jpg"
+    "./工会战/d4/0b73423fa848246697073d6b9db6fdc5189151967.jpg",
+    "./工会战/d4/2d9866d0e941c25dd663badb5d2a716f189151967.jpg",
+    "./工会战/d4/b0bb72fcd9970c1940fe109b9d948555189151967.jpg"
   ],
   "d5Images": [
-    "./工会战/d5/16f87a25933c35521bf2aa98f37a3c91189151967.jpg",
-    "./工会战/d5/b78931e0feafbd9bbea6ebd27fc1099b.jpeg",
-    "./工会战/d5/b80d4e5240c43b1c550756cdbae961e9189151967.jpg"
+    "./工会战/d5/3a0e697dcf3d3429fcece6a0af7befb6189151967.jpg",
+    "./工会战/d5/82f2bb582ee4ae9b40b862c17d61b5fd189151967.jpg"
   ],
   "d6Images": [
-    "./工会战/set刀/hw-1.png",
-    "./工会战/set刀/mx-1.png",
-    "./工会战/set刀/mx-d1.png",
-    "./工会战/set刀/mx-d2.png",
-    "./工会战/set刀/mx-d3.png",
-    "./工会战/set刀/w-1.png",
-    "./工会战/set刀/w-2.png",
-    "./工会战/set刀/w-abc.png",
-    "./工会战/set刀/w-d1.png",
-    "./工会战/set刀/w-d2.png",
-    "./工会战/set刀/w-d3.png",
-    "./工会战/set刀/w-d4.png",
-    "./工会战/set刀/w-d5.png",
-    "./工会战/set刀/w-d6.png",
-    "./工会战/set刀/w-d7.png"
+    "./工会战/set刀/w1.png",
+    "./工会战/set刀/w2.png",
+    "./工会战/set刀/w3.png",
+    "./工会战/set刀/wd1.png",
+    "./工会战/set刀/wd2.png",
+    "./工会战/set刀/wd3.png",
+    "./工会战/set刀/wd4.png",
+    "./工会战/set刀/wd5.png",
+    "./工会战/set刀/wd6.png",
+    "./工会战/set刀/wd7.png"
   ],
   "showBigImg": false,
   "bigImgSrc": ""
