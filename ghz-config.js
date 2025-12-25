@@ -35,6 +35,15 @@ const GHZconfigData = {
     "./工会战/d5/82f2bb582ee4ae9b40b862c17d61b5fd189151967.jpg"
   ],
   "d6Images": [
+    "./工会战/set刀/hd1.png",
+    "./工会战/set刀/hd2.png",
+    "./工会战/set刀/hd3.png",
+    "./工会战/set刀/hd4.png",
+    "./工会战/set刀/hd5.png",
+    "./工会战/set刀/hd6.png",
+    "./工会战/set刀/m1.png",
+    "./工会战/set刀/md1.png",
+    "./工会战/set刀/md2.png",
     "./工会战/set刀/w1.png",
     "./工会战/set刀/w2.png",
     "./工会战/set刀/w3.png",
