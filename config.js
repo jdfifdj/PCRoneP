@@ -1244,6 +1244,83 @@ const configData = {
       "end": "2025/12/29 23:59",
       "shouldShow": true,
       "icon": "./图标/团队战.png"
+    },
+    {
+      "name": "精选扭蛋「爱梅斯（夏日）」",
+      "start": "2025/12/30 14:00",
+      "end": "2026/01/11 10:59",
+      "shouldShow": true,
+      "icon": "./图标/水属性.png"
+    },
+    {
+      "name": "剧情活动「幻惑的妖精 - 盛夏乐园中舞动的身影」",
+      "start": "2025/12/30 14:00",
+      "end": "2026/01/13 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "「困难关卡」掉落量4倍庆典",
+      "start": "2025/12/30 11:00",
+      "end": "2026/01/04 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "夏日活动倒计时登录活动",
+      "start": "2025/12/31 05:00",
+      "end": "2026/01/15 04:59",
+      "shouldShow": true,
+      "icon": "./图标/妈.png"
+    },
+    {
+      "name": "深渊讨伐战开启",
+      "start": "2026/01/03 12:00",
+      "end": "2026/01/07 23:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "「普通关卡」掉落量4倍庆典",
+      "start": "2026/01/04 05:00",
+      "end": "2026/01/10 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「兰法（夏日）」「忍（夏日）」复刻",
+      "start": "2026/01/08 11:00",
+      "end": "2026/01/11 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "斗技场开启",
+      "start": "2026/01/09 12:00",
+      "end": "2026/01/13 23:59",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "「高难关卡」掉落量4倍庆典",
+      "start": "2026/01/10 05:00",
+      "end": "2026/01/14 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "「圣迹调查&神殿调查关卡」掉落量4倍庆典",
+      "start": "2026/01/10 05:00",
+      "end": "2026/01/14 04:59",
+      "shouldShow": true,
+      "icon": "./图标/圣迹调查.png"
+    },
+    {
+      "name": "「优衣（星幽）」「日和莉（星幽）」复刻",
+      "start": "2026/01/11 11:00",
+      "end": "2026/01/14 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
     }
   ],
   "gachaPools": [
@@ -1534,6 +1611,30 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。</br>有人问「真步（夏日）」出二专补不补，我认为国服加速的情况下就没必要抽，因为明年3月就是「莱拉耶尔（圣诞节）」，她替代了水壶的火法主C地位（同时期还有免费十连）这不比抽水壶赚。",
       "image": "./卡池/自选8.png"
+    },
+    {
+      "name": "精选扭蛋「爱梅斯（夏日）」",
+      "start": "2025/12/30 14:00",
+      "end": "2026/01/11 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：必抽",
+      "image": "./卡池/水ams.png"
+    },
+    {
+      "name": "「兰法（夏日）」「忍（夏日）」复刻",
+      "start": "2026/01/08 11:00",
+      "end": "2026/01/11 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/复刻-水兰法.png"
+    },
+    {
+      "name": "「优衣（星幽）」「日和莉（星幽）」复刻",
+      "start": "2026/01/11 11:00",
+      "end": "2026/01/14 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/复刻-星猫星ue.png"
     }
   ],
   "sixStar": [
@@ -1986,6 +2087,33 @@ const configData = {
       "advice": "二专开专建议：需要再开，强度不如水兔和未来水吃。",
       "image": "./专武/水狗-2.png",
       "category": "specialWeapon"
+    },
+    {
+      "name": "水忍",
+      "start": "2025/12/30 14:00",
+      "end": "2026/01/31 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/水忍.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水空花",
+      "start": "2025/12/30 14:00",
+      "end": "2026/01/31 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/水空花.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水兰法",
+      "start": "2025/12/30 14:00",
+      "end": "2026/01/31 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/水兰法.png",
+      "category": "specialWeapon"
     }
   ],
   "huodong": [
@@ -2004,6 +2132,14 @@ const configData = {
       "shouldShow": true,
       "advice": "jjc进攻角色。拉到31-0满级即可。",
       "image": "./活动角色/h3.png"
+    },
+    {
+      "name": "h4",
+      "start": "2025/12/30 14:00",
+      "end": "2026/1/31 23:59",
+      "shouldShow": true,
+      "advice": "jjc角色，能换就换，以后都是打蚊子时代",
+      "image": "./活动角色/h4.png"
     }
   ],
   "showModal": false,
