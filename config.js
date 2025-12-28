@@ -1617,7 +1617,7 @@ const configData = {
       "start": "2025/12/30 14:00",
       "end": "2026/01/11 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：必抽",
+      "advice": "抽卡建议：必抽。无需多言，各种场合都有出场机会。",
       "image": "./卡池/水ams.png"
     },
     {
@@ -1625,7 +1625,7 @@ const configData = {
       "start": "2026/01/08 11:00",
       "end": "2026/01/11 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/复刻-水兰法.png"
     },
     {
@@ -1633,7 +1633,7 @@ const configData = {
       "start": "2026/01/11 11:00",
       "end": "2026/01/14 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/复刻-星猫星ue.png"
     }
   ],
@@ -2093,7 +2093,7 @@ const configData = {
       "start": "2025/12/30 14:00",
       "end": "2026/01/31 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：要用在开",
       "image": "./专武/水忍.png",
       "category": "specialWeapon"
     },
@@ -2102,7 +2102,7 @@ const configData = {
       "start": "2025/12/30 14:00",
       "end": "2026/01/31 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：要用在开",
       "image": "./专武/水空花.png",
       "category": "specialWeapon"
     },
@@ -2111,7 +2111,7 @@ const configData = {
       "start": "2025/12/30 14:00",
       "end": "2026/01/31 23:59",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：要用在开",
       "image": "./专武/水兰法.png",
       "category": "specialWeapon"
     }
@@ -2138,7 +2138,7 @@ const configData = {
       "start": "2025/12/30 14:00",
       "end": "2026/1/31 23:59",
       "shouldShow": true,
-      "advice": "jjc角色，能换就换，以后都是打蚊子时代",
+      "advice": "jjc角色，能换就换，以后都是打蚊子时代。pve偶额也有出场机会",
       "image": "./活动角色/h4.png"
     }
   ],

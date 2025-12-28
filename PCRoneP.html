@@ -184,12 +184,12 @@
                 <table>
                     <tr>
                         <th colspan="2" style="background-color: red;">
-                            <h2 style="color: yellow;">活动赠送角色</h2>
+                            <h2 style="color: yellow;">兑换角色</h2>
                         </th>
                     </tr>
                     <tr>
-                        <th>活动角色</th>
-                        <th>刷取建议</th>
+                        <th>兑换角色</th>
+                        <th>兑换建议</th>
                     </tr>
                     <!-- 为活动角色添加时间控制 -->
                     <tr v-for="(weapon, index) in huodong" :key="`weapon-${index}`" v-show="weapon.shouldShow">
@@ -476,7 +476,7 @@
                         const daysBeforeStart = (start - now) / (1000 * 60 * 60 * 24);
                         const daysAfterEnd = (now - end) / (1000 * 60 * 60 * 24); // 新增
 
-                        role.shouldShow = (daysBeforeStart <= 2 && daysBeforeStart > 0) ||
+                        role.shouldShow = (daysBeforeStart <= 3 && daysBeforeStart > 0) ||
                             (daysAfterEnd <= 1 && daysAfterEnd >= 0) ||
                             (now >= start && now <= end);
                     });
