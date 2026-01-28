@@ -33,15 +33,16 @@
             <!-- 背景图片 -->
             <div class="img-container">
                 <img src="背景.gif" alt="七月活动" class="img-preview"
-                    @click="showImageModal('background-image.png')">
+                    @click.prevent="showImageModal('background-image.png')">
             </div>
+            
             <!-- 表格数据 -->
 
             <div class="card">
-                <table>
+                <table class="basic-info-table">
                     <tr>
-                        <th colspan="4" style="background-color: red;">
-                            <h2 style="color: yellow;">基本信息</h2>
+                        <th colspan="4" class="basic-info-header">
+                            <h2>基本信息</h2>
                         </th>
                     </tr>
                     <tr>
@@ -115,11 +116,11 @@
                         <th>抽取建议</th>
                     </tr>
                     <!-- 为卡池添加时间控制 -->
-                    <tr v-for="(pool, index) in gachaPools" :key="`gacha-${index}`" v-show="pool.shouldShow">
+                    <tr v-for="(pool, index) in filteredGachaPools" :key="`gacha-${index}`">
                         <td>
                             <div class="img-container">
                                 <img :src="pool.image" :alt="pool.name" class="img-preview"
-                                    @click="showImageModal(pool.image)">
+                                    @click.prevent="showImageModal(pool.image)">
                             </div>
                             <div class="activity-time">
                                 {{ formatDate(pool.start) }} - {{ formatDate(pool.end) }}
@@ -144,11 +145,11 @@
                         </th>
                     </tr>
                     <!-- 为六星添加时间控制 -->
-                    <tr v-for="(star, index) in sixStar" :key="`six-${index}`" v-show="star.shouldShow">
+                    <tr v-for="(star, index) in filteredSixStar" :key="`six-${index}`">
                         <td>
                             <div class="img-container">
                                 <img :src="star.image" :alt="star.name" class="img-preview"
-                                    @click="showImageModal(star.image)">
+                                    @click.prevent="showImageModal(star.image)">
                             </div>
                         </td>
                     </tr>
@@ -156,24 +157,24 @@
             </div>
 
             <!-- 专武表格 -->
-            <!-- 专武部分 - 应用增大尺寸的样式 -->
+            <!-- 专武部分 - 一行4个，图片和标题同行 -->
             <div class="card">
                 <h2 style="background-color: red; color: yellow; padding: 10px; text-align: center; border-radius: 5px;">本月专武</h2>
-                <div class="activity-list">
-                    <div v-for="(weapon, index) in specialWeapons" :key="`weapon-${index}`" v-show="weapon.shouldShow" class="activity-item special-weapon-item">
-                        <div class="activity-icon special-weapon-icon">
-                            <img :src="weapon.image" alt="专武图标" class="activity-icon-img">
-                        </div>
-                        <div class="activity-content special-weapon-content">
-                            <h3>{{ weapon.name }}</h3>
-                            <div class="activity-time special-weapon-time">
-                                {{ formatDate(weapon.start) }} - {{ formatDate(weapon.end) }}
+                <div class="special-weapon-grid">
+                    <div v-for="(weapon, index) in filteredSpecialWeapons" :key="`weapon-${index}`" class="special-weapon-card">
+                        <div class="special-weapon-header">
+                            <div class="special-weapon-icon">
+                                <img :src="weapon.image" alt="专武图标" class="activity-icon-img">
                             </div>
-                            <div class="activity-countdown special-weapon-countdown" :class="getCountdownText(weapon).class">
-                                {{ getCountdownText(weapon).text }}
-                            </div>
-                            <div class="activity-advice special-weapon-advice" v-html="highlightText(weapon.advice)"></div>
+                            <h3 class="special-weapon-name">{{ weapon.name }}</h3>
                         </div>
+                        <div class="special-weapon-time">
+                            {{ formatDate(weapon.start) }} - {{ formatDate(weapon.end) }}
+                        </div>
+                        <div class="special-weapon-countdown" :class="getCountdownText(weapon).class">
+                            {{ getCountdownText(weapon).text }}
+                        </div>
+                        <div class="special-weapon-advice" v-html="highlightText(weapon.advice)"></div>
                     </div>
                 </div>
             </div>
@@ -192,11 +193,11 @@
                         <th>兑换建议</th>
                     </tr>
                     <!-- 为活动角色添加时间控制 -->
-                    <tr v-for="(weapon, index) in huodong" :key="`weapon-${index}`" v-show="weapon.shouldShow">
+                    <tr v-for="(weapon, index) in filteredHuodong" :key="`weapon-${index}`">
                         <td>
                             <div class="img-container">
                                 <img :src="weapon.image" :alt="weapon.name" class="img-preview"
-                                    @click="showImageModal(weapon.image)">
+                                    @click.prevent="showImageModal(weapon.image)">
                             </div>
                         </td>
                         <th v-html="highlightText(weapon.advice)"></th>
@@ -222,15 +223,22 @@
         </footer>
 
         <!-- 图片预览弹窗 -->
-        <div class="modal" id="imageModal" v-if="showModal">
-            <div class="modal-content">
-                <span class="close-btn" @click="closeImageModal">&times;</span>
-                <img :src="modalImage" alt="预览" style="max-width: 100%; max-height: 90vh;">
+        <div class="modal" id="imageModal" v-bind:class="{ 'show': showModal }" @click.prevent="closeImageModal">
+            <div class="modal-content" @click.stop>
+                <span class="close-btn" @click.prevent="closeImageModal">&times;</span>
+                <img :src="modalImage" alt="预览" style="max-width: 100%; max-height: 90vh;" @click.prevent>
             </div>
         </div>
+        
+        <!-- 返回顶部按钮 -->
+        <button class="back-to-top" type="button" @click.prevent="scrollToTop" v-show="showBackToTop">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </button>
     </div>
     <script src="./config.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.min.js"></script>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
     <script>
         // 定义分类映射
         const categoryMap = {
@@ -271,13 +279,17 @@
             data: {
                 ...configData,
                 categoryMap: categoryMap,
-                categoryNames: categoryNames
+                categoryNames: categoryNames,
+                // 返回顶部按钮
+                showBackToTop: false
             },
             computed: {
                 // 按分类排序后的活动
                 sortedActivities() {
-                    return [...this.activities]
-                        .filter(activity => activity.shouldShow)
+                    return this.activities
+                        .filter(activity => {
+                            return activity.shouldShow;
+                        })
                         .sort((a, b) => {
                             const categoryA = this.categoryMap[a.icon] || 999;
                             const categoryB = this.categoryMap[b.icon] || 999;
@@ -286,24 +298,90 @@
                                 return categoryA - categoryB;
                             }
 
-                            // 同类活动按开始时间排序
                             return new Date(a.start) - new Date(b.start);
                         });
                 },
                 // 按分类分组的活动
                 groupedActivities() {
                     const groups = {};
-                    this.sortedActivities.forEach(activity => {
+                    const sortedActivities = this.sortedActivities;
+
+                    for (let i = 0; i < sortedActivities.length; i++) {
+                        const activity = sortedActivities[i];
                         const category = this.categoryMap[activity.icon] || 999;
                         if (!groups[category]) {
                             groups[category] = [];
                         }
                         groups[category].push(activity);
-                    });
+                    }
+
                     return groups;
+                },
+                // 过滤后的卡池
+                filteredGachaPools() {
+                    return this.gachaPools.filter(pool => pool.shouldShow);
+                },
+                // 过滤后的六星
+                filteredSixStar() {
+                    return this.sixStar.filter(star => star.shouldShow);
+                },
+                // 过滤后的专武
+                filteredSpecialWeapons() {
+                    return this.specialWeapons.filter(weapon => weapon.shouldShow);
+                },
+                // 过滤后的活动角色
+                filteredHuodong() {
+                    return this.huodong.filter(role => role.shouldShow);
                 }
             },
             methods: {
+                // 获取活动状态（带缓存）
+                getActivityStatus(activity) {
+                    // 检查是否有缓存的状态
+                    if (activity._cachedStatus && activity._cachedStatus.timestamp && 
+                        (Date.now() - activity._cachedStatus.timestamp) < 60000) { // 1分钟缓存
+                        return activity._cachedStatus.status;
+                    }
+                    
+                    const now = new Date();
+                    const start = new Date(activity.start);
+                    const end = new Date(activity.end);
+                    let status;
+                    
+                    if (now < start) {
+                        status = 'unstarted';
+                    } else if (now > end) {
+                        status = 'ended';
+                    } else {
+                        status = 'ongoing';
+                    }
+                    
+                    // 缓存状态
+                    activity._cachedStatus = {
+                        status: status,
+                        timestamp: Date.now()
+                    };
+                    
+                    return status;
+                },
+
+                // 返回顶部
+                scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                },
+                // 监听滚动事件（带节流）
+                handleScroll() {
+                    if (!this._scrollThrottle) {
+                        this._scrollThrottle = true;
+                        setTimeout(() => {
+                            this.showBackToTop = window.scrollY > 300;
+                            this._scrollThrottle = false;
+                        }, 100);
+                    }
+                },
                 updateCurrentTime() {
                     const now = new Date();
                     const year = now.getFullYear();
@@ -316,8 +394,14 @@
                     this.currentTime = `${year} 年 ${month} 月 ${day} 日 ${hours}:${minutes}:${seconds}`;
                 },
 
-                // 添加缺失的getCountdownText函数
+                // 添加缺失的getCountdownText函数（带缓存）
                 getCountdownText(activity) {
+                    // 检查是否有缓存的倒计时
+                    if (activity._cachedCountdown && activity._cachedCountdown.timestamp && 
+                        (Date.now() - activity._cachedCountdown.timestamp) < 30000) { // 30秒缓存
+                        return activity._cachedCountdown.data;
+                    }
+                    
                     const now = new Date();
                     const start = new Date(activity.start);
                     const end = new Date(activity.end);
@@ -328,6 +412,8 @@
                     // 检查是否是专武
                     const isSpecialWeapon = activity.category === 'specialWeapon';
 
+                    let result;
+
                     if (now < start) {
                         const diff = start - now;
                         const days = Math.floor(diff / oneDay);
@@ -336,13 +422,13 @@
 
                         if (isSpecialWeapon) {
                             // 专武未开始
-                            return {
+                            result = {
                                 class: 'countdown-unstarted',
                                 text: `距开专还有: ${days}天${hours}小时${minutes}分`
                             };
                         } else {
                             // 活动未开始
-                            return {
+                            result = {
                                 class: 'countdown-unstarted',
                                 text: `距开始: ${days}天${hours}小时${minutes}分`
                             };
@@ -357,13 +443,13 @@
 
                         if (isSpecialWeapon) {
                             // 专武已结束
-                            return {
+                            result = {
                                 class: 'countdown-ended',
                                 text: `本月已开专时间: ${totalDays}天${totalHours}小时${totalMinutes}分 (已结束: ${daysAfterEnd}天)`
                             };
                         } else {
                             // 活动已结束
-                            return {
+                            result = {
                                 class: 'countdown-ended',
                                 text: `已结束: ${daysAfterEnd}天`
                             };
@@ -376,7 +462,7 @@
 
                         if (isSpecialWeapon) {
                             // 专武进行中
-                            return {
+                            result = {
                                 class: 'countdown-ongoing',
                                 text: `已开专时间： ${days}天${hours}小时${minutes}分`
                             };
@@ -386,12 +472,20 @@
                             const remainingDays = Math.floor(remainingDiff / oneDay);
                             const remainingHours = Math.floor((remainingDiff % oneDay) / oneHour);
                             const remainingMinutes = Math.floor((remainingDiff % oneHour) / oneMinute);
-                            return {
+                            result = {
                                 class: 'countdown-ongoing',
                                 text: `剩余: ${remainingDays}天${remainingHours}小时${remainingMinutes}分`
                             };
                         }
                     }
+                    
+                    // 缓存结果
+                    activity._cachedCountdown = {
+                        data: result,
+                        timestamp: Date.now()
+                    };
+                    
+                    return result;
                 },
 
                 highlightText(text) {
@@ -510,6 +604,16 @@
                 this.updateActivityStatus();
                 // 每小时更新一次活动状态
                 setInterval(this.updateActivityStatus, 3600000);
+                
+                // 添加滚动事件监听
+                window.addEventListener('scroll', this.handleScroll);
+                
+                // 初始化滚动状态
+                this.handleScroll();
+            },
+            beforeDestroy() {
+                // 移除滚动事件监听
+                window.removeEventListener('scroll', this.handleScroll);
             }
         });
     </script>
