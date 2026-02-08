@@ -313,6 +313,118 @@ const configData = {
   ],
   "activities": [
     {
+      "name": "精选扭蛋「吹雪」",
+      "start": "2026/02/13 16:00",
+      "end": "2026/02/20 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "镜华（春日）、咲恋（沙漠）复刻",
+      "start": "2026/02/13 16:00",
+      "end": "2026/02/20 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "「普通关卡」装备掉落量 4 倍",
+      "start": "2026/02/13 05:00",
+      "end": "2026/02/22 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "情人节登录",
+      "start": "2026/02/14 05:00",
+      "end": "2026/03/01 04:59",
+      "shouldShow": true,
+      "icon": "./图标/妈.png"
+    },
+    {
+      "name": "克莉丝提娜（狂野）复刻",
+      "start": "2026/02/20 11:00",
+      "end": "2026/02/24 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "剧情活动「Bandit Returns 炎国的不法姐妹」",
+      "start": "2026/02/13 16:00",
+      "end": "2026/02/27 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "复刻剧情活动「浪漫萨拉利亚～沙漠的新娘和不可思议的神灯～」",
+      "start": "2026/02/13 16:00",
+      "end": "2026/02/20 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "深渊讨伐战",
+      "start": "2026/02/15 12:00",
+      "end": "2026/02/20 04:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "斗技场开启",
+      "start": "2026/02/18 12:00",
+      "end": "2026/02/22 23:59",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "露娜之塔开启",
+      "start": "2026/02/20 12:00",
+      "end": "2026/02/25 23:59",
+      "shouldShow": true,
+      "icon": "./图标/露娜塔.png"
+    },
+    {
+      "name": "精选扭蛋「大和」「若菜」",
+      "start": "2026/02/20 11:00",
+      "end": "2026/02/28 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "「射手座」团队战",
+      "start": "2026/02/23 05:00",
+      "end": "2026/02/27 23:59",
+      "shouldShow": true,
+      "icon": "./图标/团队战.png"
+    },
+    {
+      "name": "「普通关卡」装备掉落量 6 倍、玛那掉落量 4 倍庆典",
+      "start": "2026/02/22 05:00",
+      "end": "2026/02/28 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「地下城」玛那掉落量 4 倍庆典",
+      "start": "2026/02/22 05:00",
+      "end": "2026/02/28 04:59",
+      "shouldShow": true,
+      "icon": "./图标/马娜.png"
+    },
+    {
+      "name": "大师币获得量 3 倍庆典",
+      "start": "2026/02/22 05:00",
+      "end": "2026/02/28 04:59",
+      "shouldShow": true,
+      "icon": "./图标/大师币.png"
+    },
+    {
+      "name": "体力消费时玩家经验值获得量 4 倍庆典",
+      "start": "2026/02/07 05:00",
+      "end": "2026/02/28 04:59",
+      "shouldShow": true,
+      "icon": "./图标/经验.png"
+    }
+    , {
       "name": "「高难关卡」掉落量6倍庆典",
       "start": "2025/08/20 05:00",
       "end": "2025/09/03 04:59",
@@ -1645,6 +1757,38 @@ const configData = {
   ],
   "gachaPools": [
     {
+      "name": "精选扭蛋「吹雪」",
+      "start": "2026/02/13 16:00",
+      "end": "2026/02/20 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/吹雪.png"
+    },
+    {
+      "name": "镜华（春日）、咲恋（沙漠）复刻",
+      "start": "2026/02/13 16:00",
+      "end": "2026/02/20 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/自选11.png"
+    },
+    {
+      "name": "克莉丝提娜（狂野）复刻",
+      "start": "2026/02/20 11:00",
+      "end": "2026/02/24 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/复刻-兔克.png"
+    },
+    {
+      "name": "精选扭蛋「大和」「若菜」",
+      "start": "2026/02/20 11:00",
+      "end": "2026/02/28 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/大和.png"
+    }
+    , {
       "name": "蝶妈",
       "start": "2025/08/11 11:00",
       "end": "2025/08/14 10:59",
@@ -2083,6 +2227,42 @@ const configData = {
     },
   ],
   "specialWeapons": [
+    {
+      "name": "盾妹",
+      "start": "2026/02/13 16:00",
+      "end": "2026/02/28 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/盾妹.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "火电",
+      "start": "2026/02/13 16:00",
+      "end": "2026/02/28 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/火电.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水流夏",
+      "start": "2026/02/13 16:00",
+      "end": "2026/02/28 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/水流夏.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "猪妹",
+      "start": "2026/02/13 16:00",
+      "end": "2026/02/28 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/猪妹.png",
+      "category": "specialWeapon"
+    },
     {
       "name": "蝶妈",
       "start": "2025/07/30 14:00",
