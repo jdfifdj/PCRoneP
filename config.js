@@ -3,6 +3,18 @@ const configData = {
   "currentTime": "加载中...",
   "highlightKeywords": [
     {
+      "keyword": "日服至今未下岗，高寿命，中上使用率，有钻12w+必抽，对游戏体验影响较为明显。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「大和」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「若菜」：必抽，风属性物理人权角色，日服至今未下岗。",
+      "className": "highlight-red"
+    },
+    {
       "keyword": "不推荐",
       "className": "highlight-red"
     },
@@ -1761,7 +1773,7 @@ const configData = {
       "start": "2026/02/13 16:00",
       "end": "2026/02/20 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：日服至今未下岗，高寿命，中上使用率，有钻12w+必抽，对游戏体验影响较为明显。",
       "image": "./卡池/吹雪.png"
     },
     {
@@ -1769,7 +1781,7 @@ const configData = {
       "start": "2026/02/13 16:00",
       "end": "2026/02/20 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/自选11.png"
     },
     {
@@ -1777,7 +1789,7 @@ const configData = {
       "start": "2026/02/20 11:00",
       "end": "2026/02/24 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/复刻-兔克.png"
     },
     {
@@ -1785,7 +1797,7 @@ const configData = {
       "start": "2026/02/20 11:00",
       "end": "2026/02/28 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：</br>「大和」：抽若菜时>160抽可考虑补。</br>「若菜」：必抽，风属性物理人权角色，日服至今未下岗。</br>",
       "image": "./卡池/大和.png"
     }
     , {
@@ -2232,7 +2244,7 @@ const configData = {
       "start": "2026/02/13 16:00",
       "end": "2026/02/28 23:00",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：30可用。专武加攻击力，需要的可以拉满",
       "image": "./专武/盾妹.png",
       "category": "specialWeapon"
     },
@@ -2241,7 +2253,7 @@ const configData = {
       "start": "2026/02/13 16:00",
       "end": "2026/02/28 23:00",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：30可用。专武加攻击力，需要的可以拉满",
       "image": "./专武/火电.png",
       "category": "specialWeapon"
     },
@@ -2250,7 +2262,7 @@ const configData = {
       "start": "2026/02/13 16:00",
       "end": "2026/02/28 23:00",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：30可用。",
       "image": "./专武/水流夏.png",
       "category": "specialWeapon"
     },
@@ -2259,7 +2271,7 @@ const configData = {
       "start": "2026/02/13 16:00",
       "end": "2026/02/28 23:00",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：30可用。",
       "image": "./专武/猪妹.png",
       "category": "specialWeapon"
     },
