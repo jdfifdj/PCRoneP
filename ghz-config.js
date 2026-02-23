@@ -30,6 +30,12 @@ const GHZconfigData = {
     "./工会战/d5/8b4c2251fed8c17efd7a61eeeee6b807189151967.png"
   ],
   "d6Images": [
+    "./工会战/set刀/hw1.png",
+    "./工会战/set刀/hwd11.png",
+    "./工会战/set刀/hwd12.png",
+    "./工会战/set刀/hwd13.png",
+    "./工会战/set刀/hwd14.png",
+    "./工会战/set刀/hwd16.png",
     "./工会战/set刀/m1.png",
     "./工会战/set刀/m2.png",
     "./工会战/set刀/m3.png",
@@ -45,7 +51,8 @@ const GHZconfigData = {
     "./工会战/set刀/md8.png",
     "./工会战/set刀/md9.png",
     "./工会战/set刀/mx.png",
-    "./工会战/set刀/mx1.png"
+    "./工会战/set刀/mx1.png",
+    "./工会战/set刀/mx2.png"
   ],
   "showBigImg": false,
   "bigImgSrc": ""
