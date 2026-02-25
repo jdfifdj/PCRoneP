@@ -7,28 +7,14 @@
   <title id="page-title">公主连结11月简单set刀推荐</title>
   <link rel="stylesheet" href="./css/ghz.css">
   <link rel="icon" href="./图标/水黑.png" type="image/png">
-  <script>
-    // 获取当前月份并更新标题
-    document.addEventListener('DOMContentLoaded', function() {
-        const now = new Date();
-        const month = now.getMonth() + 1; // getMonth()返回0-11
-        const monthName = month + '月';
-        
-        // 更新title标签
-        document.getElementById('page-title').textContent = '公主连结' + monthName + '简单set刀推荐';
-        
-        // 更新h1标签
-        document.querySelector('h1').textContent = '公主连结' + monthName + '简单set刀推荐';
-    });
-</script>
 </head>
 
 <body>
   <div id="app">
     <h1 class="title">公主连结11月简单set刀推荐</h1>
-    <h2 class="title">点击图片可以放大</h1>
+      <div class="title-hint">点击图片可以放大</div>
       <div class="tab-container">
-        <button class="tab" v-for="(tab, index) in tabs" :key="index" @click="activeTab = index">
+        <button class="tab" :class="{ active: activeTab === index }" v-for="(tab, index) in tabs" :key="index" @click="activeTab = index">
           {{ tab }}
         </button>
       </div>
@@ -63,39 +49,28 @@
           <div class="image-item" v-for="(img, imgIndex) in d6Images" :key="imgIndex" @click="showModal(img)">
             <img :src="img" alt="D6 图片">
           </div>
-          <!--
-          <div class="image-item">
-            <a>点击下面图片进入视频，希望大伙都可以去作者视频点个赞</a>
-            <a href=" https://www.bilibili.com/video/BV1yhyHB2Ei3/">
-              <img src="./工会战/wjm.jpg" alt="玩具喵作业链接">
-              </a>
+        </div>
+        
+        <div  class="video-section">
+          <h3 class="video-title">视频攻略</h3>
+          <div class="title-hint">可以点击头像查看对应视频，给轴佬们视频一键三连吧</div>
+          <div class="video-grid">
+            <a :href="video.url" target="_blank" class="video-item" v-for="(video, index) in videoLinks" :key="index">
+              <img :src="video.cover" :alt="video.name">
+              <span class="video-name">{{ video.name }}</span>
+            </a>
           </div>
-          <div class="image-item">
-            <a>点击下面图片进入视频，希望大伙都可以去作者视频点个赞</a>
-            <a href=" https://www.bilibili.com/video/BV1FmUNBiEsM/">
-              <img src="./工会战/mx.jpg" alt="墨夕作业链接">
-              </a>
-          </div>
-          <div class="image-item">
-            <a>点击下面图片进入视频，希望大伙都可以去作者视频点个赞</a>
-            <a href=" https://www.bilibili.com/video/BV1osUpB5EEf/">
-              <img src="./工会战/汐.jpg" alt="夕作业链接">
-              </a>
-          </div>
-          -->
         </div>
       </div>
 
       <!-- 放大图片的弹窗 -->
-      <div class="modal" :class="{ active: showBigImg }">
+      <div class="modal" :class="{ active: showBigImg }" @click.self="closeModal">
         <img :src="bigImgSrc" alt="放大图片">
         <button class="close-btn" @click="closeModal">×</button>
       </div>
 
-      <div style="text-align:center;">
-        <a href="./index.html" style="color:red;text-decoration:none;">
-          <h3>点击返回首页</h3>
-        </a>
+      <div class="back-link">
+        <a href="./index.html">← 返回首页</a>
       </div>
 
       <footer>
@@ -117,20 +92,29 @@
   <script src="./ghz-config.js"></script>
   <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
   <script>
+    var baseData = GHZconfigData;
+    
     new Vue({
       el: '#app',
-      data: GHZconfigData,
+      data: baseData,
+      mounted() {
+        const now = new Date();
+        const month = now.getMonth() + 1;
+        const monthName = month + '月';
+        const titleEl = document.getElementById('page-title');
+        const h1El = document.querySelector('h1');
+        if (titleEl) titleEl.textContent = '公主连结' + monthName + '简单set刀推荐';
+        if (h1El) h1El.textContent = '公主连结' + monthName + '简单set刀推荐';
+      },
       methods: {
         showModal(src) {
           this.bigImgSrc = src;
           this.showBigImg = true;
-          // 防止背景滚动
           document.body.style.overflow = 'hidden';
         },
         closeModal() {
           this.showBigImg = false;
           this.bigImgSrc = '';
-          // 恢复背景滚动
           document.body.style.overflow = '';
         }
       }

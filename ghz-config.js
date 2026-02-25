@@ -55,7 +55,13 @@ const GHZconfigData = {
     "./工会战/set刀/mx2.png"
   ],
   "showBigImg": false,
-  "bigImgSrc": ""
+  "bigImgSrc": "",
+  "videoLinks": [
+    { "name": "汐汐的奇幻历险[手动-简单set刀]", "url": "https://www.bilibili.com/video/BV1utZ6BzEwc/", "cover": "./工会战/汐.jpg" },
+    { "name": "玩具喵Official[自动-简单set刀]", "url": "https://www.bilibili.com/video/BV1mYcbzjEsb/", "cover": "./工会战/wjm.jpg" },
+    { "name": "墨夕困困想睡觉[自动-简单set刀]", "url": "https://www.bilibili.com/video/BV1mVfPBKE6m/", "cover": "./工会战/mx.jpg" },
+    { "name": "玖璃梦_花舞组[自动-简单set刀]", "url": "https://www.bilibili.com/video/BV1vafwBLEDf/", "cover": "./工会战/花舞.jpg" }
+  ]
 };
   
   // 导出配置数据
