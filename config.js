@@ -7,6 +7,18 @@ const configData = {
       "className": "highlight-red"
     },
     {
+      "keyword": "「莱拉耶尔（圣诞节）」：钻多（15w+）以上且想要组火法队的才抽。",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「伊绪（圣诞节）」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "强烈推荐抽取",
+      "className": "highlight-red"
+    },
+    {
       "keyword": "「大和」：",
       "className": "highlight-red"
     },
@@ -2345,7 +2357,7 @@ const configData = {
       "start": "2026/02/28 16:00",
       "end": "2026/03/04 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：「莱拉耶尔（圣诞节）」：钻多（15w+）以上且想要组火法队的才抽。火法队就需要将后面的火法角色都抽了，火法队的出场率率不是太好。</br>「伊绪（圣诞节）」：常驻等歪，强度不高。</br>",
       "image": "./卡池/火法.png"
     },
     {
@@ -2353,7 +2365,7 @@ const configData = {
       "start": "2026/03/04 11:00",
       "end": "2026/03/09 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：强烈推荐抽取。高寿命，中上使用率，日服近期使用率降低，但理论上并未下岗，生涯性价比足够高。",
       "image": "./卡池/水切噜.png"
     },
     {
@@ -2361,7 +2373,7 @@ const configData = {
       "start": "2026/03/09 11:00",
       "end": "2026/03/16 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。白嫖就选圣诞克总，未来开二专了。",
       "image": "./卡池/自选12.png"
     },
     {
@@ -2369,7 +2381,7 @@ const configData = {
       "start": "2026/03/09 11:00",
       "end": "2026/03/14 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/自选13.png"
     }
   ],
@@ -2416,7 +2428,7 @@ const configData = {
       "start": "2026/02/28 16:00",
       "end": "2026/03/31 23:00",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：要用再开，30就可用",
       "image": "./专武/富婆.png",
       "category": "specialWeapon"
     },
@@ -2425,7 +2437,7 @@ const configData = {
       "start": "2026/02/28 16:00",
       "end": "2026/03/31 23:00",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：要用再开，用就要250+",
       "image": "./专武/圣吃.png",
       "category": "specialWeapon"
     },
@@ -2434,7 +2446,7 @@ const configData = {
       "start": "2026/02/28 16:00",
       "end": "2026/03/31 23:00",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：拉满",
       "image": "./专武/妈-2.png",
       "category": "specialWeapon"
     },
