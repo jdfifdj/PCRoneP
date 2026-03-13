@@ -865,7 +865,7 @@
                             <div class="basic-info-row">
                                 <div class="basic-info-item">
                                     <span class="basic-info-label">表格更新时间:</span>
-                                    <span class="basic-info-value">2026年2月23日</span>
+                                    <span class="basic-info-value">2026年3月13日</span>
                                 </div>
                                 <div class="basic-info-item">
                                     <span class="basic-info-label">图片生成时间:</span>
@@ -875,11 +875,11 @@
                             <div class="basic-info-row">
                                 <div class="basic-info-item">
                                     <span class="basic-info-label">等级上限:</span>
-                                    <span class="basic-info-value">328级</span>
+                                    <span class="basic-info-value">331级</span>
                                 </div>
                                 <div class="basic-info-item">
                                     <span class="basic-info-label">专武上限:</span>
-                                    <span class="basic-info-value">330级</span>
+                                    <span class="basic-info-value">340级</span>
                                 </div>
                             </div>
                             <div class="basic-info-row">
@@ -1459,7 +1459,7 @@
                         const daysBeforeStart = (start - now) / (1000 * 60 * 60 * 24);
                         const daysAfterEnd = (now - end) / (1000 * 60 * 60 * 24); // 新增
 
-                        role.shouldShow = (daysBeforeStart <= 3 && daysBeforeStart > 0) ||
+                        role.shouldShow = (daysBeforeStart <= 5 && daysBeforeStart > 0) ||
                             (daysAfterEnd <= 1 && daysAfterEnd >= 0) ||
                             (now >= start && now <= end);
                     });
