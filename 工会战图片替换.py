@@ -3,7 +3,7 @@ import re
 import json
 
 # 配置文件路径
-CONFIG_FILE_PATH = 'j:\\桌面备份\\文档\\pcrone-p\\ghz-config.js'
+CONFIG_FILE_PATH = 'j:\\桌面备份\\文档\\pcrone-p\\ghz-config-1.js'
 # 工会战图片根目录
 GHZ_IMAGE_ROOT = 'j:\\桌面备份\\文档\\pcrone-p\\工会战'
 

@@ -337,6 +337,90 @@ const configData = {
   ],
   "activities": [
     {
+      "name": "精选扭蛋「菈比莉斯塔（阿尔法）」",
+      "start": "2026/03/31 14:00",
+      "end": "2026/04/07 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "剧情活动「潜入・阿斯特朗 七个愿望与创世残响」",
+      "start": "2026/03/31 14:00",
+      "end": "2026/04/23 04:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "「高难关卡」掉落量 4 倍庆典",
+      "start": "2026/03/31 11:00",
+      "end": "2026/04/05 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "深渊讨伐战开启",
+      "start": "2026/04/04 12:00",
+      "end": "2026/04/09 04:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "精选扭蛋「克莉丝提娜（阿尔法）」",
+      "start": "2026/04/07 11:00",
+      "end": "2026/04/17 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "「优衣（星幽）」「日和莉（星幽）」「爱梅斯（夏日）」复刻",
+      "start": "2026/04/07 11:00",
+      "end": "2026/04/12 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "每日一次免费 10 连",
+      "start": "2026/04/07 05:00",
+      "end": "2026/04/18 04:59",
+      "shouldShow": true,
+      "icon": "./图标/妈.png"
+    },
+    {
+      "name": "「普通关卡」掉落量 4 倍庆典",
+      "start": "2026/04/05 05:00",
+      "end": "2026/04/15 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「困难关卡」掉落量 4 倍庆典",
+      "start": "2026/04/05 05:00",
+      "end": "2026/04/15 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "斗技场开启",
+      "start": "2026/04/09 12:00",
+      "end": "2026/04/13 23:59",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "6 周年倒计时活动",
+      "start": "2026/04/10 05:00",
+      "end": "2026/04/18 04:59",
+      "shouldShow": true,
+      "icon": "./图标/妈.png"
+    },
+    {
+      "name": "复刻剧情活动「迎春梦想家们！新年陨石碎碎平安！？」",
+      "start": "2026/04/16 12:00",
+      "end": "2026/04/23 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
       "name": "公主庆典扭蛋「格蕾丝」",
       "start": "2026/03/16 16:00",
       "end": "2026/03/19 17:59",
@@ -2548,6 +2632,30 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/自选15.png"
+    },
+    {
+      "name": "精选扭蛋「菈比莉斯塔（阿尔法）」",
+      "start": "2026/03/31 14:00",
+      "end": "2026/04/07 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/a晶.png"
+    },
+    {
+      "name": "精选扭蛋「克莉丝提娜（阿尔法）」",
+      "start": "2026/04/07 11:00",
+      "end": "2026/04/17 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/a克.png"
+    },
+    {
+      "name": "「优衣（星幽）」「日和莉（星幽）」「爱梅斯（夏日）」复刻",
+      "start": "2026/04/07 11:00",
+      "end": "2026/04/12 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/自选16.png"
     }
   ],
   "sixStar": [
@@ -3188,6 +3296,33 @@ const configData = {
       "shouldShow": true,
       "advice": "开专建议：拉满，伟大无需多言。光物理核心输出。",
       "image": "./专武/狱三家.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "日和莉（星幽）",
+      "start": "2026/03/31 14:00",
+      "end": "2026/04/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/日和莉（星幽）.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "怜（星幽）",
+      "start": "2026/03/31 14:00",
+      "end": "2026/04/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/怜（星幽）.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "优衣（星幽）",
+      "start": "2026/03/31 14:00",
+      "end": "2026/04/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/优衣（星幽）.png",
       "category": "specialWeapon"
     }
   ],

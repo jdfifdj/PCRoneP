@@ -947,8 +947,9 @@
                             <div class="activity-time">
                                 {{ formatDate(pool.start) }} - {{ formatDate(pool.end) }}
                             </div>
+                            
                             <div class="activity-countdown" :class="getCountdownText(pool).class">
-                                {{ getCountdownText(pool).text }}
+                                 {{ getCountdownText(pool).text }}
                             </div>
                         </td>
                         <!-- 新增状态单元格 -->
