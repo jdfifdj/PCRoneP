@@ -62,6 +62,13 @@ const GHZconfigData = {
     "./工会战/set刀/hw1.png",
     "./工会战/set刀/hw2.png",
     "./工会战/set刀/hw3.png",
+    "./工会战/set刀/hw4.png",
+    "./工会战/set刀/hw5.png",
+    "./工会战/set刀/hw6.png",
+    "./工会战/set刀/hw7.png",
+    "./工会战/set刀/hw8.png",
+    "./工会战/set刀/mx1.png",
+    "./工会战/set刀/mx2.png",
     "./工会战/set刀/nc1.png",
     "./工会战/set刀/nc2.png",
     "./工会战/set刀/nc3.png",
@@ -69,7 +76,10 @@ const GHZconfigData = {
     "./工会战/set刀/nc5.png",
     "./工会战/set刀/nc6.png",
     "./工会战/set刀/nc7.png",
-    "./工会战/set刀/nc8.png"
+    "./工会战/set刀/nc8.png",
+    "./工会战/set刀/wjm1.png",
+    "./工会战/set刀/wjm2.png",
+    "./工会战/set刀/wjm3.png"
   ],
   "showBigImg": false,
   "bigImgSrc": "",
@@ -81,17 +91,17 @@ const GHZconfigData = {
     },
     {
       "name": "玩具喵Official[自动-简单set刀]",
-      "url": "https://www.bilibili.com/video/BV1mYcbzjEsb/",
+      "url": "https://www.bilibili.com/video/BV1e5wyzBEik/",
       "cover": "./工会战/wjm.jpg"
     },
     {
       "name": "墨夕困困想睡觉[自动-简单set刀]",
-      "url": "https://www.bilibili.com/video/BV1mVfPBKE6m/",
+      "url": "https://www.bilibili.com/video/BV19dQyB5EUf/",
       "cover": "./工会战/mx.jpg"
     },
     {
       "name": "玖璃梦_花舞组[自动-简单set刀]",
-      "url": "https://www.bilibili.com/video/BV1vafwBLEDf/",
+      "url": "https://www.bilibili.com/video/BV1iFQ6BKEYf/",
       "cover": "./工会战/花舞.jpg"
     },
     {
