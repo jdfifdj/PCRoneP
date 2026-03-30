@@ -7,6 +7,10 @@ const configData = {
       "className": "highlight-red"
     },
     {
+      "keyword": "没钻不抽！！！。",
+      "className": "highlight-red"
+    },
+    {
       "keyword": "「莱拉耶尔（圣诞节）」：钻多（15w+）以上且想要组火法队的才抽。",
       "className": "highlight-red"
     },
@@ -2638,7 +2642,7 @@ const configData = {
       "start": "2026/03/31 14:00",
       "end": "2026/04/07 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：没钻不抽！！！。<br/>·没炼金望，又不想完全放弃水法就抽.<br/>·有炼金望，可接受借人度日就不抽，不会经常用.",
       "image": "./卡池/a晶.png"
     },
     {
@@ -2646,7 +2650,7 @@ const configData = {
       "start": "2026/04/07 11:00",
       "end": "2026/04/17 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：暗物理推图重要核心，各玩法合计出场次数较高，较为推荐抽取，抽了也更好放弃之后的弱角色",
       "image": "./卡池/a克.png"
     },
     {
@@ -2654,7 +2658,7 @@ const configData = {
       "start": "2026/04/07 11:00",
       "end": "2026/04/12 10:59",
       "shouldShow": true,
-      "advice": "抽卡建议：等攻略",
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/自选16.png"
     }
   ],
@@ -3303,7 +3307,7 @@ const configData = {
       "start": "2026/03/31 14:00",
       "end": "2026/04/30 23:00",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：30可用",
       "image": "./专武/日和莉（星幽）.png",
       "category": "specialWeapon"
     },
@@ -3312,7 +3316,7 @@ const configData = {
       "start": "2026/03/31 14:00",
       "end": "2026/04/30 23:00",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：jjc角色，jjc高手才开",
       "image": "./专武/怜（星幽）.png",
       "category": "specialWeapon"
     },
@@ -3321,7 +3325,7 @@ const configData = {
       "start": "2026/03/31 14:00",
       "end": "2026/04/30 23:00",
       "shouldShow": true,
-      "advice": "开专建议：等攻略",
+      "advice": "开专建议：30可用",
       "image": "./专武/优衣（星幽）.png",
       "category": "specialWeapon"
     }
