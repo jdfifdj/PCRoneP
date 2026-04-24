@@ -378,7 +378,8 @@
         }
         
         .img-preview {
-            max-width: 100%;
+            max-width: 500px;   /* 最大宽度 400px（可改） */
+            max-height: 400px;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
@@ -856,7 +857,7 @@
                 <div class="header-content">
                     <!-- 背景图片 -->
                     <div class="img-container main-image">
-                        <img src="背景.gif" alt="活动背景" class="img-preview"
+                        <img src="背景.jpg" alt="活动背景" class="img-preview"
                             @click.prevent="showImageModal('background-image.png')">
                     </div>
                     <!-- 基本信息卡片 -->

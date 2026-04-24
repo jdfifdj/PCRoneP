@@ -341,6 +341,83 @@ const configData = {
   ],
   "activities": [
     {
+      "name": "精选扭蛋「雷姆（夏日）」「艾姬多娜（夏日）」",
+      "start": "2026/04/30 12:00",
+      "end": "2026/05/15 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "「雷姆」「爱蜜莉雅」复刻",
+      "start": "2026/04/30 12:00",
+      "end": "2026/05/10 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "联动剧情活动「Re: 从零开始的畅游异世界夏日」",
+      "start": "2026/04/30 12:00",
+      "end": "2026/05/14 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "联动复刻剧情活动「Re: 从零开始收集的异世界餐桌」",
+      "start": "2026/04/30 12:00",
+      "end": "2026/05/09 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "「高难关卡」掉落量 4 倍庆典",
+      "start": "2026/04/30 05:00",
+      "end": "2026/05/15 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "深渊讨伐战开启",
+      "start": "2026/05/04 12:00",
+      "end": "2026/05/09 04:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "「困难关卡」掉落量 4 倍庆典",
+      "start": "2026/05/08 05:00",
+      "end": "2026/06/01 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "「普通关卡」装备掉落量 6 倍、玛那掉落量 4 倍庆典",
+      "start": "2026/05/08 05:00",
+      "end": "2026/05/15 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「圣迹调查 & 神殿调查关卡」掉落量 4 倍庆典",
+      "start": "2026/05/08 05:00",
+      "end": "2026/05/15 04:59",
+      "shouldShow": true,
+      "icon": "./图标/圣迹调查.png"
+    },
+    {
+      "name": "「探索关卡」掉落量 4 倍庆典",
+      "start": "2026/05/08 05:00",
+      "end": "2026/05/15 04:59",
+      "shouldShow": true,
+      "icon": "./图标/探索.png"
+    },
+    {
+      "name": "大师币获得量 3 倍庆典",
+      "start": "2026/05/08 05:00",
+      "end": "2026/05/15 04:59",
+      "shouldShow": true,
+      "icon": "./图标/大师币.png"
+    },
+    {
       "name": "「普通关卡」装备掉落量10倍、玛那掉落量4倍庆典",
       "start": "2026/04/15 16:00",
       "end": "2026/04/30 10:59",
@@ -2796,6 +2873,22 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/自选17.png"
+    },
+    {
+      "name": "精选扭蛋「雷姆（夏日）」「艾姬多娜（夏日）」",
+      "start": "2026/04/30 12:00",
+      "end": "2026/05/15 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/联动1.png"
+    },
+    {
+      "name": "「雷姆」「爱蜜莉雅」复刻",
+      "start": "2026/04/30 12:00",
+      "end": "2026/05/10 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：等攻略",
+      "image": "./卡池/联动2.png"
     }
   ],
   "sixStar": [
@@ -3464,6 +3557,33 @@ const configData = {
       "advice": "开专建议：30可用",
       "image": "./专武/优衣（星幽）.png",
       "category": "specialWeapon"
+    },
+    {
+      "name": "艾姬多娜（夏日）",
+      "start": "2026/04/30 14:00",
+      "end": "2026/05/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/艾姬多娜（夏日）.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "爱蜜莉雅（夏日）",
+      "start": "2026/04/30 14:00",
+      "end": "2026/05/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/爱蜜莉雅（夏日）.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "蕾姆（夏日）",
+      "start": "2026/04/30 14:00",
+      "end": "2026/05/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：等攻略",
+      "image": "./专武/蕾姆（夏日）.png",
+      "category": "specialWeapon"
     }
   ],
   "huodong": [
@@ -3498,6 +3618,14 @@ const configData = {
       "shouldShow": true,
       "advice": "活动多刷,未来用处挺多",
       "image": "./活动角色/1.png"
+    },
+    {
+      "name": "爱蜜莉雅（夏日）",
+      "start": "2026/04/30 16:00",
+      "end": "2026/05/15 23:59",
+      "shouldShow": true,
+      "advice": "等攻略",
+      "image": "./活动角色/联动3.png"
     },
   ],
   "showModal": false,
