@@ -49,6 +49,8 @@ const GHZconfigData = {
     "./工会战/set刀/mx1.png",
     "./工会战/set刀/mx2.png",
     "./工会战/set刀/mx3.png",
+    "./工会战/set刀/mx4.png",
+    "./工会战/set刀/mx5.png",
     "./工会战/set刀/nc1.png",
     "./工会战/set刀/nc2.png",
     "./工会战/set刀/nc3.png",
