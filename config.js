@@ -341,6 +341,104 @@ const configData = {
   ],
   "activities": [
     {
+      "name": "精选扭蛋「兰法（礼服）」「千歌（礼服）」",
+      "start": "2026/05/15 16:00",
+      "end": "2026/06/01 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "「优妮（冬日）」「静流（黑暗）」复刻",
+      "start": "2026/05/15 16:00",
+      "end": "2026/05/20 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "剧情活动「与你共步的行板 祈祷的二重唱回响之时」",
+      "start": "2026/05/15 16:00",
+      "end": "2026/05/30 04:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "复刻剧情活动「I Wish 紧紧握住你的手」",
+      "start": "2026/05/15 16:00",
+      "end": "2026/05/28 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "「普通关卡」掉落量 4 倍庆典",
+      "start": "2026/05/15 05:00",
+      "end": "2026/05/23 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "深渊讨伐战开启",
+      "start": "2026/05/17 12:00",
+      "end": "2026/05/22 04:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "斗技场开启",
+      "start": "2026/05/20 12:00",
+      "end": "2026/05/25 23:59",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "露娜之塔开启",
+      "start": "2026/05/22 12:00",
+      "end": "2026/05/27 23:59",
+      "shouldShow": true,
+      "icon": "./图标/露娜塔.png"
+    },
+    {
+      "name": "期间限定特别地下城开启",
+      "start": "2026/05/22 05:00",
+      "end": "2026/05/27 04:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "「白羊座」团队战",
+      "start": "2026/05/26 05:00",
+      "end": "2026/05/30 23:59",
+      "shouldShow": true,
+      "icon": "./图标/团队战.png"
+    },
+    {
+      "name": "「普通关卡」装备掉落量 6 倍、玛那掉落量 4 倍庆典",
+      "start": "2026/05/23 05:00",
+      "end": "2026/06/01 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「地下城」玛那掉落量 4 倍庆典",
+      "start": "2026/05/23 05:00",
+      "end": "2026/06/01 04:59",
+      "shouldShow": true,
+      "icon": "./图标/马娜.png"
+    },
+    {
+      "name": "大师币获得量 3 倍庆典",
+      "start": "2026/05/23 05:00",
+      "end": "2026/06/01 04:59",
+      "shouldShow": true,
+      "icon": "./图标/大师币.png"
+    },
+    {
+      "name": "体力消费时玩家经验值获得量 3 倍庆典",
+      "start": "2026/05/23 05:00",
+      "end": "2026/06/01 04:59",
+      "shouldShow": true,
+      "icon": "./图标/经验.png"
+    },
+    {
       "name": "精选扭蛋「雷姆（夏日）」「艾姬多娜（夏日）」",
       "start": "2026/04/30 12:00",
       "end": "2026/05/15 10:59",
@@ -2889,6 +2987,22 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：等攻略",
       "image": "./卡池/联动2.png"
+    },
+    {
+      "name": "精选扭蛋「兰法（礼服）」「千歌（礼服）」",
+      "start": "2026/05/15 16:00",
+      "end": "2026/06/01 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：「兰法（礼服）」：富可抽，穷不抽（10w以下不抽）。</br>「千歌（礼服）」：抽兰法>150再补。</br>",
+      "image": "./卡池/兰法.png"
+    },
+    {
+      "name": "「优妮（冬日）」「静流（黑暗）」复刻",
+      "start": "2026/05/15 16:00",
+      "end": "2026/05/20 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：缺优妮就补",
+      "image": "./卡池/自选18.png"
     }
   ],
   "sixStar": [
@@ -2926,6 +3040,20 @@ const configData = {
       "end": "2025/12/30 23:59",
       "shouldShow": true,
       "image": "./六星/流夏.png"
+    },
+    {
+      "name": "斑比",
+      "start": "2026/5/15 16:00",
+      "end": "2026/5/31 23:00",
+      "shouldShow": true,
+      "image": "./六星/斑比.png"
+    },
+    {
+      "name": "联动",
+      "start": "2026/5/1 16:00",
+      "end": "2026/5/31 23:00",
+      "shouldShow": true,
+      "image": "./六星/联动.png"
     },
   ],
   "specialWeapons": [
@@ -3583,6 +3711,42 @@ const configData = {
       "shouldShow": true,
       "advice": "开专建议：等攻略",
       "image": "./专武/蕾姆（夏日）.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "克罗依（冬日）",
+      "start": "2026/05/15 16:00",
+      "end": "2026/05/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：用到在说",
+      "image": "./专武/克罗依（冬日）.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "优妮（冬日）",
+      "start": "2026/05/15 16:00",
+      "end": "2026/05/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：必开，30可用",
+      "image": "./专武/优妮（冬日）.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "香澄（魔法少女）-2",
+      "start": "2026/05/15 16:00",
+      "end": "2026/05/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：JJC高手就开",
+      "image": "./专武/香澄（魔法少女）-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "栞（魔法少女）-2",
+      "start": "2026/05/15 16:00",
+      "end": "2026/05/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：喜欢就开",
+      "image": "./专武/栞（魔法少女）-2.png",
       "category": "specialWeapon"
     }
   ],
