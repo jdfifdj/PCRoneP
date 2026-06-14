@@ -3,6 +3,14 @@ const configData = {
   "currentTime": "加载中...",
   "highlightKeywords": [
     {
+      "keyword": "「露易丝玛丽」:",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「苑」:常驻。",
+      "className": "highlight-red"
+    },
+    {
       "keyword": "「碧（驾驶员）」:不放弃光物的必抽。",
       "className": "highlight-red"
     },
@@ -348,6 +356,132 @@ const configData = {
     },
   ],
   "activities": [
+    {
+      "name": "公主庆典扭蛋「薇奥莉特」",
+      "start": "2026/06/16 14:00",
+      "end": "2026/06/19 17:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "剧情活动「集结！阿尔凯斯&暮光流星群 黑市医生与两位炼金术师」",
+      "start": "2026/06/16 14:00",
+      "end": "2026/07/01 04:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "复刻剧情活动「冷酷·火爆·新兵训练营 魔鬼教官与鞭子与……糖果？」",
+      "start": "2026/06/16 14:00",
+      "end": "2026/06/23 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "自选精选扭蛋「露易丝玛丽」「苑」",
+      "start": "2026/06/19 18:00",
+      "end": "2026/07/01 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "「若菜」「大和」「吹雪」「望（炼金术士）」「镜华（春日）」「铃莓（春日）」复刻扭蛋",
+      "start": "2026/06/19 18:00",
+      "end": "2026/06/25 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "深渊讨伐战",
+      "start": "2026/06/19 12:00",
+      "end": "2026/06/24 04:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "斗技场开启",
+      "start": "2026/06/20 00:00",
+      "end": "2026/06/24 23:59",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "「普通关卡」装备掉落量8倍、玛那掉落量6倍庆典",
+      "start": "2026/06/16 05:00",
+      "end": "2026/07/01 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「困难关卡」掉落量6倍庆典",
+      "start": "2026/06/16 05:00",
+      "end": "2026/07/01 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "「高难关卡」掉落量6倍庆典",
+      "start": "2026/06/16 05:00",
+      "end": "2026/07/01 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "「圣迹调查&神殿调查关卡」掉落量6倍庆典",
+      "start": "2026/06/16 05:00",
+      "end": "2026/07/01 04:59",
+      "shouldShow": true,
+      "icon": "./图标/圣迹调查.png"
+    },
+    {
+      "name": "「探索关卡」掉落量6倍庆典",
+      "start": "2026/06/16 05:00",
+      "end": "2026/07/01 04:59",
+      "shouldShow": true,
+      "icon": "./图标/探索.png"
+    },
+    {
+      "name": "地下城掉落量2倍、玛那4倍庆典",
+      "start": "2026/06/16 05:00",
+      "end": "2026/07/01 04:59",
+      "shouldShow": true,
+      "icon": "./图标/马娜.png"
+    },
+    {
+      "name": "每日任务体力获得量4倍庆典",
+      "start": "2026/06/16 05:00",
+      "end": "2026/07/01 04:59",
+      "shouldShow": true,
+      "icon": "./图标/体力.png"
+    },
+    {
+      "name": "特别地下城开启",
+      "start": "2026/06/22 05:00",
+      "end": "2026/06/27 04:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "露娜之塔开启",
+      "start": "2026/06/22 05:00",
+      "end": "2026/06/27 23:59",
+      "shouldShow": true,
+      "icon": "./图标/露娜塔.png"
+    },
+    {
+      "name": "「毗伽菈」「姬塔（术士）」「克莉丝提娜（圣诞节）」复刻扭蛋",
+      "start": "2026/06/25 11:00",
+      "end": "2026/07/01 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "双子座 团队战开启",
+      "start": "2026/06/26 05:00",
+      "end": "2026/06/30 23:59",
+      "shouldShow": true,
+      "icon": "./图标/团队战.png"
+    },
     {
       "name": "自选精选扭蛋「碧（驾驶员）」「克萝茜（空战）」",
       "start": "2026/06/01 14:00",
@@ -3140,6 +3274,38 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/自选19.png"
+    },
+    {
+      "name": "公主庆典扭蛋「薇奥莉特」",
+      "start": "2026/06/16 14:00",
+      "end": "2026/06/19 17:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：必抽",
+      "image": "./卡池/薇奥莉特.png"
+    },
+    {
+      "name": "自选精选扭蛋「露易丝玛丽」「苑」",
+      "start": "2026/06/19 18:00",
+      "end": "2026/07/01 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：</br>「露易丝玛丽」:想组火法且余钻健康（>12w）才推荐抽。</br>「苑」:常驻。这个池子优先抽露易丝玛丽，钻多才抽。</br>",
+      "image": "./卡池/玛丽.png"
+    },
+    {
+      "name": "「若菜」「大和」「吹雪」「望（炼金术士）」「镜华（春日）」「铃莓（春日）」复刻扭蛋",
+      "start": "2026/06/19 18:00",
+      "end": "2026/06/25 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
+      "image": "./卡池/自选20.png"
+    },
+    {
+      "name": "「毗伽菈」「姬塔（术士）」「克莉丝提娜（圣诞节）」复刻扭蛋",
+      "start": "2026/06/25 11:00",
+      "end": "2026/07/01 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
+      "image": "./卡池/自选21.png"
     }
   ],
   "sixStar": [
@@ -3920,6 +4086,60 @@ const configData = {
       "shouldShow": true,
       "advice": "开专建议：建议刷，击剑必满",
       "image": "./专武/春女仆-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "兰法",
+      "start": "2026/06/16 14:00",
+      "end": "2026/06/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：建议拉满",
+      "image": "./专武/兰法.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "花cw",
+      "start": "2026/06/16 14:00",
+      "end": "2026/06/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：30可用",
+      "image": "./专武/花cw.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "花女仆",
+      "start": "2026/06/16 14:00",
+      "end": "2026/06/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：建议拉满",
+      "image": "./专武/花女仆.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "圣克-2",
+      "start": "2026/06/16 14:00",
+      "end": "2026/06/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：有就拉满",
+      "image": "./专武/圣克-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "圣望-2",
+      "start": "2026/06/16 14:00",
+      "end": "2026/06/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：jjc必练",
+      "image": "./专武/圣望-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "圣伊-2",
+      "start": "2026/06/16 14:00",
+      "end": "2026/06/30 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：jjc必练",
+      "image": "./专武/圣伊-2.png",
       "category": "specialWeapon"
     }
   ],
