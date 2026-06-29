@@ -3,6 +3,14 @@ const configData = {
   "currentTime": "加载中...",
   "highlightKeywords": [
     {
+      "keyword": "「花音」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「纺希（吉奥・矶汉拿）」",
+      "className": "highlight-red"
+    },
+    {
       "keyword": "「露易丝玛丽」:",
       "className": "highlight-red"
     },
@@ -356,6 +364,118 @@ const configData = {
     },
   ],
   "activities": [
+    {
+      "name": "自选精选扭蛋「纺希（吉奥・矶汉拿）」「花音」",
+      "start": "2026/07/01 16:00",
+      "end": "2026/07/09 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "复刻扭蛋：「莱拉耶尔（圣诞节）」「库露露」「真步（梦想乐园）」「伊莉亚（礼服）」",
+      "start": "2026/07/01 16:00",
+      "end": "2026/07/09 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "剧情活动「没落千金花音的华丽复仇～傲娇粉红相随～」",
+      "start": "2026/07/01 16:00",
+      "end": "2026/07/16 04:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "复刻剧情活动「花开时节的真挚情谊」",
+      "start": "2026/07/01 16:00",
+      "end": "2026/07/08 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "「高难关卡」掉落量 4 倍庆典",
+      "start": "2026/07/01 05:00",
+      "end": "2026/07/16 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "斗技场开启",
+      "start": "2026/07/03 12:00",
+      "end": "2026/07/07 23:59",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "深渊讨伐战",
+      "start": "2026/07/06 12:00",
+      "end": "2026/07/11 04:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "精选扭蛋「彩羽」",
+      "start": "2026/07/09 11:00",
+      "end": "2026/07/16 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "多角色复刻扭蛋（千爱瑠冬日、咲恋夏日、佩可莉姆夏日、凯露夏日、铃奈夏日、珠希夏日、铃莓夏日）",
+      "start": "2026/07/09 11:00",
+      "end": "2026/07/16 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "露娜之塔开启",
+      "start": "2026/07/10 12:00",
+      "end": "2026/07/15 23:59",
+      "shouldShow": true,
+      "icon": "./图标/露娜塔.png"
+    },
+    {
+      "name": "「普通关卡」装备掉落量 6 倍、玛那掉落量 4 倍庆典",
+      "start": "2026/07/06 05:00",
+      "end": "2026/07/16 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「困难关卡」掉落量 4 倍庆典",
+      "start": "2026/07/06 05:00",
+      "end": "2026/07/16 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "「圣迹调查 & 神殿调查关卡」掉落量 4 倍庆典",
+      "start": "2026/07/06 05:00",
+      "end": "2026/07/16 04:59",
+      "shouldShow": true,
+      "icon": "./图标/圣迹调查.png"
+    },
+    {
+      "name": "「探索关卡」掉落量 4 倍庆典",
+      "start": "2026/07/06 05:00",
+      "end": "2026/07/16 04:59",
+      "shouldShow": true,
+      "icon": "./图标/探索.png"
+    },
+    {
+      "name": "大师币获得量 3 倍庆典",
+      "start": "2026/07/06 05:00",
+      "end": "2026/07/16 04:59",
+      "shouldShow": true,
+      "icon": "./图标/大师币.png"
+    },
+    {
+      "name": "公主庆典扭蛋「美空」",
+      "start": "2026/07/13 11:00",
+      "end": "2026/07/16 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
     {
       "name": "公主庆典扭蛋「薇奥莉特」",
       "start": "2026/06/16 14:00",
@@ -3306,6 +3426,46 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/自选21.png"
+    },
+    {
+      "name": "自选精选扭蛋「纺希（吉奥・矶汉拿）」「花音」",
+      "start": "2026/07/01 16:00",
+      "end": "2026/07/09 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：</br>「花音」：理论非必需品，但有较多日常以及PVE-boss会用到，且日服未下岗，黎明界也好用，因此抽取推荐度较高。</br>「纺希（吉奥・矶汉拿）」：钻多就必抽，光物理后续主流之一。",
+      "image": "./卡池/花音.png"
+    },
+    {
+      "name": "复刻扭蛋：「莱拉耶尔（圣诞节）」「库露露」「真步（梦想乐园）」「伊莉亚（礼服）」",
+      "start": "2026/07/01 16:00",
+      "end": "2026/07/09 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强",
+      "image": "./卡池/自选22.png"
+    },
+    {
+      "name": "精选扭蛋「彩羽」",
+      "start": "2026/07/09 11:00",
+      "end": "2026/07/16 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：常驻角色，需求不高，可以等歪",
+      "image": "./卡池/彩羽.png"
+    },
+    {
+      "name": "多角色复刻扭蛋（千爱瑠冬日、咲恋夏日、佩可莉姆夏日、凯露夏日、铃奈夏日、珠希夏日、铃莓夏日）",
+      "start": "2026/07/09 11:00",
+      "end": "2026/07/16 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强",
+      "image": "./卡池/自选23.png"
+    },
+    {
+      "name": "公主庆典扭蛋「美空」",
+      "start": "2026/07/13 11:00",
+      "end": "2026/07/16 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：这个池子不推荐补以前的fes角色，等下个月的",
+      "image": "./卡池/美空.png"
     }
   ],
   "sixStar": [
@@ -4140,6 +4300,42 @@ const configData = {
       "shouldShow": true,
       "advice": "开专建议：jjc必练",
       "image": "./专武/圣伊-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "宝石兔",
+      "start": "2026/07/01 14:00",
+      "end": "2026/07/31 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：建议拉满",
+      "image": "./专武/宝石兔.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "梦狐",
+      "start": "2026/07/01 14:00",
+      "end": "2026/07/31 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：开专可用，越高越好",
+      "image": "./专武/梦狐.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "美空",
+      "start": "2026/07/01 14:00",
+      "end": "2026/07/31 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：建议拉满",
+      "image": "./专武/美空.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水吃-2",
+      "start": "2026/07/01 14:00",
+      "end": "2026/07/31 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：拉满",
+      "image": "./专武/水吃-2.png",
       "category": "specialWeapon"
     }
   ],
