@@ -3,6 +3,14 @@ const configData = {
   "currentTime": "加载中...",
   "highlightKeywords": [
     {
+      "keyword": "「厄里斯（夏日）」：",
+      "className": "highlight-red"
+    },
+    {
+      "keyword": "「雪菲（夏日）」：要抽就优先抽水雪菲。",
+      "className": "highlight-red"
+    },
+    {
       "keyword": "「花音」：",
       "className": "highlight-red"
     },
@@ -364,6 +372,111 @@ const configData = {
     },
   ],
   "activities": [
+    {
+      "name": "自选精选扭蛋「厄里斯（夏日）」「雪菲（夏日）」",
+      "start": "2026/07/16 14:00",
+      "end": "2026/07/23 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "咲恋（新年）美空（夏日）莉莉（夏日）涅亚（夏日）复刻",
+      "start": "2026/07/16 14:00",
+      "end": "2026/07/23 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "剧情活动「夏日梦境・悠扬回响 海平线彼岸的旅程」",
+      "start": "2026/07/16 14:00",
+      "end": "2026/07/31 04:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "复刻剧情活动「奇幻梦想大游行 宝石兔与秘密的伙伴们」",
+      "start": "2026/07/16 14:00",
+      "end": "2026/07/23 23:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "深渊讨伐战",
+      "start": "2026/07/17 12:00",
+      "end": "2026/07/22 04:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "「普通关卡」掉落量 4 倍庆典",
+      "start": "2026/07/16 05:00",
+      "end": "2026/07/23 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "斗技场开启",
+      "start": "2026/07/19 12:00",
+      "end": "2026/07/23 23:59",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "露娜之塔开启",
+      "start": "2026/07/20 12:00",
+      "end": "2026/07/25 23:59",
+      "shouldShow": true,
+      "icon": "./图标/露娜塔.png"
+    },
+    {
+      "name": "精选扭蛋「普雷西娅（夏日）」",
+      "start": "2026/07/23 11:00",
+      "end": "2026/07/31 08:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "美杜莎、七七香（夏日）、流夏（夏日）、真琴（夏日）复刻",
+      "start": "2026/07/23 11:00",
+      "end": "2026/07/31 08:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "「普通关卡」装备掉落量 6 倍、玛那掉落量 4 倍庆典",
+      "start": "2026/07/23 05:00",
+      "end": "2026/07/31 08:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「地下城」掉落量 2 倍、玛那 4 倍庆典",
+      "start": "2026/07/23 05:00",
+      "end": "2026/07/31 08:59",
+      "shouldShow": true,
+      "icon": "./图标/马娜.png"
+    },
+    {
+      "name": "体力消费时经验值获得量 3 倍庆典",
+      "start": "2026/07/23 05:00",
+      "end": "2026/07/31 08:59",
+      "shouldShow": true,
+      "icon": "./图标/经验.png"
+    },
+    {
+      "name": "大师币获得量 3 倍庆典",
+      "start": "2026/07/23 05:00",
+      "end": "2026/07/31 08:59",
+      "shouldShow": true,
+      "icon": "./图标/大师币.png"
+    },
+    {
+      "name": "狮子座 团队战开启",
+      "start": "2026/07/26 05:00",
+      "end": "2026/07/30 23:59",
+      "shouldShow": true,
+      "icon": "./图标/团队战.png"
+    },
     {
       "name": "自选精选扭蛋「纺希（吉奥・矶汉拿）」「花音」",
       "start": "2026/07/01 16:00",
@@ -3466,6 +3579,38 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：这个池子不推荐补以前的fes角色，等下个月的",
       "image": "./卡池/美空.png"
+    },
+    {
+      "name": "自选精选扭蛋「厄里斯（夏日）」「雪菲（夏日）」",
+      "start": "2026/07/16 14:00",
+      "end": "2026/07/23 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：</br>「厄里斯（夏日）」：PVE无歌姬作用大，会战高光中等，组风法就必抽。钻很少也有不补的选择，赌她后续PVE不强，尽快下岗，会战已很少出场，主要就深域多借几次，。</br>「雪菲（夏日）」：要抽就优先抽水雪菲。近期非常重要的光物理单目标坦克，日服未下岗，建议抽取，春妈并不会让她掉价太多，未来黎明界主流抽光属性时她也很强。</br>",
+      "image": "./卡池/夏els.png"
+    },
+    {
+      "name": "咲恋（新年）美空（夏日）莉莉（夏日）涅亚（夏日）复刻",
+      "start": "2026/07/16 14:00",
+      "end": "2026/07/23 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
+      "image": "./卡池/自选24.png"
+    },
+    {
+      "name": "精选扭蛋「普雷西娅（夏日）」",
+      "start": "2026/07/23 11:00",
+      "end": "2026/07/31 08:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：无高追求尽量不抽，组风物理且不想借卡位才抽，必要性较差，属于不抽影响较小的角色，明年周年庆付费超得可买。",
+      "image": "./卡池/普雷.png"
+    },
+    {
+      "name": "美杜莎、七七香（夏日）、流夏（夏日）、真琴（夏日）复刻",
+      "start": "2026/07/23 11:00",
+      "end": "2026/07/31 08:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
+      "image": "./卡池/自选25.png"
     }
   ],
   "sixStar": [
@@ -4336,6 +4481,51 @@ const configData = {
       "shouldShow": true,
       "advice": "开专建议：拉满",
       "image": "./专武/水吃-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水黄",
+      "start": "2026/07/16 14:00",
+      "end": "2026/07/31 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：建议拉满",
+      "image": "./专武/水黄.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水莉莉",
+      "start": "2026/07/16 14:00",
+      "end": "2026/07/31 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：建议拉满",
+      "image": "./专武/水莉莉.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水美空",
+      "start": "2026/07/16 14:00",
+      "end": "2026/07/31 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：用了再拉，不着急满",
+      "image": "./专武/水美空.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水流夏-2",
+      "start": "2026/07/16 14:00",
+      "end": "2026/07/31 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：建议拉满",
+      "image": "./专武/水流夏-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水七七香-2",
+      "start": "2026/07/16 14:00",
+      "end": "2026/07/31 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：建议拉满",
+      "image": "./专武/水七七香-2.png",
       "category": "specialWeapon"
     }
   ],
