@@ -10,55 +10,41 @@ const GHZconfigData = {
   ],
   "activeTab": 0,
   "d1Images": [
-    "./工会战/d1/07b5d0f71815795fde5bb2922b54aadd353996433.png",
-    "./工会战/d1/69bb77fb0b35ad1247a604398dcc7498353996433.png",
-    "./工会战/d1/9f82e14c3206f5233a5c377229d89a8b353996433.png",
-    "./工会战/d1/Image_1782277795029_476.png",
-    "./工会战/d1/Image_1782277822955_612.png",
-    "./工会战/d1/QQ图片20260626160056.jpeg",
-    "./工会战/d1/QQ图片20260626160202.jpeg"
+    "./工会战/d1/4130b4cc7049df93ced7bed4754a74377200759 (1).png",
+    "./工会战/d1/76443fba5eda2d0f7aec8477ab9f1e117200759.png",
+    "./工会战/d1/QQ20260725-195633.png"
   ],
   "d2Images": [
-    "./工会战/d2/0bdbb19986585b8f9d3dae7b6609ef23353996433.png",
-    "./工会战/d2/79007ed799f1489fe3dc256aaaf7a398353996433.png",
-    "./工会战/d2/Image_1782277820209_259.png",
-    "./工会战/d2/QQ图片20260626160207(1).jpeg.jpeg"
+    "./工会战/d2/15ca92b24c543d77a0a8af5b797d61b07200759.png",
+    "./工会战/d2/4550769c51dcee5170959b1031ec5b357200759.png",
+    "./工会战/d2/84d22ef79d92db273c0de8df802264ad7200759.png",
+    "./工会战/d2/bd8412ce3062c1f922a45d28b758f7037200759.png",
+    "./工会战/d2/f21e5e6961cf02e5b6caa98f705b6b1d7200759.png",
+    "./工会战/d2/QQ20260725-195650.png"
   ],
   "d3Images": [
-    "./工会战/d3/32f756f626b6f3e4f8066875993b6eb0353996433.png",
-    "./工会战/d3/a6143a6306d6e455fde376b2b4f55341353996433.png",
-    "./工会战/d3/f7a43f1ef5cfbc9fcec76783c981b63f353996433.png",
-    "./工会战/d3/f98835548d13c5b70d6d0f3dd1723500353996433.png",
-    "./工会战/d3/Image_1782277809500_513.png",
-    "./工会战/d3/Image_1782277812232_366.png",
-    "./工会战/d3/Image_1782277815088_563.png",
-    "./工会战/d3/Image_1782277817631_114.png",
-    "./工会战/d3/QQ图片20260626160238(2).jpeg"
+    "./工会战/d3/94a228ad3140be1928d01ead851743b67200759.png",
+    "./工会战/d3/9f6b4eed-187f-423c-8d72-79455bea5c04.png"
   ],
   "d4Images": [
-    "./工会战/d4/57d5748510e7716560dcdd8d7e21aeb7353996433.png",
-    "./工会战/d4/75d922a9b0c6d0639433a005bbd573b1353996433.png",
-    "./工会战/d4/e77ea454a83fd8fc0c8bab56c5b45f87353996433.png",
-    "./工会战/d4/Image_1782277806885_941.png",
-    "./工会战/d4/QQ图片20260626160238(3).jpeg"
+    "./工会战/d4/27ad35a62c0edc7f05cefcdc840f543c7200759.png",
+    "./工会战/d4/b104216f9dce8028d99f10d8b4e20a657200759.png",
+    "./工会战/d4/d4ae4ea55ece2a14efd267a9a98850ce7200759.png",
+    "./工会战/d4/QQ20260725-195725.png"
   ],
   "d5Images": [
-    "./工会战/d5/378e61c0d058fe72e5bbe7887c39d172353996433.png",
-    "./工会战/d5/57af2f9d29d92b5079dedd0f68b0bbb0353996433.png",
-    "./工会战/d5/beaa7d0a37b47437506bc2022039852e353996433.png",
-    "./工会战/d5/f62094207160bd6e36cb9d051c171d95353996433.png",
-    "./工会战/d5/Image_1782277798909_90.png",
-    "./工会战/d5/Image_1782277801806_786.png",
-    "./工会战/d5/QQ图片20260626160238(4).jpeg",
-    "./工会战/d5/QQ图片20260626160238(5).jpeg",
-    "./工会战/d5/QQ图片20260626160335.png"
+    "./工会战/d5/32544c14d1e2d22af9f2b4c0748521fd7200759.png",
+    "./工会战/d5/69597da4194d4111d8d0a881467e8f197200759.png",
+    "./工会战/d5/c721f1393591b7582e04650d8037b7237200759.png",
+    "./工会战/d5/e6c4a7d3f1350ca115f252038438806d7200759.png",
+    "./工会战/d5/QQ20260725-195734.png"
   ],
   "d6Images": [
-    "./工会战/set刀/ev1.png",
-    "./工会战/set刀/ev2.png",
-    "./工会战/set刀/ev3.png",
-    "./工会战/set刀/ev4.png",
-    "./工会战/set刀/ev5.png",
+    "./工会战/set刀/ex1.png",
+    "./工会战/set刀/ex2.png",
+    "./工会战/set刀/ex3.png",
+    "./工会战/set刀/ex4.png",
+    "./工会战/set刀/ex5.png",
     "./工会战/set刀/hw1.png",
     "./工会战/set刀/hw2.png",
     "./工会战/set刀/hw3.png",
@@ -66,11 +52,12 @@ const GHZconfigData = {
     "./工会战/set刀/hw5.png",
     "./工会战/set刀/hw6.png",
     "./工会战/set刀/hw7.png",
+    "./工会战/set刀/hw8.png",
     "./工会战/set刀/mx1.png",
     "./工会战/set刀/mx2.png",
     "./工会战/set刀/mx3.png",
-    "./工会战/set刀/mx4.png",
     "./工会战/set刀/nc1.png",
+    "./工会战/set刀/nc10.png",
     "./工会战/set刀/nc2.png",
     "./工会战/set刀/nc3.png",
     "./工会战/set刀/nc4.png",
@@ -78,11 +65,7 @@ const GHZconfigData = {
     "./工会战/set刀/nc6.png",
     "./工会战/set刀/nc7.png",
     "./工会战/set刀/nc8.png",
-    "./工会战/set刀/wjm1.png",
-    "./工会战/set刀/wjm2.png",
-    "./工会战/set刀/wjm3.png",
-    "./工会战/set刀/wjm4.png",
-    "./工会战/set刀/wjm5.png"
+    "./工会战/set刀/nc9.png"
   ],
   "showBigImg": false,
   "bigImgSrc": "",
@@ -99,17 +82,17 @@ const GHZconfigData = {
     },
     {
       "name": "墨夕困困想睡觉[自动-简单set刀]",
-      "url": "",
+      "url": "https://www.bilibili.com/video/BV15t3K6BEAg/?spm_id_from=333.337.search-card.all.click&vd_source=8f074b7d90e0b4646126907ed781bafd",
       "cover": "./工会战/mx.jpg"
     },
     {
       "name": "玖璃梦_花舞组[自动-简单set刀]",
-      "url": "",
+      "url": "https://www.bilibili.com/opus/1226687327456198662?spm_id_from=333.1387.0.0",
       "cover": "./工会战/花舞.jpg"
     },
     {
       "name": "这是一个好记的昵称[自动-简单set刀]",
-      "url": "https://www.bilibili.com/video/BV1JHE96YExE",
+      "url": "https://www.bilibili.com/video/BV1qaKp63EK6",
       "cover": "./工会战/nc.jpg"
     },
     {
@@ -119,7 +102,7 @@ const GHZconfigData = {
     },
     {
       "name": "浮城墟烟[简单set刀]",
-      "url": "https://www.bilibili.com/video/BV1uEjS6wEGd",
+      "url": "https://space.bilibili.com/485486381?spm_id_from=333.788.upinfo.detail.click",
       "cover": "./工会战/浮.jpg"
     }
   ]
