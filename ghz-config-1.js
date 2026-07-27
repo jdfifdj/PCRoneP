@@ -12,7 +12,7 @@ const GHZconfigData = {
   "d1Images": [
     "./工会战/d1/4130b4cc7049df93ced7bed4754a74377200759 (1).png",
     "./工会战/d1/76443fba5eda2d0f7aec8477ab9f1e117200759.png",
-    "./工会战/d1/QQ20260725-195633.png"
+    "./工会战/d1/QQ截图20260727143833.png"
   ],
   "d2Images": [
     "./工会战/d2/15ca92b24c543d77a0a8af5b797d61b07200759.png",
@@ -20,31 +20,31 @@ const GHZconfigData = {
     "./工会战/d2/84d22ef79d92db273c0de8df802264ad7200759.png",
     "./工会战/d2/bd8412ce3062c1f922a45d28b758f7037200759.png",
     "./工会战/d2/f21e5e6961cf02e5b6caa98f705b6b1d7200759.png",
-    "./工会战/d2/QQ20260725-195650.png"
+    "./工会战/d2/QQ20260727-143845.png"
   ],
   "d3Images": [
     "./工会战/d3/94a228ad3140be1928d01ead851743b67200759.png",
-    "./工会战/d3/9f6b4eed-187f-423c-8d72-79455bea5c04.png"
+    "./工会战/d3/QQ20260727-143854.png"
   ],
   "d4Images": [
     "./工会战/d4/27ad35a62c0edc7f05cefcdc840f543c7200759.png",
     "./工会战/d4/b104216f9dce8028d99f10d8b4e20a657200759.png",
     "./工会战/d4/d4ae4ea55ece2a14efd267a9a98850ce7200759.png",
-    "./工会战/d4/QQ20260725-195725.png"
+    "./工会战/d4/QQ20260727-143906.png"
   ],
   "d5Images": [
     "./工会战/d5/32544c14d1e2d22af9f2b4c0748521fd7200759.png",
     "./工会战/d5/69597da4194d4111d8d0a881467e8f197200759.png",
     "./工会战/d5/c721f1393591b7582e04650d8037b7237200759.png",
     "./工会战/d5/e6c4a7d3f1350ca115f252038438806d7200759.png",
-    "./工会战/d5/QQ20260725-195734.png"
+    "./工会战/d5/QQ20260727-143914.png"
   ],
   "d6Images": [
-    "./工会战/set刀/ex1.png",
-    "./工会战/set刀/ex2.png",
-    "./工会战/set刀/ex3.png",
-    "./工会战/set刀/ex4.png",
-    "./工会战/set刀/ex5.png",
+    "./工会战/set刀/ev1.png",
+    "./工会战/set刀/ev2.png",
+    "./工会战/set刀/ev3.png",
+    "./工会战/set刀/ev4.png",
+    "./工会战/set刀/ev5.png",
     "./工会战/set刀/hw1.png",
     "./工会战/set刀/hw2.png",
     "./工会战/set刀/hw3.png",
@@ -56,6 +56,7 @@ const GHZconfigData = {
     "./工会战/set刀/mx1.png",
     "./工会战/set刀/mx2.png",
     "./工会战/set刀/mx3.png",
+    "./工会战/set刀/mx4.png",
     "./工会战/set刀/nc1.png",
     "./工会战/set刀/nc10.png",
     "./工会战/set刀/nc2.png",
