@@ -373,6 +373,76 @@ const configData = {
   ],
   "activities": [
     {
+      "name": "剧情活动「Summer Anemos, Summer Qualia」",
+      "start": "2026/07/31 18:00",
+      "end": "2026/08/23 04:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "精选扭蛋「可璃亚（夏日）」",
+      "start": "2026/07/31 18:00",
+      "end": "2026/08/09 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "「普通关卡」掉落量 2 倍",
+      "start": "2026/08/04 05:00",
+      "end": "2026/08/09 05:00",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「困难关卡」掉落量 2 倍",
+      "start": "2026/07/31 05:00",
+      "end": "2026/08/04 05:00",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "斗技场开启",
+      "start": "2026/08/03 12:00",
+      "end": "2026/08/07 23:59",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "精选扭蛋「银莲（夏日）」",
+      "start": "2026/08/09 11:00",
+      "end": "2026/08/14 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "自选精选扭蛋",
+      "start": "2026/08/09 11:00",
+      "end": "2026/08/14 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "深渊讨伐战",
+      "start": "2026/08/09 12:00",
+      "end": "2026/08/14 10:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "「高难关卡」掉落量 2 倍",
+      "start": "2026/08/09 05:00",
+      "end": "2026/08/14 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "「圣迹调查」掉落量 2 倍",
+      "start": "2026/08/09 05:00",
+      "end": "2026/08/14 04:59",
+      "shouldShow": true,
+      "icon": "./图标/圣迹调查.png"
+    },
+    {
       "name": "自选精选扭蛋「厄里斯（夏日）」「雪菲（夏日）」",
       "start": "2026/07/16 14:00",
       "end": "2026/07/23 10:59",
@@ -3611,6 +3681,30 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/自选25.png"
+    },
+    {
+      "name": "精选扭蛋「可璃亚（夏日）」",
+      "start": "2026/07/31 18:00",
+      "end": "2026/08/09 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：可抽可不抽，钻多的考虑。出场一般都是打boss风物理刀。",
+      "image": "./卡池/可璃亚（夏日）.png"
+    },
+    {
+      "name": "精选扭蛋「银莲（夏日）」",
+      "start": "2026/08/09 11:00",
+      "end": "2026/08/14 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：光法必抽，短期内光法都是水银莲+老角色，后续新角色可不抽，抽个水银莲性价比极高",
+      "image": "./卡池/水银莲.png"
+    },
+    {
+      "name": "自选精选扭蛋",
+      "start": "2026/08/09 11:00",
+      "end": "2026/08/14 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
+      "image": "./卡池/自选26.png"
     }
   ],
   "sixStar": [
@@ -4526,6 +4620,24 @@ const configData = {
       "shouldShow": true,
       "advice": "开专建议：建议拉满",
       "image": "./专武/水七七香-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水nnk",
+      "start": "2026/07/31 14:00",
+      "end": "2026/08/31 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：建议拉满",
+      "image": "./专武/水nnk.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "水龙妈",
+      "start": "2026/07/31 14:00",
+      "end": "2026/08/31 23:00",
+      "shouldShow": true,
+      "advice": "开专建议：建议拉满",
+      "image": "./专武/水龙妈.png",
       "category": "specialWeapon"
     }
   ],
