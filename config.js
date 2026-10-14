@@ -3297,6 +3297,118 @@ const configData = {
       "end": "2026/10/18 04:59",
       "shouldShow": true,
       "icon": "./图标/妈.png"
+    },
+    {
+      "name": "联动登录奖励活动",
+      "start": "2026/10/23 05:00",
+      "end": "2026/11/23 11:59",
+      "shouldShow": true,
+      "icon": "./图标/妈.png"
+    },
+    {
+      "name": "庆典「限定精选扭蛋」",
+      "start": "2026/10/23 11:00",
+      "end": "2026/10/30 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "自选附奖扭蛋「纺希（万圣节）」「维尔姆」「琳德」「望（炼金术士）」",
+      "start": "2026/10/23 11:00",
+      "end": "2026/10/30 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "精选扭蛋「樱」",
+      "start": "2026/10/23 11:00",
+      "end": "2026/11/02 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "剧情活动「僵尸乐园连结！Re:DIEve」",
+      "start": "2026/10/23 12:00",
+      "end": "2026/11/02 11:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "「10月」团队战",
+      "start": "2026/10/25 05:00",
+      "end": "2026/10/29 23:59",
+      "shouldShow": true,
+      "icon": "./图标/团队战.png"
+    },
+    {
+      "name": "「普通关卡」掉落量 3 倍",
+      "start": "2026/10/15 05:00",
+      "end": "2026/10/19 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「困难关卡」掉落量 2 倍",
+      "start": "2026/10/19 05:00",
+      "end": "2026/10/23 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "体力消费时玩家经验值获得 2 倍庆典",
+      "start": "2026/10/23 05:00",
+      "end": "2026/10/30 04:59",
+      "shouldShow": true,
+      "icon": "./图标/经验.png"
+    },
+    {
+      "name": "每日任务体力获得量 2 倍庆典",
+      "start": "2026/10/23 05:00",
+      "end": "2026/11/02 04:59",
+      "shouldShow": true,
+      "icon": "./图标/体力.png"
+    },
+    {
+      "name": "「普通关卡」掉落量 3 倍",
+      "start": "2026/10/23 05:00",
+      "end": "2026/11/02 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "「困难关卡」掉落量 3 倍",
+      "start": "2026/10/23 05:00",
+      "end": "2026/11/02 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "「高难关卡」掉落量 3 倍",
+      "start": "2026/10/23 05:00",
+      "end": "2026/11/02 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "「探索关卡」掉落量 2 倍庆典",
+      "start": "2026/10/25 05:00",
+      "end": "2026/11/02 04:59",
+      "shouldShow": true,
+      "icon": "./图标/探索.png"
+    },
+    {
+      "name": "「圣迹调查」「神殿调查」掉落量 2 倍",
+      "start": "2026/10/25 05:00",
+      "end": "2026/10/30 04:59",
+      "shouldShow": true,
+      "icon": "./图标/圣迹调查.png"
+    },
+    {
+      "name": "大师币获得量 1.5 倍庆典",
+      "start": "2026/10/25 05:00",
+      "end": "2026/10/30 04:59",
+      "shouldShow": true,
+      "icon": "./图标/大师币.png"
     }
   ],
   "gachaPools": [
@@ -4099,6 +4211,22 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：暗9-10优化刀型，除此之外用处较少。性价比上不推荐抽取，除非无脑保限定或追求高MP。",
       "image": "./卡池/沙月.png"
+    },
+    {
+      "name": "自选附奖扭蛋「纺希（万圣节）」「维尔姆」「琳德」「望（炼金术士）」",
+      "start": "2026/10/23 11:00",
+      "end": "2026/10/30 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
+      "image": "./卡池/自选30.png"
+    },
+    {
+      "name": "精选扭蛋「樱」",
+      "start": "2026/10/23 11:00",
+      "end": "2026/11/02 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：纯xp角色，喜欢就抽",
+      "image": "./卡池/樱.png"
     }
   ],
   "sixStar": [
@@ -5067,6 +5195,42 @@ const configData = {
       "shouldShow": true,
       "advice": "开专建议：用到再说",
       "image": "./专武/水骑-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "纺希（万圣节）-2",
+      "start": "2026/10/15 11:00",
+      "end": "2026/10/31 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：PVE/JJC对策降攻角色，可用机会较多在黎明界高难度为优质坦克，建议拉满",
+      "image": "./专武/纺希（万圣节）-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "维尔姆",
+      "start": "2026/10/15 11:00",
+      "end": "2026/10/31 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：建议拉满",
+      "image": "./专武/维尔姆.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "琳德",
+      "start": "2026/10/15 11:00",
+      "end": "2026/10/31 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：建议拉满",
+      "image": "./专武/琳德.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "望（炼金术士）",
+      "start": "2026/10/15 11:00",
+      "end": "2026/10/31 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：建议拉满",
+      "image": "./专武/望（炼金术士）.png",
       "category": "specialWeapon"
     }
   ],
