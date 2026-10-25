@@ -10,28 +10,27 @@ const GHZconfigData = {
   ],
   "activeTab": 0,
   "d1Images": [
-    "./工会战/d1/6c81f809345c5ce7414ea65efb1c1e25336471695.png",
-    "./工会战/d1/86537baeb848ee588c9142b0b09e01e8336471695.png",
-    "./工会战/d1/ev7.png",
-    "./工会战/d1/ev8.png"
+    "./工会战/d1/ev6.png"
   ],
   "d2Images": [
-    "./工会战/d2/53db428c5092dd7b0e1a9a50aef24d1a336471695.png",
-    "./工会战/d2/ev10.png",
-    "./工会战/d2/ev9.png"
+    "./工会战/d2/ev7.png",
+    "./工会战/d2/ev8.png"
   ],
   "d3Images": [
-    "./工会战/d3/43b49e46e5de802a9825af40feab22ff336471695.png",
-    "./工会战/d3/ev11.png",
-    "./工会战/d3/ev12.png"
+    "./工会战/d3/ev10.png",
+    "./工会战/d3/ev16.png",
+    "./工会战/d3/ev9.png"
   ],
   "d4Images": [
-    "./工会战/d4/ev13.png",
-    "./工会战/d4/ev14.png",
-    "./工会战/d4/f95ad62ffa45768777d5c6e382e1761c336471695.png"
+    "./工会战/d4/ev11.png",
+    "./工会战/d4/ev12.png",
+    "./工会战/d4/ev17.png"
   ],
   "d5Images": [
-    "./工会战/d5/ev15.png"
+    "./工会战/d5/ev13.png",
+    "./工会战/d5/ev14.png",
+    "./工会战/d5/ev15.png",
+    "./工会战/d5/ev18.png"
   ],
   "d6Images": [
     "./工会战/set刀/ev1.png",
@@ -39,7 +38,6 @@ const GHZconfigData = {
     "./工会战/set刀/ev3.png",
     "./工会战/set刀/ev4.png",
     "./工会战/set刀/ev5.png",
-    "./工会战/set刀/ev6.png",
     "./工会战/set刀/hw1.png",
     "./工会战/set刀/hw10.png",
     "./工会战/set刀/hw2.png",
@@ -53,15 +51,10 @@ const GHZconfigData = {
     "./工会战/set刀/mx1.png",
     "./工会战/set刀/mx2.png",
     "./工会战/set刀/mx3.png",
-    "./工会战/set刀/nc1.png",
-    "./工会战/set刀/nc2.png",
-    "./工会战/set刀/nc3.png",
-    "./工会战/set刀/nc4.png",
-    "./工会战/set刀/nc5.png",
+    "./工会战/set刀/mx4.png",
     "./工会战/set刀/wjm1.png",
     "./工会战/set刀/wjm2.png",
-    "./工会战/set刀/wjm3.png",
-    "./工会战/set刀/wjm4.png"
+    "./工会战/set刀/wjm3.png"
   ],
   "showBigImg": false,
   "bigImgSrc": "",
@@ -73,17 +66,17 @@ const GHZconfigData = {
     },
     {
       "name": "玩具喵Official[自动-简单set刀]",
-      "url": "https://www.bilibili.com/video/BV1AMgF6PEHL",
+      "url": "https://space.bilibili.com/296496909?spm_id_from=333.788.upinfo.detail.click",
       "cover": "./工会战/wjm.jpg"
     },
     {
       "name": "墨夕困困想睡觉[自动-简单set刀]",
-      "url": "https://www.bilibili.com/video/BV1D4hG6wENR",
+      "url": "hhttps://space.bilibili.com/33955898?spm_id_from=333.788.upinfo.detail.click",
       "cover": "./工会战/mx.jpg"
     },
     {
       "name": "玖璃梦_花舞组[自动-简单set刀]",
-      "url": "https://www.bilibili.com/video/BV18Ch36hEwd",
+      "url": "https://space.bilibili.com/29627147/dynamic",
       "cover": "./工会战/花舞.jpg"
     },
     {
