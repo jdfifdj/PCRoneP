@@ -3409,6 +3409,69 @@ const configData = {
       "end": "2026/10/30 04:59",
       "shouldShow": true,
       "icon": "./图标/大师币.png"
+    },
+    {
+      "name": "精选扭蛋「阿拉克涅」",
+      "start": "2026/10/30 11:00",
+      "end": "2026/11/02 17:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "剧情活动「炼狱的名侦探  全部成为W」",
+      "start": "2026/10/30 11:00",
+      "end": "2026/11/22 04:59",
+      "shouldShow": true,
+      "icon": "./图标/庆典.png"
+    },
+    {
+      "name": "精选扭蛋「香澄（修女）」",
+      "start": "2026/11/02 18:00",
+      "end": "2026/11/13 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "自选附奖扭蛋「自选」",
+      "start": "2026/11/02 18:00",
+      "end": "2026/11/13 10:59",
+      "shouldShow": true,
+      "icon": "./图标/扭蛋.png"
+    },
+    {
+      "name": "「普通关卡」掉落量 2 倍",
+      "start": "2026/11/02 05:00",
+      "end": "2026/11/07 04:59",
+      "shouldShow": true,
+      "icon": "./图标/主线关卡.png"
+    },
+    {
+      "name": "深渊讨伐战",
+      "start": "2026/11/02 05:00",
+      "end": "2026/11/07 04:59",
+      "shouldShow": true,
+      "icon": "./图标/地下城.png"
+    },
+    {
+      "name": "「高难关卡」掉落量 2 倍",
+      "start": "2026/11/07 05:00",
+      "end": "2026/11/25 04:59",
+      "shouldShow": true,
+      "icon": "./图标/困难关卡.png"
+    },
+    {
+      "name": "斗技场开启",
+      "start": "2026/11/09 05:00",
+      "end": "2026/11/13 04:59",
+      "shouldShow": true,
+      "icon": "./图标/竞技场.png"
+    },
+    {
+      "name": "「圣迹调查」「神殿调查」掉落量 2 倍",
+      "start": "2026/11/07 05:00",
+      "end": "2026/11/13 04:59",
+      "shouldShow": true,
+      "icon": "./图标/圣迹调查.png"
     }
   ],
   "gachaPools": [
@@ -4227,6 +4290,30 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：纯xp角色，喜欢就抽",
       "image": "./卡池/樱.png"
+    },
+    {
+      "name": "精选扭蛋「阿拉克涅」",
+      "start": "2026/10/30 11:00",
+      "end": "2026/11/02 17:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：必抽",
+      "image": "./卡池/阿拉克涅.png"
+    },
+    {
+      "name": "精选扭蛋「香澄（修女）」",
+      "start": "2026/11/02 18:00",
+      "end": "2026/11/13 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：不是钻很多想保全限定就别抽，作用低寿命短，明年6月推天使三姐妹，出刀再带个水银莲，光法只剩一个自由位置，修驴基本抢不到这个出场位置，直接长时间不见踪影。",
+      "image": "./卡池/香澄（修女）.png"
+    },
+    {
+      "name": "自选卡池",
+      "start": "2026/11/02 18:00",
+      "end": "2026/11/13 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
+      "image": "./卡池/自选31.png"
     }
   ],
   "sixStar": [
@@ -5231,6 +5318,33 @@ const configData = {
       "shouldShow": true,
       "advice": "开专建议：建议拉满",
       "image": "./专武/望（炼金术士）.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "大和",
+      "start": "2026/10/30 18:00",
+      "end": "2026/11/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：黎明界好用，需要再开",
+      "image": "./专武/大和.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "若菜",
+      "start": "2026/10/30 18:00",
+      "end": "2026/11/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：必开",
+      "image": "./专武/若菜.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "雌小鬼",
+      "start": "2026/10/30 18:00",
+      "end": "2026/11/30 23:59",
+      "shouldShow": true,
+      "advice": "开专建议：需要再开",
+      "image": "./专武/雌小鬼.png",
       "category": "specialWeapon"
     }
   ],
