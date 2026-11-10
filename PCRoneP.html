@@ -25,7 +25,7 @@
                 <span>ONE-PAGE / CN</span>
             </div>
             <div class="topbar__right">
-                <span class="live"><i aria-hidden="true"></i>DATA LINK</span>
+                <span class="live"><i aria-hidden="true"></i>DATA LINK 当前时间</span>
                 <span class="clock">{{ clock }}<em>UTC+8</em></span>
                 <a class="back" href="./index.html">返回首页 <span aria-hidden="true">↗</span></a>
             </div>
@@ -70,16 +70,16 @@
                 </div>
                 <div class="stat">
                     <span class="stat__label">EQUIPMENT RANK</span>
-                    <div class="stat__value">38<small>R</small></div>
+                    <div class="stat__value">38<small>Rank</small></div>
                     <span class="stat__cn">装备上限</span>
                 </div>
                 <div class="stat">
                     <span class="stat__label">MIN EQUIPMENT</span>
-                    <div class="stat__value">37<small>R</small></div>
+                    <div class="stat__value">37<small>Rank</small></div>
                     <span class="stat__cn">最低装备</span>
                 </div>
                 <div class="stat stats__meta">
-                    <span class="stat__label">TABLE UPDATE</span>
+                    <span class="stat__label">TABLE UPDATE 表格更新时间</span>
                     <b>{{ dataUpdated }}</b>
                     <span class="stat__cn">表格更新 · 页面同步 {{ clockShort }}</span>
                 </div>
@@ -491,7 +491,7 @@
 
                         if (now < start) {
                             const days = Math.ceil((start - now) / DAY);
-                            return days <= 1 ? '即将开始' : 'T-' + days + '天';
+                            return days <= 1 ? '即将开始' : '即将开始：剩' + days + '天';
                         }
                         if (now > end) return '已结束';
 
@@ -499,8 +499,8 @@
                         const days = Math.floor(left / DAY);
                         const hours = Math.floor((left % DAY) / HOUR);
                         const minutes = Math.floor((left % HOUR) / MINUTE);
-                        if (days > 0) return '剩 ' + days + '天 ' + hours + '时';
-                        if (hours > 0) return '剩 ' + hours + '时 ' + minutes + '分';
+                        if (days > 0) return '结束时间：剩 ' + days + '天 ' + hours + '时';
+                        if (hours > 0) return '结束时间：剩 ' + hours + '时 ' + minutes + '分';
                         return '剩 ' + minutes + '分';
                     },
 
