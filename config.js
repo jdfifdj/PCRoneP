@@ -4525,6 +4525,22 @@ const configData = {
       "shouldShow": true,
       "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
       "image": "./卡池/自选31.png"
+    },
+    {
+      "name": "精选扭蛋「纳娜」",
+      "start": "2026/11/13 11:00",
+      "end": "2026/11/30 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：不建议抽，只有小众对策性，没有强度",
+      "image": "./卡池/精选扭蛋「纳娜」.png"
+    },
+    {
+      "name": "自选附奖扭蛋「智（万圣节）」「香织（万圣节）」「依里（天使）」「茜里（天使）」「镜华（万圣节）」「美咲（万圣节）」「忍（万圣节）」",
+      "start": "2026/11/13 11:00",
+      "end": "2026/11/30 10:59",
+      "shouldShow": true,
+      "advice": "抽卡建议：抽新不抽旧，属性版本后面越来越强。",
+      "image": "./卡池/自选32.png"
     }
   ],
   "sixStar": [
@@ -5556,6 +5572,24 @@ const configData = {
       "shouldShow": true,
       "advice": "开专建议：需要再开",
       "image": "./专武/雌小鬼.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "天使姐法-2",
+      "start": "2026/11/13 10:59",
+      "end": "2026/11/30 23:41",
+      "shouldShow": true,
+      "advice": "开专建议：对策型法队坦克，泛用性略低于宝石免，需要就开",
+      "image": "./专武/天使姐法-2.png",
+      "category": "specialWeapon"
+    },
+    {
+      "name": "天使妹法-2",
+      "start": "2026/11/13 10:59",
+      "end": "2026/11/30 23:41",
+      "shouldShow": true,
+      "advice": "开专建议：必开。光法强力输出之一，近期会战+未来平民法刀。",
+      "image": "./专武/天使妹法-2.png",
       "category": "specialWeapon"
     }
   ],
