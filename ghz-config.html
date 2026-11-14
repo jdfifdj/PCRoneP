@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双配置编辑器 - ghz-config.js & index-config.js</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .file-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .file-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+        .file-card h3 {
+            margin-top: 0;
+            color: #555;
+        }
+        .drag-drop-area {
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            margin: 10px 0;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .drag-drop-area:hover {
+            border-color: #667eea;
+            background: #f0f4ff;
+        }
+        .drag-drop-area.dragover {
+            border-color: #764ba2;
+            background: #e8f2ff;
+        }
+        .file-input {
+            display: none;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+            flex-wrap: wrap;
+        }
+        .tab {
+            padding: 12px 24px;
+            cursor: pointer;
+            background: #f0f0f0;
+            border: none;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            border-radius: 8px 8px 0 0;
+            transition: all 0.3s;
+        }
+        .tab.active {
+            background: #667eea;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .item-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .item-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .item-card h4 {
+            margin-top: 0;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            min-height: 60px;
+            resize: vertical;
+        }
+        .image-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .image-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px;
+            background: #f5f5f5;
+            border-radius: 4px;
+            flex: 1;
+            min-width: 200px;
+        }
+        .image-item input {
+            flex: 1;
+        }
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 5px;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+        .btn-warning {
+            background: #ffc107;
+            color: black;
+        }
+        .export-area {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .export-textarea {
+            width: 100%;
+            height: 300px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+        }
+        .group-section {
+            margin-bottom: 30px;
+        }
+        .group-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            border-left: 4px solid #667eea;
+            padding-left: 10px;
+        }
+        .up-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: white;
+            display: grid;
+            grid-template-columns: 60px 1fr auto;
+            gap: 15px;
+            align-items: center;
+        }
+        .up-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .up-info h5 {
+            margin: 0 0 5px 0;
+            color: #333;
+        }
+        .up-info p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+        }
+        .article-item {
+            display: grid;
+            grid-template-columns: 120px 1fr auto;
+            gap: 15px;
+            align-items: center;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: white;
+        }
+        .article-thumb {
+            width: 120px;
+            height: 68px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📁 双配置编辑器</h1>
+            <p>同时编辑 ghz-config.js 和 index-config.js</p>
+        </div>
+
+        <!-- 文件加载区域 -->
+        <div class="file-section">
+            <div class="file-card">
+                <h3>📊 ghz-config.js</h3>
+                <div class="drag-drop-area" onclick="document.getElementById('ghzFileInput').click()">
+                    <strong>点击或拖拽加载 ghz-config.js</strong>
+                    <input type="file" id="ghzFileInput" class="file-input" accept=".js" onchange="loadFile('ghz', event)">
+                </div>
+                <div id="ghzStatus" style="color: #666; margin-top: 10px;">未加载</div>
+            </div>
+            
+            <div class="file-card">
+                <h3>🏠 index-config.js</h3>
+                <div class="drag-drop-area" onclick="document.getElementById('indexFileInput').click()">
+                    <strong>点击或拖拽加载 index-config.js</strong>
+                    <input type="file" id="indexFileInput" class="file-input" accept=".js" onchange="loadFile('index', event)">
+                </div>
+                <div id="indexStatus" style="color: #666; margin-top: 10px;">未加载</div>
+            </div>
+        </div>
+
+        <!-- 标签页 -->
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('ghz')">📊 工会战配置</button>
+            <button class="tab" onclick="switchTab('index')">🏠 首页配置</button>
+            <button class="tab" onclick="switchTab('export')">📤 导出配置</button>
+        </div>
+
+        <!-- ghz-config 编辑区 -->
+        <div id="ghz" class="tab-content active">
+            <div class="item-card">
+                <h4>🎯 标签页设置</h4>
+                <div class="form-group">
+                    <label>标签页列表</label>
+                    <input type="text" id="ghzTabs" placeholder="用逗号分隔，如: D1,D2,D3" onchange="updateGhz('tabs', this.value.split(',').map(s => s.trim()))">
+                </div>
+                <div class="form-group">
+                    <label>当前激活标签</label>
+                    <input type="number" id="ghzActiveTab" min="0" onchange="updateGhz('activeTab', parseInt(this.value))">
+                </div>
+            </div>
+
+            <div class="item-grid">
+                <div class="item-card">
+                    <h4>📅 D1 图片</h4>
+                    <div id="ghzD1Images"></div>
+                    <button class="btn btn-primary" onclick="addImage('d1Images')">➕ 添加图片</button>
+                </div>
+                
+                <div class="item-card">
+                    <h4>📅 D2 图片</h4>
+                    <div id="ghzD2Images"></div>
+                    <button class="btn btn-primary" onclick="addImage('d2Images')">➕ 添加图片</button>
+                </div>
+                
+                <div class="item-card">
+                    <h4>📅 D3 图片</h4>
+                    <div id="ghzD3Images"></div>
+                    <button class="btn btn-primary" onclick="addImage('d3Images')">➕ 添加图片</button>
+                </div>
+                
+                <div class="item-card">
+                    <h4>📅 D4 图片</h4>
+                    <div id="ghzD4Images"></div>
+                    <button class="btn btn-primary" onclick="addImage('d4Images')">➕ 添加图片</button>
+                </div>
+                
+                <div class="item-card">
+                    <h4>📅 D5 图片</h4>
+                    <div id="ghzD5Images"></div>
+                    <button class="btn btn-primary" onclick="addImage('d5Images')">➕ 添加图片</button>
+                </div>
+                
+                <div class="item-card">
+                    <h4>🎮 简单分刀图片</h4>
+                    <div id="ghzD6Images"></div>
+                    <button class="btn btn-primary" onclick="addImage('d6Images')">➕ 添加图片</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- index-config 编辑区 -->
+        <div id="index" class="tab-content">
+            <div class="item-card">
+                <h4>⚙️ 基础设置</h4>
+                <div class="form-group">
+                    <label>侧边栏折叠</label>
+                    <select id="indexSidebarCollapsed" onchange="updateIndex('sidebarCollapsed', this.value === 'true')">
+                        <option value="false">展开</option>
+                        <option value="true">折叠</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>当前标签页</label>
+                    <input type="text" id="indexCurrentTab" onchange="updateIndex('currentTab', this.value)">
+                </div>
+            </div>
+
+            <!-- UP主管理 -->
+            <div class="group-section">
+                <div class="group-title">👥 UP主管理</div>
+                <div id="upGroups"></div>
+                <button class="btn btn-success" onclick="addUpGroup()">➕ 添加分组</button>
+                <button class="btn btn-primary" onclick="addUp()">➕ 添加UP主</button>
+            </div>
+
+            <!-- 文章管理 -->
+            <div class="group-section">
+                <div class="group-title">📰 文章管理</div>
+                <div id="articles"></div>
+                <button class="btn btn-success" onclick="addArticle()">➕ 添加文章</button>
+            </div>
+        </div>
+
+        <!-- 导出区域 -->
+        <div id="export" class="tab-content">
+            <div class="export-area">
+                <h3>📤 导出配置</h3>
+                <div style="margin-bottom: 15px;">
+                    <button class="btn btn-success" onclick="downloadConfig('ghz')">💾 下载 ghz-config.js</button>
+                    <button class="btn btn-success" onclick="downloadConfig('index')">💾 下载 index-config.js</button>
+                </div>
+                <select id="exportSelect" onchange="showExport()">
+                    <option value="">选择要导出的文件</option>
+                    <option value="ghz">ghz-config.js</option>
+                    <option value="index">index-config.js</option>
+                </select>
+                <textarea class="export-textarea" id="exportOutput" placeholder="选择文件后显示内容..."></textarea>
+                <button class="btn btn-primary" onclick="copyExport()">📋 复制到剪贴板</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let ghzData = null;
+        let indexData = null;
+
+        // 文件拖放支持
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            document.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            document.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            document.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            if (e.target.classList.contains('drag-drop-area')) {
+                e.target.classList.add('dragover');
+            }
+        }
+
+        function unhighlight(e) {
+            if (e.target.classList.contains('drag-drop-area')) {
+                e.target.classList.remove('dragover');
+            }
+        }
+
+        document.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                const file = files[0];
+                if (file.name.includes('ghz')) {
+                    loadFile('ghz', { target: { files: [file] } });
+                } else if (file.name.includes('index')) {
+                    loadFile('index', { target: { files: [file] } });
+                }
+            }
+        }
+
+        // 加载文件
+        function loadFile(type, event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const content = e.target.result;
+                    const data = parseConfig(content, type);
+                    
+                    if (type === 'ghz') {
+                        ghzData = data;
+                        document.getElementById('ghzStatus').innerHTML = `✅ 已加载 (${file.name})`;
+                        renderGhz();
+                    } else {
+                        indexData = data;
+                        document.getElementById('indexStatus').innerHTML = `✅ 已加载 (${file.name})`;
+                        renderIndex();
+                    }
+                } catch (error) {
+                    alert(`❌ 解析 ${type}-config.js 失败: ${error.message}`);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // 解析配置
+        function parseConfig(text, type) {
+            const varName = type === 'ghz' ? 'GHZconfigData' : 'INDEXconfigData';
+            const match = text.match(new RegExp(`const ${varName} = ({[\\s\\S]*?});?\\s*//`));
+            if (!match) throw new Error('无法解析配置文件格式');
+            return eval('(' + match[1] + ')');
+        }
+
+        // 更新ghz配置
+        function updateGhz(key, value) {
+            if (!ghzData) return;
+            ghzData[key] = value;
+        }
+
+        // 更新index配置
+        function updateIndex(key, value) {
+            if (!indexData) return;
+            indexData[key] = value;
+        }
+
+        // 渲染ghz配置
+        function renderGhz() {
+            if (!ghzData) return;
+
+            document.getElementById('ghzTabs').value = ghzData.tabs?.join(', ') || '';
+            document.getElementById('ghzActiveTab').value = ghzData.activeTab || 0;
+
+            ['d1Images', 'd2Images', 'd3Images', 'd4Images', 'd5Images', 'd6Images'].forEach(key => {
+                const container = document.getElementById(`ghz${key.charAt(0).toUpperCase() + key.slice(1)}`);
+                const images = ghzData[key] || [];
+                container.innerHTML = images.map((img, index) => `
+                    <div class="image-item">
+                        <input type="text" value="${img}" onchange="updateGhzImage('${key}', ${index}, this.value)">
+                        <button class="btn btn-danger" onclick="removeGhzImage('${key}', ${index})">🗑️</button>
+                    </div>
+                `).join('');
+            });
+        }
+
+        // 添加图片
+        function addImage(key) {
+            if (!ghzData) return;
+            if (!ghzData[key]) ghzData[key] = [];
+            ghzData[key].push('./工会战/新图片路径.jpg');
+            renderGhz();
+        }
+
+        // 更新图片
+        function updateGhzImage(key, index, value) {
+            if (!ghzData[key]) return;
+            ghzData[key][index] = value;
+        }
+
+        // 删除图片
+        function removeGhzImage(key, index) {
+            if (!ghzData[key]) return;
+            ghzData[key].splice(index, 1);
+            renderGhz();
+        }
+
+        // 渲染index配置
+        function renderIndex() {
+            if (!indexData) return;
+
+            document.getElementById('indexSidebarCollapsed').value = indexData.sidebarCollapsed?.toString() || 'false';
+            document.getElementById('indexCurrentTab').value = indexData.currentTab || 'home';
+
+            // 渲染UP主分组
+            const upGroups = indexData.upGroups || {};
+            const upContainer = document.getElementById('upGroups');
+            upContainer.innerHTML = Object.entries(upGroups).map(([groupName, ups]) => `
+                <div class="group-section">
+                    <div class="group-title">${groupName}</div>
+                    ${ups.map((up, upIndex) => `
+                        <div class="up-item">
+                            <img src="${up.avatar}" class="up-avatar" alt="${up.name}">
+                            <div class="up-info">
+                                <h5>${up.name}</h5>
+                                <p>${up.desc}</p>
+                                <input type="text" value="${up.url}" placeholder="URL" style="width: 100%; margin-top: 5px;">
+                            </div>
+                            <button class="btn btn-danger" onclick="removeUp('${groupName}', ${upIndex})">🗑️</button>
+                        </div>
+                    `).join('')}
+                </div>
+            `).join('');
+
+            // 渲染文章
+            const articles = indexData.articles || [];
+            const articleContainer = document.getElementById('articles');
+            articleContainer.innerHTML = articles.map((article, index) => `
+                <div class="article-item">
+                    <img src="${article.thumb}" class="article-thumb" alt="${article.title}">
+                    <div>
+                        <h5>${article.title}</h5>
+                        <p>作者: ${article.author} | 日期: ${article.date}</p>
+                    </div>
+                    <button class="btn btn-danger" onclick="removeArticle(${index})">🗑️</button>
+                </div>
+            `).join('');
+        }
+
+        // 添加UP主分组
+        function addUpGroup() {
+            if (!indexData) return;
+            const groupName = prompt('请输入分组名称:');
+            if (groupName && !indexData.upGroups[groupName]) {
+                indexData.upGroups[groupName] = [];
+                renderIndex();
+            }
+        }
+
+        // 添加UP主
+        function addUp() {
+            if (!indexData) return;
+            const groupNames = Object.keys(indexData.upGroups || {});
+            if (groupNames.length === 0) {
+                alert('请先添加分组！');
+                return;
+            }
+            const groupName = prompt('请选择分组:\n' + groupNames.join('\n'));
+            if (groupName && indexData.upGroups[groupName]) {
+                indexData.upGroups[groupName].push({
+                    name: '新UP主',
+                    avatar: 'https://via.placeholder.com/60',
+                    desc: '描述信息',
+                    url: 'https://example.com'
+                });
+                renderIndex();
+            }
+        }
+
+        // 移除UP主
+        function removeUp(groupName, index) {
+            if (!indexData.upGroups[groupName]) return;
+            indexData.upGroups[groupName].splice(index, 1);
+            renderIndex();
+        }
+
+        // 添加文章
+        function addArticle() {
+            if (!indexData) return;
+            if (!indexData.articles) indexData.articles = [];
+            indexData.articles.push({
+                id: Date.now(),
+                title: '新文章标题',
+                thumb: 'https://via.placeholder.com/120x68',
+                date: new Date().toISOString().split('T')[0],
+                author: '作者名'
+            });
+            renderIndex();
+        }
+
+        // 移除文章
+        function removeArticle(index) {
+            if (!indexData.articles) return;
+            indexData.articles.splice(index, 1);
+            renderIndex();
+        }
+
+        // 切换标签
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+            
+            if (tabName === 'export') {
+                showExport();
+            }
+        }
+
+        // 显示导出内容
+        function showExport() {
+            const select = document.getElementById('exportSelect');
+            const output = document.getElementById('exportOutput');
+            
+            if (select.value === 'ghz' && ghzData) {
+                output.value = `// ghz-config.js
+const GHZconfigData = ${JSON.stringify(ghzData, null, 2)};
+
+// 导出配置数据
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = GHZconfigData;
+} else {
+    window.configData = GHZconfigData;
+}`;
+            } else if (select.value === 'index' && indexData) {
+                output.value = `// index-config.js
+const INDEXconfigData = ${JSON.stringify(indexData, null, 2)};
+
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = INDEXconfigData;
+} else {
+    window.configData = INDEXconfigData;
+}`;
+            } else {
+                output.value = '请先加载对应的配置文件！';
+            }
+        }
+
+        // 下载配置
+        function downloadConfig(type) {
+            if (type === 'ghz' && !ghzData) {
+                alert('请先加载 ghz-config.js！');
+                return;
+            }
+            if (type === 'index' && !indexData) {
+                alert('请先加载 index-config.js！');
+                return;
+            }
+            
+            const select = document.getElementById('exportSelect');
+            select.value = type;
+            showExport();
+            
+            const content = document.getElementById('exportOutput').value;
+            const blob = new Blob([content], { type: 'application/javascript' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${type}-config.js`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // 复制到剪贴板
+        function copyExport() {
+            const output = document.getElementById('exportOutput');
+            output.select();
+            document.execCommand('copy');
+            alert('配置已复制到剪贴板！');
+        }
+    </script>
+</body>
+</html>

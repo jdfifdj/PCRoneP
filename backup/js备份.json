@@ -1,0 +1,16 @@
+[
+    { name: '活动', start: '2025/07/05 12:00', end: '2025/07/09 23:59', status: null, statusText: '', shouldShow: true },
+
+    { keyword: "高光池", className: "highlight-blue" },
+
+
+    { name: '卡池名字', image: './卡池/.png', advice: '抽卡建议：等攻略', start: '2025/06/21 11:00', end: '2025/06/25 10:59', shouldShow: true, status: null, statusText: '' },
+
+    { name: '61', image: './六星/.png', start: '2025/06/01 00:00', end: '2025/06/30 23:59', shouldShow: true },
+
+    { name: '专武', image: './专武/.png', advice: '专武开专建议：等攻略', start: '2025/06/01 05:00', end: '2025/06/30 23:59', shouldShow: true },
+]
+
+
+
+

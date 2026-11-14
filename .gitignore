@@ -1,16 +1,18 @@
-# Dependencies
-node_modules/
-.npm-cache/
+# Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
 
-# Local tooling
-.edge-profile*/
-.shots/
-.verify-*.html
-data/.session-secret
-dist/
-*.log
-.env
+# Other files and folders
+.settings/
 
-# OS
-.DS_Store
-Thumbs.db
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+
+# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
+# should NOT be excluded as they contain compiler settings and other important
+# information for Eclipse / Flash Builder.
