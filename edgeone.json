@@ -1,0 +1,76 @@
+{
+  "buildCommand": "npm run build:edgeone",
+  "installCommand": "npm install",
+  "outputDirectory": "./dist",
+  "nodeVersion": "20.18.0",
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/PCRoneP.html",
+      "destination": "/pcronep",
+      "statusCode": 301
+    },
+    {
+      "source": "/PCRoneGHZ.html",
+      "destination": "/pcroneghz",
+      "statusCode": 301
+    },
+    {
+      "source": "/pcrone",
+      "destination": "/pcronep",
+      "statusCode": 301
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/pcronep",
+      "destination": "/pcronep.html"
+    },
+    {
+      "source": "/pcroneghz",
+      "destination": "/pcroneghz.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/images/*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    },
+    {
+      "source": "/css/*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    },
+    {
+      "source": "/js/*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    }
+  ]
+}

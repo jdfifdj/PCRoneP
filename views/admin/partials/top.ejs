@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title><%= title %> | PCR ARCHIVE ADMIN</title>
+  <link rel="icon" href="/images/icons/妈盖.png" type="image/png">
+  <link rel="stylesheet" href="/css/base.css?v=<%= assetVersion %>">
+  <link rel="stylesheet" href="/css/admin.css?v=<%= assetVersion %>">
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-side" id="admin-side">
+      <a class="admin-brand" href="/admin">
+        <span class="admin-brand__mark">PCR<span>//</span>ADMIN</span>
+        <span class="admin-brand__sub">内容管理后台</span>
+      </a>
+
+      <nav class="admin-nav" aria-label="管理导航">
+        <% nav.forEach((group) => { %>
+        <p class="admin-nav__title"><%= group.title %></p>
+        <% group.items.forEach((item) => { %>
+        <a class="admin-nav__link<%= active === item.key ? ' is-active' : '' %>" href="<%= item.href %>">
+          <span><%= item.label %></span>
+          <i aria-hidden="true">→</i>
+        </a>
+        <% }) %>
+        <% }) %>
+      </nav>
+
+      <div class="admin-side__foot">
+        <% if (typeof currentAdmin !== 'undefined' && currentAdmin) { %>
+        <div class="admin-side__user">
+          <span>当前账号</span>
+          <b><%= currentAdmin.username %></b>
+          <% if (currentAdmin.mustChangePassword) { %><a href="/admin/accounts">修改初始密码</a><% } %>
+        </div>
+        <% } %>
+        <a class="admin-side__site" href="/" target="_blank" rel="noopener">查看站点 ↗</a>
+        <form method="post" action="/admin/logout">
+          <button class="admin-linkbtn" type="submit">退出登录</button>
+        </form>
+      </div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-topbar">
+        <button class="admin-menu" type="button" data-menu-toggle aria-label="打开管理菜单" aria-controls="admin-side" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="admin-topbar__title"><%= title %></div>
+        <a class="admin-topbar__site" href="/" target="_blank" rel="noopener">前台预览 ↗</a>
+      </header>
+
+      <main class="admin-content">
+        <% if (flash) { %>
+        <div class="admin-flash" role="status"><%= flash %></div>
+        <% } %>
+        <% if (typeof showPasswordWarning !== 'undefined' && showPasswordWarning) { %>
+        <div class="admin-alert admin-alert--warning">
+          当前账号仍使用初始密码。请前往 <a href="/admin/accounts">管理员账号</a> 修改密码。
+        </div>
+        <% } %>

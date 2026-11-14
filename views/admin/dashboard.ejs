@@ -1,0 +1,91 @@
+<%- include('partials/top') %>
+
+<section class="admin-page-head">
+  <div>
+    <p class="admin-eyebrow">DASHBOARD / OVERVIEW</p>
+    <h1>内容管理</h1>
+    <p>管理三个页面的全部内容，修改会直接写入 <code>data/*.json</code>，前台刷新即可看到。</p>
+  </div>
+  <div class="admin-page-head__actions">
+    <a class="admin-btn admin-btn--primary" href="/admin/activities/new">+ 新增活动</a>
+    <a class="admin-btn" href="/admin/activities/bulk">批量添加活动</a>
+    <a class="admin-btn" href="/admin/gachaPools/new">+ 新增卡池</a>
+  </div>
+</section>
+
+<section class="admin-stats">
+  <a class="admin-stat" href="/admin/activities"><span>活动</span><b><%= counts.activities %></b></a>
+  <a class="admin-stat" href="/admin/gachaPools"><span>卡池</span><b><%= counts.gachaPools %></b></a>
+  <a class="admin-stat" href="/admin/specialWeapons"><span>专武</span><b><%= counts.specialWeapons %></b></a>
+  <a class="admin-stat" href="/admin/sixStar"><span>六星</span><b><%= counts.sixStar %></b></a>
+  <a class="admin-stat" href="/admin/huodong"><span>兑换角色</span><b><%= counts.huodong %></b></a>
+  <a class="admin-stat" href="/admin/highlightKeywords"><span>高亮词</span><b><%= counts.highlightKeywords %></b></a>
+</section>
+
+<div class="admin-columns">
+  <section class="admin-panel">
+    <header class="admin-panel__head">
+      <h2>首页</h2>
+      <a href="/" target="_blank" rel="noopener">预览 ↗</a>
+    </header>
+    <ul class="admin-manage-list">
+      <li>
+        <div><b>UP 主分组</b><span><%= counts.upGroups %> 个分组 · <%= counts.creators %> 位 UP 主</span></div>
+        <a class="admin-btn admin-btn--small" href="/admin/up-groups">管理</a>
+      </li>
+      <li>
+        <div><b>情报文章</b><span><%= counts.articles %> 条情报</span></div>
+        <a class="admin-btn admin-btn--small" href="/admin/articles">管理</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="admin-panel">
+    <header class="admin-panel__head">
+      <h2>一图流</h2>
+      <a href="/pcronep" target="_blank" rel="noopener">预览 ↗</a>
+    </header>
+    <ul class="admin-manage-list">
+      <li><div><b>重要活动</b><span><%= counts.activities %> 条</span></div><a class="admin-btn admin-btn--small" href="/admin/activities">管理</a></li>
+      <li><div><b>卡池</b><span><%= counts.gachaPools %> 条</span></div><a class="admin-btn admin-btn--small" href="/admin/gachaPools">管理</a></li>
+      <li><div><b>专武</b><span><%= counts.specialWeapons %> 条</span></div><a class="admin-btn admin-btn--small" href="/admin/specialWeapons">管理</a></li>
+      <li><div><b>六星 / 兑换角色</b><span><%= counts.sixStar %> / <%= counts.huodong %> 条</span></div><a class="admin-btn admin-btn--small" href="/admin/sixStar">管理</a></li>
+      <li><div><b>高亮词</b><span><%= counts.highlightKeywords %> 条</span></div><a class="admin-btn admin-btn--small" href="/admin/highlightKeywords">管理</a></li>
+    </ul>
+  </section>
+
+  <section class="admin-panel">
+    <header class="admin-panel__head">
+      <h2>工会战</h2>
+      <a href="/pcroneghz" target="_blank" rel="noopener">预览 ↗</a>
+    </header>
+    <ul class="admin-manage-list">
+      <li><div><b>阶段作业图</b><span><%= counts.stages %> 个阶段 · <%= counts.stageImages %> 张图</span></div><a class="admin-btn admin-btn--small" href="/admin/stages">管理</a></li>
+      <li><div><b>视频攻略</b><span><%= counts.videoLinks %> 位作者</span></div><a class="admin-btn admin-btn--small" href="/admin/videoLinks">管理</a></li>
+    </ul>
+  </section>
+
+  <section class="admin-panel">
+    <header class="admin-panel__head">
+      <h2>站点设置</h2>
+      <a href="/admin/site">编辑</a>
+    </header>
+    <ul class="admin-manage-list">
+      <li><div><b>版本信息</b><span>当前版本 <%= site.version %> · 更新于 <%= site.updated %></span></div><a class="admin-btn admin-btn--small" href="/admin/site">编辑</a></li>
+      <li><div><b>等级 / 装备数据</b><span>Lv.<%= site.stats.levelCap %> · 专武 <%= site.stats.weaponCap %> · R<%= site.stats.rankMax %></span></div><a class="admin-btn admin-btn--small" href="/admin/site">编辑</a></li>
+      <li><div><b>管理员账号</b><span><%= counts.accounts %> 个账号</span></div><a class="admin-btn admin-btn--small" href="/admin/accounts">管理</a></li>
+    </ul>
+  </section>
+</div>
+
+<section class="admin-panel">
+  <header class="admin-panel__head"><h2>数据文件</h2></header>
+  <div class="admin-panel__body admin-files">
+    <div><code>data/pcronep.json</code><span>活动、卡池、专武、六星、兑换、高亮词</span></div>
+    <div><code>data/index.json</code><span>UP 主分组、情报文章</span></div>
+    <div><code>data/pcroneghz.json</code><span>工会战阶段、作业图、视频攻略</span></div>
+    <div><code>data/site.json</code><span>版本、等级、装备、GitHub 链接</span></div>
+  </div>
+</section>
+
+<%- include('partials/bottom') %>
