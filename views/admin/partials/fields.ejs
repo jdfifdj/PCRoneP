@@ -1,0 +1,48 @@
+<% fields.forEach((field) => { %>
+<div class="admin-field<%= errors[field.key] ? ' has-error' : '' %>">
+  <label for="field-<%= field.key %>">
+    <%= field.label %><% if (field.required) { %><span class="admin-required">*</span><% } %>
+  </label>
+
+  <% if (field.type === 'textarea') { %>
+  <textarea id="field-<%= field.key %>" name="<%= field.key %>" rows="<%= field.rows || 4 %>"
+            placeholder="<%= field.placeholder || '' %>"><%= values[field.key] || '' %></textarea>
+  <% } else if (field.type === 'select') { %>
+  <select id="field-<%= field.key %>" name="<%= field.key %>">
+    <% (field.options || []).forEach((option) => { %>
+    <option value="<%= option.value %>"<%= String(values[field.key]) === String(option.value) ? ' selected' : '' %>><%= option.label %></option>
+    <% }) %>
+  </select>
+  <% } else if (field.type === 'image') { %>
+  <div class="admin-imagefield">
+    <input id="field-<%= field.key %>" type="text" name="<%= field.key %>" value="<%= values[field.key] || '' %>"
+           list="images-<%= field.key %>" placeholder="/images/..." autocomplete="off" data-image-input>
+    <datalist id="images-<%= field.key %>">
+      <% (imageOptions[field.target] || []).forEach((option) => { %>
+      <option value="<%= option %>"></option>
+      <% }) %>
+    </datalist>
+    <div class="admin-imagefield__row">
+      <img class="admin-imagefield__preview" src="<%= values[field.key] || 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==' %>" alt="预览"
+           data-image-preview<%= values[field.key] ? '' : ' hidden' %>>
+      <label class="admin-upload">
+        <input type="file" accept="image/png,image/jpeg,image/webp,image/gif" data-upload-target="<%= field.target %>" hidden>
+        <span>上传图片</span>
+      </label>
+      <span class="admin-upload__status" data-upload-status></span>
+    </div>
+  </div>
+  <% } else { %>
+  <% const inputType = field.type === 'url' ? 'url' : field.type === 'number' ? 'number' : field.type === 'date' ? 'date' : field.type === 'datetime' ? 'datetime-local' : 'text'; %>
+  <input id="field-<%= field.key %>" type="<%= inputType %>" name="<%= field.key %>" value="<%= values[field.key] || '' %>"
+         placeholder="<%= field.placeholder || '' %>"<%= field.type === 'number' ? ' min="0" step="1"' : '' %> autocomplete="off">
+  <% } %>
+
+  <% if (errors[field.key]) { %>
+  <p class="admin-error"><%= errors[field.key] %></p>
+  <% } %>
+  <% if (field.hint) { %>
+  <p class="admin-hint"><%= field.hint %></p>
+  <% } %>
+</div>
+<% }) %>

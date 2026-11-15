@@ -1,0 +1,37 @@
+<%- include('partials/top') %>
+
+<section class="admin-page-head">
+  <div>
+    <p class="admin-eyebrow">HOME / CREATORS</p>
+    <h1><%= title %></h1>
+    <p>分组：<b><%= group %></b></p>
+  </div>
+  <div class="admin-page-head__actions">
+    <a class="admin-btn" href="/admin/up-groups">← 返回分组</a>
+  </div>
+</section>
+
+<% if (Object.keys(errors).length) { %>
+<div class="admin-alert admin-alert--error">有 <%= Object.keys(errors).length %> 项内容需要修正。</div>
+<% } %>
+
+<form class="admin-form" method="post" action="<%= action %>">
+  <input type="hidden" name="group" value="<%= group %>">
+  <div class="admin-form__fields">
+    <%- include('partials/fields', { fields: creatorFields, values, errors, imageOptions }) %>
+  </div>
+  <div class="admin-form__actions">
+    <button class="admin-btn admin-btn--primary" type="submit"><%= mode === 'create' ? '添加 UP 主' : '保存修改' %></button>
+    <a class="admin-btn" href="/admin/up-groups">取消</a>
+  </div>
+</form>
+
+<% if (mode === 'edit') { %>
+<form class="admin-danger-zone" method="post" action="/admin/creators/<%= encodeURIComponent(group) %>/<%= action.split('/').pop() %>/delete"
+      data-confirm="确定删除这位 UP 主？">
+  <div><b>删除 UP 主</b><span>删除后首页会立即移除该卡片。</span></div>
+  <button class="admin-btn admin-btn--danger" type="submit">删除</button>
+</form>
+<% } %>
+
+<%- include('partials/bottom') %>

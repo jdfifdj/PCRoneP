@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff8f0">
+  <meta name="description" content="公主连结 Re:Dive 月度一图流：活动、卡池、专武与六星一屏速览。">
+  <title>公主连结<%= month %>月一图流 | PCR ARCHIVE</title>
+  <link rel="icon" href="/images/icons/妈盖.png" type="image/png">
+  <link rel="stylesheet" href="/css/base.css?v=<%= assetVersion %>">
+  <link rel="stylesheet" href="/css/pcronep.css?v=<%= assetVersion %>">
+</head>
+<body>
+  <div id="app" class="app">
+
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="公主连结攻略档案 首页">
+        <img src="/images/logo/pcr-logo.png" alt="公主连结 Re:Dive" width="949" height="225">
+      </a>
+      <span class="topbar__divider" aria-hidden="true"></span>
+      <div class="page-id">
+        <b>一图流</b>
+        <span>ONE-PAGE / CN</span>
+      </div>
+      <div class="topbar__right">
+        <span class="live"><i aria-hidden="true"></i>DATA LINK 当前时间</span>
+        <span class="clock"><span data-clock><%= clock %></span><em>UTC+8</em></span>
+        <a class="back" href="/">返回首页 <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main class="workspace">
+
+      <section class="topline">
+        <div class="topline__title">
+          <span class="topline__num" aria-hidden="true"><%= month %></span>
+          <div>
+            <p class="eyebrow">MONTHLY OVERVIEW / CN SERVER</p>
+            <h1><%= month %>月一图流</h1>
+            <p class="sub">活动 · 卡池 · 专武 · 六星，一屏掌握</p>
+          </div>
+        </div>
+        <div class="topline__right">
+          <div class="chips" aria-label="当前数据概览">
+            <span class="chip"><i class="dot dot--ongoing"></i>进行中 <b data-summary="ongoing"><%= summary.ongoing %></b></span>
+            <span class="chip"><i class="dot dot--upcoming"></i>即将开始 <b data-summary="upcoming"><%= summary.upcoming %></b></span>
+            <span class="chip"><i class="dot dot--gacha"></i>卡池 <b data-summary="gacha"><%= summary.gacha %></b></span>
+            <span class="chip"><i class="dot dot--weapon"></i>专武 <b data-summary="weapons"><%= summary.weapons %></b></span>
+          </div>
+          <button class="guide-btn" type="button" data-image="<%= site.fullGuideImage || '/images/background-image.png' %>" data-caption="完整一图流">
+            <span>完整一图流</span><em>FULL IMAGE</em><i aria-hidden="true">↗</i>
+          </button>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="版本基础信息">
+        <div class="stat">
+          <span class="stat__label">LEVEL CAP</span>
+          <div class="stat__value"><%= stats.levelCap %><small>级</small></div>
+          <span class="stat__cn">等级上限</span>
+        </div>
+        <div class="stat">
+          <span class="stat__label">UNIQUE WEAPON</span>
+          <div class="stat__value"><%= stats.weaponCap %><small>级</small></div>
+          <span class="stat__cn">专武上限</span>
+        </div>
+        <div class="stat">
+          <span class="stat__label">EQUIPMENT RANK</span>
+          <div class="stat__value"><%= stats.rankMax %><small>Rank</small></div>
+          <span class="stat__cn">装备上限</span>
+        </div>
+        <div class="stat">
+          <span class="stat__label">MIN EQUIPMENT</span>
+          <div class="stat__value"><%= stats.rankMin %><small>Rank</small></div>
+          <span class="stat__cn">最低装备</span>
+        </div>
+        <div class="stat stats__meta">
+          <span class="stat__label">TABLE UPDATE 表格更新时间</span>
+          <b><%= updated %></b>
+          <span class="stat__cn">表格更新 · 页面同步 <span data-clock-short><%= clockShort %></span></span>
+        </div>
+      </section>
+
+      <section class="board">
+
+        <article class="panel">
+          <header class="panel__head">
+            <span class="panel__idx">01</span>
+            <h2>重要活动</h2>
+            <span class="panel__en">SCHEDULE</span>
+            <span class="panel__count"><%= activities.length %></span>
+          </header>
+          <div class="panel__body">
+            <div class="cats">
+              <% columns.forEach((column) => { %>
+              <section class="cat">
+                <header class="cat__head">
+                  <div class="cat__row">
+                    <span class="cat__idx">0<%= column.key %></span>
+                    <span class="cat__en"><%= column.en %></span>
+                    <b class="cat__count"><%= column.items.length %></b>
+                  </div>
+                  <h3><%= column.name %></h3>
+                </header>
+                <div class="cat__list">
+                  <% column.items.forEach((item) => { %>
+                  <article class="act is-<%= item.status %>"
+                           data-start="<%= item.start %>" data-end="<%= item.end %>" data-kind="activity">
+                    <div class="act__top">
+                      <img class="act__icon" src="<%= item.icon %>" alt="" loading="lazy">
+                      <h4 class="act__name" title="<%= item.name %>"><%= item.name %></h4>
+                    </div>
+                    <div class="act__state-row">
+                      <span class="act__state" data-state title="<%= item.stateCN %>"><%= item.stateLabel %></span>
+                      <span class="act__time" data-countdown><%= item.countdown %></span>
+                    </div>
+                    <span class="act__range"><%= item.range %></span>
+                    <span class="act__bar" aria-hidden="true">
+                      <i data-progress style="width: <%= item.progress %>%"></i>
+                    </span>
+                  </article>
+                  <% }) %>
+                  <% if (!column.items.length) { %>
+                  <p class="cat__empty">NO DATA</p>
+                  <% } %>
+                </div>
+              </section>
+              <% }) %>
+            </div>
+          </div>
+        </article>
+
+        <aside class="side">
+
+          <article class="panel">
+            <header class="panel__head">
+              <span class="panel__idx">02</span>
+              <h2>卡池抽取</h2>
+              <span class="panel__en">GACHA</span>
+              <span class="panel__count"><%= gacha.length %></span>
+            </header>
+            <div class="panel__body panel__body--tight">
+              <% if (gacha.length) { %>
+              <div class="gacha-list">
+                <% gacha.forEach((pool) => { %>
+                <div class="gacha" data-start="<%= pool.start %>" data-end="<%= pool.end %>" data-kind="gacha">
+                  <button class="thumb" type="button" data-image="<%= pool.image %>" data-caption="<%= pool.name %>"
+                          aria-label="查看卡池图片：<%= pool.name %>">
+                    <img src="<%= pool.image %>" alt="<%= pool.name %>" loading="lazy">
+                  </button>
+                  <div class="gacha__body">
+                    <div class="row">
+                      <h3 title="<%= pool.name %>"><%= pool.name %></h3>
+                      <span class="pill pill--<%= pool.status %>" data-state title="<%= pool.stateCN %>"><%= pool.stateLabel %></span>
+                    </div>
+                    <p class="meta"><%= pool.range %></p>
+                    <% if (pool.advice) { %>
+                    <p class="advice" title="<%= pool.advice %>"><%- pool.adviceHtml %></p>
+                    <% } %>
+                  </div>
+                </div>
+                <% }) %>
+              </div>
+              <% } else { %>
+              <p class="empty">当前没有在售卡池</p>
+              <% } %>
+            </div>
+          </article>
+
+          <article class="panel">
+            <header class="panel__head">
+              <span class="panel__idx">03</span>
+              <h2>本月专武</h2>
+              <span class="panel__en">UNIQUE WEAPON</span>
+              <span class="panel__count"><%= weapons.length %></span>
+            </header>
+            <div class="panel__body panel__body--tight">
+              <% if (weapons.length) { %>
+              <div class="weapon-list">
+                <% weapons.forEach((weapon) => { %>
+                <div class="weapon" data-start="<%= weapon.start %>" data-end="<%= weapon.end %>" data-kind="weapon">
+                  <button class="thumb thumb--icon" type="button" data-image="<%= weapon.image %>"
+                          data-caption="<%= weapon.name %>" aria-label="查看专武图片：<%= weapon.name %>">
+                    <img src="<%= weapon.image %>" alt="<%= weapon.name %>" loading="lazy">
+                  </button>
+                  <div class="weapon__body">
+                    <div class="row">
+                      <h3 title="<%= weapon.name %>"><%= weapon.name %></h3>
+                      <span class="weapon__time" data-countdown><%= weapon.countdown %></span>
+                    </div>
+                    <p class="meta"><%= weapon.range %></p>
+                    <% if (weapon.advice) { %>
+                    <p class="advice" title="<%= weapon.advice %>"><%- weapon.adviceHtml %></p>
+                    <% } %>
+                  </div>
+                </div>
+                <% }) %>
+              </div>
+              <% } else { %>
+              <p class="empty">本月暂无专武情报</p>
+              <% } %>
+            </div>
+          </article>
+
+          <% if (sixStar.length) { %>
+          <article class="panel">
+            <header class="panel__head">
+              <span class="panel__idx">04</span>
+              <h2>本月六星</h2>
+              <span class="panel__en">SIX STAR</span>
+              <span class="panel__count"><%= sixStar.length %></span>
+            </header>
+            <div class="panel__body panel__body--tight">
+              <div class="six-grid">
+                <% sixStar.forEach((star) => { %>
+                <button class="six-item" type="button" data-image="<%= star.image %>" data-caption="<%= star.name %>">
+                  <img src="<%= star.image %>" alt="<%= star.name %>" loading="lazy">
+                </button>
+                <% }) %>
+              </div>
+            </div>
+          </article>
+          <% } %>
+
+          <% if (roles.length) { %>
+          <article class="panel">
+            <header class="panel__head">
+              <span class="panel__idx">05</span>
+              <h2>兑换角色</h2>
+              <span class="panel__en">EXCHANGE</span>
+              <span class="panel__count"><%= roles.length %></span>
+            </header>
+            <div class="panel__body panel__body--tight">
+              <div class="role-list">
+                <% roles.forEach((role) => { %>
+                <div class="role">
+                  <button class="thumb thumb--icon" type="button" data-image="<%= role.image %>"
+                          data-caption="<%= role.name %>" aria-label="查看角色图片：<%= role.name %>">
+                    <img src="<%= role.image %>" alt="<%= role.name %>" loading="lazy">
+                  </button>
+                  <div class="role__body">
+                    <h3><%= role.name %></h3>
+                    <% if (role.advice) { %>
+                    <p class="advice" title="<%= role.advice %>"><%- role.adviceHtml %></p>
+                    <% } %>
+                  </div>
+                </div>
+                <% }) %>
+              </div>
+            </div>
+          </article>
+          <% } %>
+
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>数据更新 <%= updated %></span>
+      <span class="footer__dot" aria-hidden="true"></span>
+      <span>资料：<a href="https://space.bilibili.com/25586360" target="_blank" rel="noopener">Columba-丘比</a> /
+        <a href="https://space.bilibili.com/2574869" target="_blank" rel="noopener">南条鸡腿子</a></span>
+      <span class="footer__dot" aria-hidden="true"></span>
+      <a href="<%= site.github %>" target="_blank" rel="noopener">项目 Github ↗</a>
+      <span class="footer__clock">SYNC <span data-clock><%= clock %></span></span>
+    </footer>
+
+    <%- include('partials/modal') %>
+  </div>
+
+  <script src="/js/time.js?v=<%= assetVersion %>"></script>
+  <script src="/js/app.js?v=<%= assetVersion %>"></script>
+  <script src="/js/pcronep.js?v=<%= assetVersion %>"></script>
+</body>
+</html>

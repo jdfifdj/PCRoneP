@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>登录 | PCR ARCHIVE ADMIN</title>
+  <link rel="icon" href="/images/icons/妈盖.png" type="image/png">
+  <link rel="stylesheet" href="/css/base.css?v=<%= assetVersion %>">
+  <link rel="stylesheet" href="/css/admin.css?v=<%= assetVersion %>">
+</head>
+<body class="admin-body admin-body--login">
+  <main class="admin-login">
+    <div class="admin-login__card">
+      <p class="admin-login__mark">PCR<span>//</span>ADMIN</p>
+      <h1>内容管理后台</h1>
+      <p class="admin-login__sub">管理首页、一图流与工会战页面的全部条目。</p>
+
+      <% if (error) { %>
+      <div class="admin-alert admin-alert--error"><%= error %></div>
+      <% } %>
+
+      <form method="post" action="/admin/login" class="admin-login__form">
+        <input type="hidden" name="next" value="<%= next %>">
+        <label for="admin-username">管理员账号</label>
+        <input id="admin-username" type="text" name="username" value="<%= username || '' %>" required autofocus autocomplete="username" maxlength="30">
+        <label for="admin-password">密码</label>
+        <input id="admin-password" type="password" name="password" required autocomplete="current-password" maxlength="200">
+        <button type="submit" class="admin-btn admin-btn--primary">登录</button>
+      </form>
+
+      <% if (showInitialHint) { %>
+      <p class="admin-login__hint">初始账号为 <code>admin</code> / <code>pcr-admin</code>，首次登录后请在「管理员账号」中修改密码。</p>
+      <% } %>
+      <a class="admin-login__back" href="/">← 返回站点</a>
+    </div>
+  </main>
+</body>
+</html>

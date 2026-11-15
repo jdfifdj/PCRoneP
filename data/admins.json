@@ -1,0 +1,16 @@
+{
+  "accounts": [
+    {
+      "id": "d4552d49-c831-4985-835f-ac6c29a1f37a",
+      "username": "admin",
+      "passwordSalt": "08c7e42b1a2fb893e8831836b5697b45",
+      "passwordHash": "d3c58f516eab6bfe813fbe1ee438809c05db110fa1b8469442527762940977266c9eaad999445e2fa51c2bd2a3aa5cd8143ee27fdca8c690f088a8958914e32f",
+      "passwordUpdatedAt": 1794646373446,
+      "mustChangePassword": false,
+      "failedAttempts": 0,
+      "lockedUntil": null,
+      "createdAt": "2026-11-14T02:57:25.599Z",
+      "updatedAt": "2026-11-14T08:52:53.446Z"
+    }
+  ]
+}

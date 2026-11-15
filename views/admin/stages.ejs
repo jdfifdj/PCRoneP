@@ -1,0 +1,102 @@
+<%- include('partials/top') %>
+
+<section class="admin-page-head">
+  <div>
+    <p class="admin-eyebrow">CLAN BATTLE / STAGES</p>
+    <h1>阶段作业图</h1>
+    <p>每个阶段对应工会战页面的一个标签页。图片顺序即前台展示顺序。</p>
+  </div>
+</section>
+
+<form class="admin-inline-card" method="post" action="/admin/stages">
+  <div><b>新增阶段</b><span>例如：D6、简单分刀、特殊作业。</span></div>
+  <input type="text" name="name" placeholder="阶段名称" required maxlength="60">
+  <button class="admin-btn admin-btn--primary" type="submit">+ 添加阶段</button>
+</form>
+
+<% if (!stages.length) { %>
+<div class="admin-empty admin-empty--card">还没有阶段，先在上方添加一个。</div>
+<% } %>
+
+<% stages.forEach((stage) => { %>
+<section class="admin-card">
+  <header class="admin-card__head">
+    <div class="admin-card__title">
+      <h2><%= stage.name %></h2>
+      <span><%= stage.images.length %> 张作业图</span>
+    </div>
+    <div class="admin-card__actions">
+      <form class="admin-rename" method="post" action="/admin/stages/<%= stage.index %>/rename">
+        <input type="text" name="name" value="<%= stage.name %>" aria-label="阶段名称" maxlength="60">
+        <button class="admin-btn admin-btn--small" type="submit">改名</button>
+      </form>
+      <form method="post" action="/admin/stages/<%= stage.index %>/delete" data-confirm="确定删除阶段「<%= stage.name %>」及其中 <%= stage.images.length %> 张图？">
+        <button class="admin-btn admin-btn--small admin-btn--danger" type="submit">删除阶段</button>
+      </form>
+    </div>
+  </header>
+
+  <div class="admin-card__body">
+    <% if (stage.images.length) { %>
+    <div class="admin-image-grid">
+      <% stage.images.forEach((image) => { %>
+      <figure class="admin-image-card">
+        <a href="<%= image.src %>" target="_blank" rel="noopener">
+          <img src="<%= image.thumb %>" alt="" loading="lazy">
+        </a>
+        <figcaption>
+          <span class="admin-image-card__path" title="<%= image.src %>"><%= image.src %></span>
+          <span class="admin-image-card__actions">
+            <form method="post" action="/admin/stages/<%= stage.index %>/images/<%= image.imageIndex %>/move">
+              <input type="hidden" name="direction" value="up">
+              <button class="admin-iconbtn" type="submit" title="上移"<%= image.imageIndex === 0 ? ' disabled' : '' %>>↑</button>
+            </form>
+            <form method="post" action="/admin/stages/<%= stage.index %>/images/<%= image.imageIndex %>/move">
+              <input type="hidden" name="direction" value="down">
+              <button class="admin-iconbtn" type="submit" title="下移"<%= image.imageIndex === stage.images.length - 1 ? ' disabled' : '' %>>↓</button>
+            </form>
+            <form method="post" action="/admin/stages/<%= stage.index %>/images/<%= image.imageIndex %>/delete" data-confirm="确定删除这张作业图？">
+              <button class="admin-iconbtn admin-iconbtn--danger" type="submit" title="删除">×</button>
+            </form>
+          </span>
+        </figcaption>
+      </figure>
+      <% }) %>
+    </div>
+    <% } else { %>
+    <p class="admin-empty">这个阶段还没有作业图。</p>
+    <% } %>
+
+    <div class="admin-add-images">
+      <h3>添加作业图</h3>
+      <form method="post" action="/admin/stages/<%= stage.index %>/images">
+        <div class="admin-field">
+          <label for="stage-images-<%= stage.index %>">图片路径（每行一个，可批量）</label>
+          <textarea id="stage-images-<%= stage.index %>" name="images" rows="3" placeholder="/images/clan/d1/ev6.png"></textarea>
+        </div>
+        <div class="admin-field">
+          <label for="stage-image-<%= stage.index %>">或上传一张图 / 填写单张路径</label>
+          <div class="admin-imagefield">
+            <input id="stage-image-<%= stage.index %>" type="text" name="image" list="clan-images-<%= stage.index %>" placeholder="/images/clan/..." autocomplete="off" data-image-input>
+            <datalist id="clan-images-<%= stage.index %>">
+              <% clanImages.forEach((option) => { %>
+              <option value="<%= option %>"></option>
+              <% }) %>
+            </datalist>
+            <div class="admin-imagefield__row">
+              <label class="admin-upload">
+                <input type="file" accept="image/png,image/jpeg,image/webp,image/gif" data-upload-target="clan" hidden>
+                <span>上传图片</span>
+              </label>
+              <span class="admin-upload__status" data-upload-status></span>
+            </div>
+          </div>
+        </div>
+        <button class="admin-btn admin-btn--primary admin-btn--small" type="submit">+ 添加到本阶段</button>
+      </form>
+    </div>
+  </div>
+</section>
+<% }) %>
+
+<%- include('partials/bottom') %>
