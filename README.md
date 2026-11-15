@@ -5,10 +5,10 @@
 | 页面 | 路由 | 说明 |
 | --- | --- | --- |
 | 首页 | `/` | 版本概览、页面导航、推荐 UP 主、情报索引 |
-| 一图流 | `/pcronep` | 活动 / 卡池 / 专武 / 六星 / 兑换角色 |
-| 工会战 SET 刀 | `/pcroneghz` | D1–D5 与简单分刀作业图、作者攻略 |
+| 一图流 | `/PCRoneP` | 活动 / 卡池 / 专武 / 六星 / 兑换角色 |
+| 工会战 SET 刀 | `/PCRoneGHZ` | D1–D5 与简单分刀作业图、作者攻略 |
 
-旧地址 `/index.html`、`/PCRoneP.html`、`/PCRoneGHZ.html` 会自动 301 到新路由。
+旧地址 `/index.html`、`/PCRoneP.html`、`/PCRoneGHZ.html`、`/pcronep`、`/pcroneghz` 会自动 301 到大写路由。
 
 ## 运行
 
@@ -62,10 +62,10 @@ npm run build:edgeone
 
 构建结果在 `dist/`，包含：
 
-- `/`、`/pcronep`、`/pcroneghz` 三个公开页面
+- `/`、`/PCRoneP`、`/PCRoneGHZ` 三个公开页面
 - `css/`、`js/`、`images/`、`fonts/` 静态资源
 - `404.html`
-- 旧地址重定向与 `/pcronep`、`/pcroneghz` 的 clean URL 重写（见 `edgeone.json`）
+- 旧地址重定向与 `/PCRoneP`、`/PCRoneGHZ` 的 clean URL 重写（见 `edgeone.json`）
 
 部署步骤：
 

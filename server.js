@@ -12,6 +12,8 @@ const adminRouter = require('./src/admin');
 const app = express();
 
 app.disable('x-powered-by');
+// 路由区分大小写：/PCRoneP 是正式地址，/pcronep 只用于 301 跳转。
+app.set('case sensitive routing', true);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.locals.assetVersion = require('./package.json').version;
@@ -34,10 +36,12 @@ app.use((req, res, next) => {
 // 兼容旧地址
 const legacy = {
   '/index.html': '/',
-  '/PCRoneP.html': '/pcronep',
-  '/PCRoneP-1.html': '/pcronep',
-  '/PCRoneGHZ.html': '/pcroneghz',
-  '/pcrone': '/pcronep'
+  '/PCRoneP.html': '/PCRoneP',
+  '/PCRoneP-1.html': '/PCRoneP',
+  '/PCRoneGHZ.html': '/PCRoneGHZ',
+  '/pcrone': '/PCRoneP',
+  '/pcronep': '/PCRoneP',
+  '/pcroneghz': '/PCRoneGHZ'
 };
 for (const [from, to] of Object.entries(legacy)) {
   app.get(from, (req, res) => res.redirect(301, to));
@@ -47,12 +51,12 @@ app.get('/', (req, res) => {
   res.render('index', buildIndex(store.get('index'), store.get('site')));
 });
 
-app.get('/pcronep', (req, res) => {
-  res.render('pcronep', buildPcronep(store.get('pcronep'), store.get('site')));
+app.get('/PCRoneP', (req, res) => {
+  res.render('PCRoneP', buildPcronep(store.get('pcronep'), store.get('site')));
 });
 
-app.get('/pcroneghz', (req, res) => {
-  res.render('pcroneghz', buildGhz(store.get('ghz'), store.get('site')));
+app.get('/PCRoneGHZ', (req, res) => {
+  res.render('PCRoneGHZ', buildGhz(store.get('ghz'), store.get('site')));
 });
 
 app.use('/admin', adminRouter);

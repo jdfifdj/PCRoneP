@@ -11,28 +11,43 @@
     },
     {
       "source": "/PCRoneP.html",
-      "destination": "/pcronep",
+      "destination": "/PCRoneP",
+      "statusCode": 301
+    },
+    {
+      "source": "/PCRoneP-1.html",
+      "destination": "/PCRoneP",
       "statusCode": 301
     },
     {
       "source": "/PCRoneGHZ.html",
-      "destination": "/pcroneghz",
+      "destination": "/PCRoneGHZ",
       "statusCode": 301
     },
     {
       "source": "/pcrone",
-      "destination": "/pcronep",
+      "destination": "/PCRoneP",
+      "statusCode": 301
+    },
+    {
+      "source": "/pcronep",
+      "destination": "/PCRoneP",
+      "statusCode": 301
+    },
+    {
+      "source": "/pcroneghz",
+      "destination": "/PCRoneGHZ",
       "statusCode": 301
     }
   ],
   "rewrites": [
     {
-      "source": "/pcronep",
-      "destination": "/pcronep.html"
+      "source": "/PCRoneP",
+      "destination": "/PCRoneP.html"
     },
     {
-      "source": "/pcroneghz",
-      "destination": "/pcroneghz.html"
+      "source": "/PCRoneGHZ",
+      "destination": "/PCRoneGHZ.html"
     }
   ],
   "headers": [

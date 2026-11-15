@@ -80,19 +80,19 @@ async function main() {
   });
   write('index.html', indexHtml);
 
-  const pcronepHtml = await render('pcronep.ejs', {
+  const pcronepHtml = await render('PCRoneP.ejs', {
     ...buildPcronep(pcronepData, site, now),
     ...base
   });
-  write('pcronep.html', pcronepHtml);
-  write(path.join('pcronep', 'index.html'), pcronepHtml);
+  write('PCRoneP.html', pcronepHtml);
+  write(path.join('PCRoneP', 'index.html'), pcronepHtml);
 
-  const ghzHtml = await render('pcroneghz.ejs', {
+  const ghzHtml = await render('PCRoneGHZ.ejs', {
     ...buildGhz(ghzData, site, now),
     ...base
   });
-  write('pcroneghz.html', ghzHtml);
-  write(path.join('pcroneghz', 'index.html'), ghzHtml);
+  write('PCRoneGHZ.html', ghzHtml);
+  write(path.join('PCRoneGHZ', 'index.html'), ghzHtml);
 
   const notFoundHtml = await render('404.ejs', { path: '该页面', ...base });
   write('404.html', notFoundHtml);
