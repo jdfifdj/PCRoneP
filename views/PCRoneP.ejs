@@ -88,7 +88,7 @@
             <span class="panel__idx">01</span>
             <h2>重要活动</h2>
             <span class="panel__en">SCHEDULE</span>
-            <span class="panel__count"><%= activities.length %></span>
+            <span class="panel__count" data-count="activities"><%= activities.length %></span>
           </header>
           <div class="panel__body">
             <div class="cats">
@@ -98,7 +98,7 @@
                   <div class="cat__row">
                     <span class="cat__idx">0<%= column.key %></span>
                     <span class="cat__en"><%= column.en %></span>
-                    <b class="cat__count"><%= column.items.length %></b>
+                    <b class="cat__count" data-cat-count="<%= column.key %>"><%= column.items.length %></b>
                   </div>
                   <h3><%= column.name %></h3>
                 </header>
@@ -137,7 +137,7 @@
               <span class="panel__idx">02</span>
               <h2>卡池抽取</h2>
               <span class="panel__en">GACHA</span>
-              <span class="panel__count"><%= gacha.length %></span>
+              <span class="panel__count" data-count="gacha"><%= gacha.length %></span>
             </header>
             <div class="panel__body panel__body--tight">
               <% if (gacha.length) { %>
@@ -172,7 +172,7 @@
               <span class="panel__idx">03</span>
               <h2>本月专武</h2>
               <span class="panel__en">UNIQUE WEAPON</span>
-              <span class="panel__count"><%= weapons.length %></span>
+              <span class="panel__count" data-count="weapons"><%= weapons.length %></span>
             </header>
             <div class="panel__body panel__body--tight">
               <% if (weapons.length) { %>

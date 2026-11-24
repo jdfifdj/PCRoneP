@@ -800,6 +800,9 @@ img { display: block; max-width: 100%; }
   color: var(--muted);
 }
 
+/* 活动结束后由脚本自动隐藏 */
+.is-hidden { display: none !important; }
+
 /* ---------------- 页脚 ---------------- */
 .footer {
   flex: none;
