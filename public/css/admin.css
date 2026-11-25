@@ -782,6 +782,38 @@ button, input, select, textarea { font: inherit; }
 .admin-add-images h3 { margin: 0 0 12px; font-size: 13px; }
 .admin-add-images .admin-field { margin-bottom: 12px; }
 
+/* 批量上传 */
+.admin-batch {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--ad-line);
+}
+.admin-batch h3 { margin: 0 0 4px; font-size: 13px; }
+.admin-batch .admin-hint { margin-bottom: 10px; }
+.admin-batch__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.admin-batch__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 260px;
+  padding: 3px 7px;
+  overflow: hidden;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ad-muted);
+  background: var(--ad-cream);
+  border: 1px solid var(--ad-line);
+  border-radius: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.admin-batch__item.is-fail { color: var(--ad-red); border-color: #f0c9cd; background: #fff5f6; }
+
 /* ---------------------------------- 登录 ---------------------------------- */
 .admin-body--login {
   display: grid;

@@ -17,7 +17,7 @@ const {
 } = require('../auth');
 const { SECTIONS, CREATOR_FIELDS, NAV } = require('./schema');
 const { readFields, formValues, displayValue, truncate, isImagePath } = require('./fields');
-const { listImages, uploadImage } = require('./images');
+const { listImages, uploadImage, generateClanThumb, deleteClanImage } = require('./images');
 const { defaultRange, formatDateTime } = require('./dates');
 const { parseActivitiesPayload } = require('./bulk');
 
@@ -82,11 +82,62 @@ function imageOptionsFor(fields) {
   return options;
 }
 
+function fileVersion(file) {
+  try {
+    return Math.floor(fs.statSync(file).mtimeMs);
+  } catch {
+    return 0;
+  }
+}
+
 function thumbFor(url) {
   if (!url || !url.startsWith('/images/clan/')) return url;
   const thumb = url.replace('/images/clan/', '/images/clan/thumbs/').replace(/\.png$/i, '.jpg');
-  const file = path.join(PUBLIC_DIR, thumb.replace(/^\//, '').replace(/\//g, path.sep));
-  return fs.existsSync(file) ? thumb : url;
+  const thumbFile = path.join(PUBLIC_DIR, thumb.replace(/^\//, '').replace(/\//g, path.sep));
+  if (fs.existsSync(thumbFile)) return thumb + '?v=' + fileVersion(thumbFile);
+
+  const originalFile = path.join(PUBLIC_DIR, url.replace(/^\//, '').replace(/\//g, path.sep));
+  if (fs.existsSync(originalFile)) return url + '?v=' + fileVersion(originalFile);
+  return url;
+}
+
+/** 当前数据里仍被引用的工会战图片（阶段 / 作者封面） */
+function referencedClanImages(data) {
+  const used = new Set();
+  (data.stages || []).forEach((stage) => {
+    (stage.images || []).forEach((src) => used.add(src));
+  });
+  (data.videoLinks || []).forEach((creator) => {
+    if (creator.cover) used.add(creator.cover);
+  });
+  return used;
+}
+
+/** 删除已从数据中移除、且不再被其他位置引用的图片文件 */
+async function cleanupClanImages(urls, data) {
+  const used = referencedClanImages(data);
+  for (const url of urls) {
+    if (!used.has(url)) await deleteClanImage(url);
+  }
+}
+
+/** 阶段对应的图片目录：优先取已有图片的目录，其次按阶段名推断 */
+function stageFolderName(stage) {
+  const images = Array.isArray(stage.images) ? stage.images : [];
+  for (const src of images) {
+    const match = String(src).match(/^\/images\/clan\/(.+)\/[^/]+$/);
+    if (match && match[1] && !match[1].includes('..') && !match[1].split('/').includes('thumbs')) return match[1];
+  }
+
+  const name = String(stage.name || '').trim();
+  const day = name.match(/^d\s*([1-6])$/i);
+  if (day) return 'd' + day[1];
+  if (/简单|分刀|set/i.test(name)) return 'set';
+  const folder = name
+    .replace(/[^\w\u4e00-\u9fa5.-]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .toLowerCase();
+  return folder.includes('..') ? '' : folder;
 }
 
 function sortEntries(entries, sort) {
@@ -786,6 +837,7 @@ router.get('/stages', (req, res) => {
   const stages = data.stages.map((stage, index) => ({
     ...stage,
     index,
+    folder: stageFolderName(stage),
     images: stage.images.map((src, imageIndex) => ({
       src,
       thumb: thumbFor(src),
@@ -832,15 +884,105 @@ router.post('/stages/:index/rename', (req, res) => {
     .catch((error) => res.status(500).send('保存失败：' + error.message));
 });
 
-router.post('/stages/:index/delete', (req, res) => {
+router.post('/stages/:index/delete', async (req, res) => {
   const index = parseIndex(req.params.index);
   const data = clone('ghz');
   if (index == null || !data.stages[index]) return res.redirect('/admin/stages');
 
+  const removed = data.stages[index].images.slice();
   data.stages.splice(index, 1);
-  store.save('ghz', data)
-    .then(() => redirectWithFlash(res, '/admin/stages', '已删除阶段'))
-    .catch((error) => res.status(500).send('删除失败：' + error.message));
+  try {
+    await store.save('ghz', data);
+    await cleanupClanImages(removed, data);
+    return redirectWithFlash(res, '/admin/stages', '已删除阶段及其作业图文件');
+  } catch (error) {
+    return res.status(500).send('删除失败：' + error.message);
+  }
+});
+
+router.post('/stages/:index/sync', async (req, res) => {
+  try {
+    const index = parseIndex(req.params.index);
+    const data = clone('ghz');
+    if (index == null || !data.stages[index]) return res.redirect('/admin/stages');
+
+    const stage = data.stages[index];
+    const folder = stageFolderName(stage);
+    if (!folder) {
+      return redirectWithFlash(res, '/admin/stages', '无法确定阶段目录，请先给该阶段添加一张图片，或把阶段命名为 D1–D6 / 简单分刀');
+    }
+
+    const dir = path.join(PUBLIC_DIR, 'images', 'clan', folder);
+    if (!fs.existsSync(dir) || !fs.statSync(dir).isDirectory()) {
+      return redirectWithFlash(res, '/admin/stages', `未找到目录 /images/clan/${folder}`);
+    }
+
+    const files = fs.readdirSync(dir, { withFileTypes: true })
+      .filter((entry) => entry.isFile() && /\.(png|jpe?g|webp|gif)$/i.test(entry.name))
+      .map((entry) => entry.name)
+      .sort((a, b) => a.localeCompare(b, 'zh-CN', { numeric: true }));
+
+    if (!files.length) {
+      return redirectWithFlash(res, '/admin/stages', `目录 /images/clan/${folder} 中没有图片`);
+    }
+
+    const urls = files.map((file) => `/images/clan/${folder}/${file}`);
+    stage.images = urls;
+    await store.save('ghz', data);
+
+    let created = 0;
+    let skipped = 0;
+    let failed = 0;
+    for (const url of stage.images) {
+      const result = await generateClanThumb(url);
+      if (result.status === 'created') created += 1;
+      else if (result.status === 'skipped') skipped += 1;
+      else if (result.status === 'failed' || result.status === 'missing') failed += 1;
+    }
+
+    const parts = [`已从 /images/clan/${folder} 填入 ${urls.length} 张作业图`];
+    parts.push(`生成缩略图 ${created} 张`);
+    if (skipped) parts.push(`已存在 ${skipped} 张`);
+    if (failed) parts.push(`失败 ${failed} 张`);
+    return redirectWithFlash(res, '/admin/stages', parts.join('，'));
+  } catch (error) {
+    return res.status(500).send('扫描失败：' + error.message);
+  }
+});
+
+router.post('/stages/:index/images/clear', async (req, res) => {
+  const index = parseIndex(req.params.index);
+  const data = clone('ghz');
+  if (index == null || !data.stages[index]) return res.redirect('/admin/stages');
+
+  const stage = data.stages[index];
+  const folder = stageFolderName(stage);
+  const targets = new Set(stage.images);
+  if (folder) {
+    const dir = path.join(PUBLIC_DIR, 'images', 'clan', folder);
+    if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) {
+      fs.readdirSync(dir, { withFileTypes: true })
+        .filter((entry) => entry.isFile() && /\.(png|jpe?g|webp|gif)$/i.test(entry.name))
+        .forEach((entry) => targets.add(`/images/clan/${folder}/${entry.name}`));
+    }
+  }
+
+  if (!targets.size) {
+    return redirectWithFlash(res, '/admin/stages', '该阶段没有可清空的作业图');
+  }
+
+  stage.images = [];
+  try {
+    await store.save('ghz', data);
+    const used = referencedClanImages(data);
+    for (const url of targets) {
+      if (!used.has(url)) await deleteClanImage(url);
+    }
+    return redirectWithFlash(res, '/admin/stages',
+      `已清空「${stage.name}」目录中的 ${targets.size} 张作业图（文件与缩略图已删除）`);
+  } catch (error) {
+    return res.status(500).send('清空失败：' + error.message);
+  }
 });
 
 router.post('/stages/:index/images', (req, res) => {
@@ -872,7 +1014,7 @@ router.post('/stages/:index/images', (req, res) => {
     .catch((error) => res.status(500).send('保存失败：' + error.message));
 });
 
-router.post('/stages/:index/images/:imageIndex/delete', (req, res) => {
+router.post('/stages/:index/images/:imageIndex/delete', async (req, res) => {
   const index = parseIndex(req.params.index);
   const imageIndex = parseIndex(req.params.imageIndex);
   const data = clone('ghz');
@@ -880,10 +1022,15 @@ router.post('/stages/:index/images/:imageIndex/delete', (req, res) => {
     return res.redirect('/admin/stages');
   }
 
+  const url = data.stages[index].images[imageIndex];
   data.stages[index].images.splice(imageIndex, 1);
-  store.save('ghz', data)
-    .then(() => redirectWithFlash(res, '/admin/stages', '已删除作业图'))
-    .catch((error) => res.status(500).send('删除失败：' + error.message));
+  try {
+    await store.save('ghz', data);
+    await cleanupClanImages([url], data);
+    return redirectWithFlash(res, '/admin/stages', '已删除作业图（文件已删除）');
+  } catch (error) {
+    return res.status(500).send('删除失败：' + error.message);
+  }
 });
 
 router.post('/stages/:index/images/:imageIndex/move', (req, res) => {
@@ -907,11 +1054,15 @@ router.post('/stages/:index/images/:imageIndex/move', (req, res) => {
 
 /* ------------------------------ 图片上传 ------------------------------ */
 
-router.post('/upload', express.json({ limit: '16mb' }), (req, res) => {
-  const { target, filename, data } = req.body || {};
-  uploadImage(target, filename, data)
-    .then((url) => res.json({ path: url }))
-    .catch((error) => res.status(400).json({ error: error.message }));
+router.post('/upload', express.json({ limit: '16mb' }), async (req, res) => {
+  try {
+    const { target, filename, data, subdir } = req.body || {};
+    const url = await uploadImage(target, filename, data, subdir);
+    if (target === 'clan') await generateClanThumb(url);
+    return res.json({ path: url });
+  } catch (error) {
+    return res.status(400).json({ error: error.message });
+  }
 });
 
 /* ------------------------------ 404 ------------------------------ */

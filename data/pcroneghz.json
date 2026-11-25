@@ -3,51 +3,45 @@
     {
       "name": "D1",
       "images": [
-        "/images/clan/d1/ev6.png"
+        "/images/clan/d1/QQ20261125-110253.png",
+        "/images/clan/d1/QQ20261125-110304.png"
       ]
     },
     {
       "name": "D2",
       "images": [
-        "/images/clan/d2/ev7.png",
-        "/images/clan/d2/ev8.png"
+        "/images/clan/d2/QQ20261125-110230.png",
+        "/images/clan/d2/QQ20261125-110242.png"
       ]
     },
     {
       "name": "D3",
       "images": [
-        "/images/clan/d3/ev10.png",
-        "/images/clan/d3/ev16.png",
-        "/images/clan/d3/ev9.png"
+        "/images/clan/d3/970a13c3b4c7bf8aba8efcb6949669d050446.png",
+        "/images/clan/d3/022254f0f2301ba60a86fec8d48237db50446.png",
+        "/images/clan/d3/QQ20261125-110219.png"
       ]
     },
     {
       "name": "D4",
       "images": [
-        "/images/clan/d4/ev11.png",
-        "/images/clan/d4/ev12.png",
-        "/images/clan/d4/ev17.png"
+        "/images/clan/d4/85a9b6ac0d7116b9a8802251a57bf80c50446.png",
+        "/images/clan/d4/f00b74591262fbd7096e6d63de3f38fd50446.png",
+        "/images/clan/d4/QQ20261125-110156.png",
+        "/images/clan/d4/QQ20261125-110208.png"
       ]
     },
     {
       "name": "D5",
       "images": [
-        "/images/clan/d5/ev13.png",
-        "/images/clan/d5/ev14.png",
-        "/images/clan/d5/ev15.png",
-        "/images/clan/d5/ev18.png"
+        "/images/clan/d5/3d67c7da2a1b0f1edcbaa66ba415ff7d50446.png",
+        "/images/clan/d5/QQ20261125-110138.png"
       ]
     },
     {
       "name": "简单分刀",
       "images": [
-        "/images/clan/set/ev1.png",
-        "/images/clan/set/ev2.png",
-        "/images/clan/set/ev3.png",
-        "/images/clan/set/ev4.png",
-        "/images/clan/set/ev5.png",
         "/images/clan/set/hw1.png",
-        "/images/clan/set/hw10.png",
         "/images/clan/set/hw2.png",
         "/images/clan/set/hw3.png",
         "/images/clan/set/hw4.png",
@@ -56,13 +50,14 @@
         "/images/clan/set/hw7.png",
         "/images/clan/set/hw8.png",
         "/images/clan/set/hw9.png",
+        "/images/clan/set/hw10.png",
         "/images/clan/set/mx1.png",
         "/images/clan/set/mx2.png",
-        "/images/clan/set/mx3.png",
-        "/images/clan/set/mx4.png",
         "/images/clan/set/wjm1.png",
         "/images/clan/set/wjm2.png",
-        "/images/clan/set/wjm3.png"
+        "/images/clan/set/wjm3.png",
+        "/images/clan/set/wjm4.png",
+        "/images/clan/set/wjm5.png"
       ]
     }
   ],
@@ -101,6 +96,11 @@
       "name": "浮城墟烟[简单set刀]",
       "url": "https://www.bilibili.com/video/BV1zN846SERo",
       "cover": "/images/clan/浮.jpg"
+    },
+    {
+      "name": "云烨朱云",
+      "url": "https://space.bilibili.com/182764718/dynamic",
+      "cover": "/images/clan/4cd16c18-7edb-403b-978b-2af23cd01de9.png"
     }
   ]
 }

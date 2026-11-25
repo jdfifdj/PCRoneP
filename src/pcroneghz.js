@@ -10,9 +10,19 @@ function toFile(url) {
   return path.join(PUBLIC_DIR, url.replace(/^\//, '').replace(/\//g, path.sep));
 }
 
+function fileVersion(file) {
+  try {
+    return Math.floor(fs.statSync(file).mtimeMs);
+  } catch {
+    return 0;
+  }
+}
+
 function thumbOf(src) {
   const thumb = src.replace('/images/clan/', '/images/clan/thumbs/').replace(/\.png$/i, '.jpg');
-  return fs.existsSync(toFile(thumb)) ? thumb : src;
+  if (fs.existsSync(toFile(thumb))) return thumb + '?v=' + fileVersion(toFile(thumb));
+  if (fs.existsSync(toFile(src))) return src + '?v=' + fileVersion(toFile(src));
+  return src;
 }
 
 function safeUrl(value) {

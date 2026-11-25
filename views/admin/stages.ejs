@@ -23,16 +23,26 @@
   <header class="admin-card__head">
     <div class="admin-card__title">
       <h2><%= stage.name %></h2>
-      <span><%= stage.images.length %> 张作业图</span>
+      <span><%= stage.images.length %> 张作业图<% if (stage.folder) { %> · /images/clan/<%= stage.folder %><% } else { %> · 未识别目录<% } %></span>
     </div>
     <div class="admin-card__actions">
       <form class="admin-rename" method="post" action="/admin/stages/<%= stage.index %>/rename">
         <input type="text" name="name" value="<%= stage.name %>" aria-label="阶段名称" maxlength="60">
         <button class="admin-btn admin-btn--small" type="submit">改名</button>
       </form>
-      <form method="post" action="/admin/stages/<%= stage.index %>/delete" data-confirm="确定删除阶段「<%= stage.name %>」及其中 <%= stage.images.length %> 张图？">
+      <form method="post" action="/admin/stages/<%= stage.index %>/sync"
+        data-confirm="将用 /images/clan/<%= stage.folder || '未识别目录' %> 中的图片替换「<%= stage.name %>」的作业图列表，并生成缩略图。继续？">
+        <button class="admin-btn admin-btn--small admin-btn--primary" type="submit"<%= stage.folder ? '' : ' disabled' %>>扫描并填入</button>
+      </form>
+      <form method="post" action="/admin/stages/<%= stage.index %>/delete" data-confirm="确定删除阶段「<%= stage.name %>」及其中 <%= stage.images.length %> 张图？图片文件也会从磁盘删除。">
         <button class="admin-btn admin-btn--small admin-btn--danger" type="submit">删除阶段</button>
       </form>
+      <% if (stage.folder || stage.images.length) { %>
+      <form method="post" action="/admin/stages/<%= stage.index %>/images/clear"
+        data-confirm="确定清空阶段「<%= stage.name %>」目录（/images/clan/<%= stage.folder || '未识别目录' %>）中的全部图片与缩略图？该操作不可撤销。">
+        <button class="admin-btn admin-btn--small admin-btn--danger" type="submit">清空目录</button>
+      </form>
+      <% } %>
     </div>
   </header>
 
@@ -55,7 +65,7 @@
               <input type="hidden" name="direction" value="down">
               <button class="admin-iconbtn" type="submit" title="下移"<%= image.imageIndex === stage.images.length - 1 ? ' disabled' : '' %>>↓</button>
             </form>
-            <form method="post" action="/admin/stages/<%= stage.index %>/images/<%= image.imageIndex %>/delete" data-confirm="确定删除这张作业图？">
+            <form method="post" action="/admin/stages/<%= stage.index %>/images/<%= image.imageIndex %>/delete" data-confirm="确定删除这张作业图？图片文件也会从磁盘删除。">
               <button class="admin-iconbtn admin-iconbtn--danger" type="submit" title="删除">×</button>
             </form>
           </span>
@@ -85,7 +95,8 @@
             </datalist>
             <div class="admin-imagefield__row">
               <label class="admin-upload">
-                <input type="file" accept="image/png,image/jpeg,image/webp,image/gif" data-upload-target="clan" hidden>
+                <input type="file" accept="image/png,image/jpeg,image/webp,image/gif" data-upload-target="clan"
+                  data-upload-folder="<%= stage.folder %>" hidden>
                 <span>上传图片</span>
               </label>
               <span class="admin-upload__status" data-upload-status></span>
@@ -94,6 +105,27 @@
         </div>
         <button class="admin-btn admin-btn--primary admin-btn--small" type="submit">+ 添加到本阶段</button>
       </form>
+
+      <div class="admin-batch" data-batch>
+        <h3>批量上传</h3>
+        <p class="admin-hint">可一次选择多张图片（每张不超过 10MB），全部上传完成后自动加入本阶段。</p>
+        <div class="admin-field">
+          <div class="admin-imagefield">
+            <div class="admin-imagefield__row">
+              <label class="admin-upload">
+                <input type="file" accept="image/png,image/jpeg,image/webp,image/gif" multiple
+                  data-batch-upload data-batch-target="clan" data-upload-folder="<%= stage.folder %>" hidden>
+                <span>选择多张图片</span>
+              </label>
+              <span class="admin-upload__status" data-batch-status></span>
+            </div>
+          </div>
+        </div>
+        <div class="admin-batch__list" data-batch-list></div>
+        <form method="post" action="/admin/stages/<%= stage.index %>/images" data-batch-form hidden>
+          <input type="hidden" name="images" data-batch-input>
+        </form>
+      </div>
     </div>
   </div>
 </section>
